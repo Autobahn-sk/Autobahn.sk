@@ -2,7 +2,7 @@
 Maturitný projekt 2024/2025
 
 ## Hrubý nástrel
-Cieľom našej maturitnej práce je vytvoriť portál pre širšiu verejnosť, ktorý bude slúžiť k inzerciu dielov, predaj/kúpu nemeckých áut a komunitné fórum. Projekt bude zhotovený pomocou webových technológií.
+Cieľom našej maturitnej práce je vytvoriť komunitný portál pre širšiu verejnosť, ktorý bude slúžiť k inzerciu dielov, predaj/kúpu nemeckých áut a komunitné fórum. Projekt bude zhotovený pomocou webových technológií.
 
 ### Použitie technológií
 - Frontend
