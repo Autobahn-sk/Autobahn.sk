@@ -16,8 +16,6 @@ Cieľom našej maturitnej práce je vytvoriť komunitný portál pre širšiu ve
   
 - Virtuálny servis - pomocou AI chceme docieliť lahšiu diagnostiku problému s automobilom a odporučiť vhodné náhradné diely/naceniť opravu. Zatiaľ pomocou textu, neskôr video/zvuk.
   
-- Sekcia "Auto na mieru" - konfigurátor, vďaka ktorému by mohli používatelia vytvoriť svoju vysnívanú kombináciu auta pomocou náhradných dielov (napríklad: motor z BMW, kolesá z Audi atď.) a získať odporúčania na inzeráty alebo náhradné diely, ktoré by mohli kúpiť pre stavbu vlastného auta.
-  
 - Porovnávanie parametrov automobilov - používatelia by si vybrali niekoľko áut na porovnanie a získali detailnú tabuľku s technickými údajmi, výbavou, spotrebou a ďalšími dôležitými parametrami.
 
 - História ceny - funkcia, ktorá používateľovi ukáže, ako sa cena podobných áut na trhu vyvíjala v čase, a tak mu pomôže rozhodnúť, či je auto výhodné kúpiť práve teraz.
