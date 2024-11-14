@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/api/modules/system/tests" />
         <option value="$PROJECT_DIR$/api/modules/tailor/tests" />
         <option value="$PROJECT_DIR$/api/modules/backend/tests" />
+        <option value="$PROJECT_DIR$/api/tests" />
       </list>
     </option>
   </component>

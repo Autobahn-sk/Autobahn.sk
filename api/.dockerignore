@@ -1,0 +1,12 @@
+.git
+.idea
+.DS_Store
+.dockerignore
+.phpunit.result.cache
+Dockerfile
+README.md
+phpunit.xml
+phpcs.xml
+/vendor
+/modules
+/tests

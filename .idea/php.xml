@@ -131,6 +131,13 @@
       <path value="$PROJECT_DIR$/api/vendor/composer" />
       <path value="$PROJECT_DIR$/api/vendor/carbonphp/carbon-doctrine-types" />
       <path value="$PROJECT_DIR$/api/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/api/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/api/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/api/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/api/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/api/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/api/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/api/vendor/wikimedia/composer-merge-plugin" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
