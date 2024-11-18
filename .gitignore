@@ -1,0 +1,11 @@
+/css
+/img
+/js
+/mock
+/pdf
+
+# for netbeans
+nbproject
+
+.DS_Store
+.idea
