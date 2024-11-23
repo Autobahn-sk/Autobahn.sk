@@ -2,7 +2,7 @@
     <header>
         <div class="inline-flex flex-row justify-between w-full">
             <div class="columns-1">  
-                <h1 class="subtitle subtitle-32">AUTOBAHN.SK</h1>
+                <h1 class="logo logo-20">AUTOBAHN.SK</h1>
             </div>
             <div class="columns-1">
                 <nav class="inline-flex space-x-7">

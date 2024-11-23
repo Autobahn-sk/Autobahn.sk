@@ -1,7 +1,8 @@
 <template>
     <form action="" class="input-wrapper">
         <input type="text" placeholder="Popíšte Vaše vysnívané auto">
-        <button class="button">Hladať</button>
+        <button class="button text text-16">Hladať</button>
+        <img src="./_img/OpenAILogo.svg" alt="">
     </form>
 </template>
 
@@ -10,7 +11,7 @@
 .input-wrapper {
     position: relative;
     display: inline-block;
-    }
+}
 
 .input-wrapper button {
     position: absolute;
@@ -22,7 +23,14 @@
     height: 49px;
     background-color: #405FF2;
     border-radius: 53px;
-    }
+}
+
+.input-wrapper img {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    border: none;
+}
 
 .input-wrapper button::before {
     display: inline-block;
@@ -32,19 +40,7 @@
     background-image: url("./_img/SearchIcon.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-bottom: -3px;
-    margin-right: 5px;
-}
-
-.input-wrapper input::placeholder::before {
-    display: inline-block;
-    content: "";
-    width: 36px;
-    height: 36px;
-    background-image: url("./_img/OpenAILogo.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: -3px;
+    margin-bottom: -4px;
     margin-right: 5px;
 }
 
@@ -54,7 +50,7 @@
     border-radius: 67px;
     background-color: white;
     color: #050B20;
-    padding-left: 20px;
+    padding-left: 60px;
 }
 
 input::placeholder {
