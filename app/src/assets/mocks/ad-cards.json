@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "BMW E46 M3",
+        "description": "3.5 R6 160KW Coupe RWD",
+        "kilometres": "197 430 km",
+        "fuel": "Benzín",
+        "gearbox": "Manuálna",
+        "price": "$25,000"
+    },
+    {
+        "id": 2,
+        "title": "BMW E60 M5",
+        "description": "4.0 V10 270KW Sedan RWD",
+        "kilometres": "205 315 km",
+        "fuel": "Benzín",
+        "gearbox": "Manuálna",
+        "price": "$36,999"
+    },
+    {
+        "id": 3,
+        "title": "AUDI RS6",
+        "description": "4.2 V10 240KW Combi RWD",
+        "kilometres": "142 030 km",
+        "fuel": "Benzín",
+        "gearbox": "Automat",
+        "price": "$28,321"
+    },
+    {
+        "id": 4,
+        "title": "AUDI A4 B5",
+        "description": "1.9TDI R4 74KW Sedan QUATTRO",
+        "kilometres": "142 030 km",
+        "fuel": "Benzín",
+        "gearbox": "Automat",
+        "price": "$28,321"
+    },
+    {
+        "id": 5,
+        "title": "AUDI RS6",
+        "description": "4.2 V10 240KW Combi RWD",
+        "kilometres": "142 030 km",
+        "fuel": "Benzín",
+        "gearbox": "Automat",
+        "price": "$28,321"
+    }
+]

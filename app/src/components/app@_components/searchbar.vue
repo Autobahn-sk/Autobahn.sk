@@ -1,7 +1,7 @@
 <template>
     <form action="" class="input-wrapper">
         <input type="text" placeholder="Popíšte Vaše vysnívané auto">
-        <button class="button text text-16">Hladať</button>
+        <button class="button text-base font-medium text-white">Hladať</button>
         <img src="./_img/OpenAILogo.svg" alt="">
     </form>
 </template>
@@ -45,7 +45,7 @@
 }
 
 .input-wrapper input {
-    width: 60vw;
+    width: 830px;
     height: 67px;
     border-radius: 67px;
     background-color: white;
