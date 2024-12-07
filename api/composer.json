@@ -7,7 +7,7 @@
         "october/system": "^3.7",
         "october/backend": "^3.7",
         "laravel/framework": "^9.0",
-        "rainlab/user-plugin": "^3.1",
+        "rainlab/user-plugin": "^2.0",
         "october/drivers-plugin": "v2.0.1",
         "wikimedia/composer-merge-plugin": "^2.0"
     },

@@ -4,14 +4,16 @@
 
 fields:
     name:
-        label: Name
-
-    description:
-        label: Description
-        type: textarea
-        size: small
+        label: rainlab.user::lang.group.name
+        span: left
 
     code:
-        label: Code
-        comment: Enter a unique code used to identify this group.
+        label: rainlab.user::lang.group.code
+        comment: rainlab.user::lang.group.code_comment
+        span: right
         preset: name
+
+    description:
+        label: rainlab.user::lang.group.description_field
+        type: textarea
+        size: tiny

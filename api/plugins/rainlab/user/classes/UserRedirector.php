@@ -5,50 +5,44 @@ use Illuminate\Routing\Redirector;
 
 /**
  * UserRedirector
- *
- * @todo this is a black box; nearly impossible to find from the `Redirect` facade,
- * the `october\rain` library should  provide an interface to change the key name,
- * that is, if Laravel doesn't add this common feature in a later version.
  */
 class UserRedirector extends Redirector
 {
     /**
-     * intended creates a new redirect response to the previously intended location.
+     * guest creates a new redirect response, while putting the current URL in the session.
+     * @param  string  $path
+     * @param  int     $status
+     * @param  array   $headers
+     * @param  bool    $secure
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function intended($default = '/', $status = 302, $headers = [], $secure = null)
+    public function guest($path, $status = 302, $headers = [], $secure = null)
     {
-        if (!App::runningInFrontend()) {
-            return parent::intended($default, $status, $headers, $secure);
-        }
+        $sessionKey = App::runningInBackend()
+            ? 'url.intended'
+            : 'url.cms.intended';
 
-        $path = $this->session->pull('url.cms.intended', $default);
+        $this->session->put($sessionKey, $this->generator->full());
 
         return $this->to($path, $status, $headers, $secure);
     }
 
     /**
-     * getIntendedUrl from the session.
+     * intended creates a new redirect response to the previously intended location.
+     * @param  string  $default
+     * @param  int     $status
+     * @param  array   $headers
+     * @param  bool    $secure
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function getIntendedUrl()
+    public function intended($default = '/', $status = 302, $headers = [], $secure = null)
     {
-        if (!App::runningInFrontend()) {
-            return parent::getIntendedUrl();
-        }
+        $sessionKey = App::runningInBackend()
+            ? 'url.intended'
+            : 'url.cms.intended';
 
-        return $this->session->get('url.cms.intended');
-    }
+        $path = $this->session->pull($sessionKey, $default);
 
-    /**
-     * setIntendedUrl in the session.
-     */
-    public function setIntendedUrl($url)
-    {
-        if (!App::runningInFrontend()) {
-            return parent::setIntendedUrl($url);
-        }
-
-        $this->session->put('url.cms.intended', $url);
-        return $this;
+        return $this->to($path, $status, $headers, $secure);
     }
 }
