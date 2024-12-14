@@ -22,13 +22,13 @@ class ResetApiController extends UserApiController
             'email' => input('email'),
             'code' => input('code'),
             'password' => input('password'),
-            'password_confirmation' => input('password_confirmation') ?? input('password'),
+            'password_confirmation' => input('password_confirmation') ?? input('password')
         ];
 
         $validation = Validator::make($params, [
             'email' => 'required|email',
             'code' => 'required',
-            'password' => sprintf('required|between:%d,255|confirmed', User::getMinPasswordLength()),
+            'password' => sprintf('required|between:%d,255|confirmed', User::getMinPasswordLength())
         ]);
 
         if ($validation->fails()) {

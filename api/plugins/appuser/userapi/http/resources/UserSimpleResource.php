@@ -1,5 +1,6 @@
 <?php namespace AppUser\UserApi\Http\Resources;
 
+use October\Rain\Support\Facades\Event;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserSimpleResource extends JsonResource
@@ -11,9 +12,11 @@ class UserSimpleResource extends JsonResource
             'name' => $this->name,
             'surname' => $this->surname,
             'username' => $this->username,
-            'email' => $this->email,
+            'email' => $this->email
         ];
 
-        return $data;
+		Event::fire('appuser.userapi.user.beforeReturnSimpleResource', [&$data, $this->resource]);
+
+		return $data;
     }
 }

@@ -16,7 +16,12 @@ class LoginApiController extends UserApiController
     {
         $response = [];
 
-        $user = Event::fire('appuser.userapi.beforeLogin', [], true);
+		$params = [
+			'login' => input('login'),
+			'password' => input('password'),
+		];
+
+        $user = Event::fire('appuser.userapi.beforeLogin', [$params], true);
 
         if ($user) {
             Auth::loginUsingId($user->id);
@@ -43,7 +48,7 @@ class LoginApiController extends UserApiController
         $userResourceClass = config('appuser.userapi::resources.user');
         $response = [
             'token' => $token,
-            'user' => new $userResourceClass($user),
+            'user' => new $userResourceClass($user)
         ];
 
         return $afterProcess = UserApiHook::hook('afterProcess', [$this, $response], function () use ($response) {

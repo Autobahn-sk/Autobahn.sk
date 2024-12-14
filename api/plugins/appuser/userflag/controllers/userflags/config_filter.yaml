@@ -1,0 +1,30 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    user:
+        label: User
+        type: group
+        conditions: user_id in (:filtered)
+        modelClass: AppUser\UserFlag\Models\UserFlag
+        options: getUserOptions
+    flaggable_type:
+        label: Flaggable type
+        type: group
+        conditions: flaggable_type in (:filtered)
+        modelClass: AppUser\UserFlag\Models\UserFlag
+        options: getFlaggableTypeOptions
+    type:
+        label: Type
+        type: group
+        conditions: type in (:filtered)
+        modelClass: AppUser\UserFlag\Models\UserFlag
+        options: getTypeOptions
+    value:
+        label: Value
+        type: switch
+        default: 0
+        conditions:
+            - value = false
+            - value = true

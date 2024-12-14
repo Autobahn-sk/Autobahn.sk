@@ -1,0 +1,33 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    user[username]:
+        label: User
+        searchable: true
+    flaggable_type:
+        label: Flaggable type
+        searchable: true
+    flaggable_id:
+        label: Flaggable ID
+        searchable: true
+        type: number
+    type:
+        label: Type
+        searchable: true
+    value:
+        label: Value
+        searchable: true
+        type: switch
+    created_at:
+        label: Created at
+        searchable: true
+        type: datetime
+    updated_at:
+        label: Updated at
+        searchable: true
+        type: datetime

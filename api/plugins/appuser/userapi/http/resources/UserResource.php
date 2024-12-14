@@ -1,6 +1,7 @@
 <?php namespace AppUser\UserApi\Http\Resources;
 
 use Cache;
+use October\Rain\Support\Facades\Event;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -24,7 +25,7 @@ class UserResource extends JsonResource
             'is_activated' => (bool) $this->is_activated,
             'is_phone_number_verified' => (bool) $this->is_phone_number_verified,
             'is_guest' => (bool) $this->is_guest,
-            'is_superuser' => (bool) $this->is_superuser,
+            'is_superuser' => (bool) $this->is_superuser
         ];
         if (config('app.debug')) {
             $data['phone_number_verification_code'] = Cache::store('file')->get('phone_verification_'.$this->id);
@@ -33,6 +34,8 @@ class UserResource extends JsonResource
             $data['email_verification_code'] = Cache::store('file')->get('email_verification_'.$this->id);
         }
 
-        return $data;
+		Event::fire('appuser.userapi.user.beforeReturnResource', [&$data, $this->resource]);
+
+		return $data;
     }
 }
