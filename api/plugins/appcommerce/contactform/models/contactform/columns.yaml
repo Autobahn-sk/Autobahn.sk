@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: false
+        invisible: true
+    name:
+        label: Meno a Priezvisko
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        searchable: true
+        sortable: true
+    is_done:
+        label: Vybavené
+        type: switch
+        sortable: true
+    created_at:
+        label: Prijaté
+        type: timesince
+        searchable: false
+        sortable: true

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Kontaktný formulár
+
+# Model Form Field configuration
+form: $/appcommerce/contactform/models/contactform/fields.yaml
+
+# Model Class name
+modelClass: AppCommerce\ContactForm\Models\ContactForm
+
+# Default redirect location
+defaultRedirect: appcommerce/contactform/contactforms
+
+# Create page
+create:
+    title: Nový kontaktný formulár
+    redirect: appcommerce/contactform/contactforms/update/:id
+    redirectClose: appcommerce/contactform/contactforms
+
+# Update page
+update:
+    title: Upraviť kontaktný formulár
+    redirect: appcommerce/contactform/contactforms
+    redirectClose: appcommerce/contactform/contactforms
+
+# Preview page
+preview:
+    title: Zobraziť kontaktný formulár

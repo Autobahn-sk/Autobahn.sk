@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+    name:
+        type: text
+        label: Meno a Priezvisko
+        span: left
+    email:
+        type: text
+        label: Email
+        span: left
+    message:
+        type: textarea
+        label: Správa
+        span: full
+    is_done:
+        type: switch
+        label: Vybavené
+        span: left
