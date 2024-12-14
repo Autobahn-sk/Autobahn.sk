@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/api/modules/backend/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/api/modules/system/console" isTestSource="false" packagePrefix="System\Console\" />
       <sourceFolder url="file://$MODULE_DIR$/api/modules/system/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/api/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/composer" />
@@ -128,12 +129,8 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/wikimedia/less.php" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/bacon/bacon-qr-code" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/dasprid/enum" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/firebase/php-jwt" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/mobiledetect/mobiledetectlib" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/paragonie/constant_time_encoding" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/pragmarx/google2fa" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/wikimedia/composer-merge-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/aws/aws-crt-php" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/aws/aws-sdk-php" />
@@ -146,6 +143,14 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/http-client-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/mailgun-mailer" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/postmark-mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/bugsnag/bugsnag" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/google/apiclient" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/google/apiclient-services" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/google/auth" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/mailjet/mailjet-apiv3-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/validator" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
