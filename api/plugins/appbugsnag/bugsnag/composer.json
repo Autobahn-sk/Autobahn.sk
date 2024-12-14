@@ -1,0 +1,7 @@
+{
+    "name": "appbugsnag/bugsnag",
+    "type": "october-plugin",
+    "require": {
+        "bugsnag/bugsnag": "^3.0"
+    }
+}
