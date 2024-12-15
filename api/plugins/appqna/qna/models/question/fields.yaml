@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    question:
+        label: Question
+        span: left
+        type: text
+    answer:
+        label: Answer
+        span: left
+        type: textarea
+        size: large
+    is_published:
+        label: Is Published
+        type: switch

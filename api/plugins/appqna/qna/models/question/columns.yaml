@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    question:
+        label: Question
+        type: text
+    answer:
+        label: Answer
+        type: summary
+        sortable: false
+        searchable: false
+    is_published:
+        label: Is Published
+        type: switch

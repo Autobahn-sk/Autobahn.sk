@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Question
+
+# Model Form Field configuration
+form: $/appqna/qna/models/question/fields.yaml
+
+# Model Class name
+modelClass: AppQna\Qna\Models\Question
+
+# Default redirect location
+defaultRedirect: appqna/qna/questions
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appqna/qna/questions/update/:id
+    redirectClose: appqna/qna/questions
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appqna/qna/questions
+    redirectClose: appqna/qna/questions
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
