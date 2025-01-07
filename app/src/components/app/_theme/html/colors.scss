@@ -1,3 +1,39 @@
-.purple-color {
-    color: #405FF2;
+.text {
+    &-purple {
+        color: #405FF2;
+    }
+    
+    &-main-black {
+        color: #050B20;
+    }
+}
+
+.bg {
+    &-black {
+        background-color: #35394A;
+    }
+
+    &-light-black {
+        background-color: #35394A;
+    }
+
+    &-dark-blue {
+        background-color: #1A2E4F;
+    }
+
+    &-violet {
+        background-color: #F9FBFC; 
+    }
+
+    &-dark-violet {
+        background-color: #F2F4FE;
+    }
+    
+    &-purple {
+        background-color: #405FF2; 
+    } 
+
+    &-light-gray {
+        background-color: #F9FBFC;
+    }
 }

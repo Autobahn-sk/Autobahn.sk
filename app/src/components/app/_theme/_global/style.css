@@ -20,30 +20,35 @@ a {
 
 a:hover {
   color: #535bf2;
+  cursor: pointer;
 }
 
 .hero-layout{
-  padding-right: 31px;
-  padding-left: 31px;
-  padding-top: 26px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1.6rem;
 }
 
-.site-layout{
-  margin-right: 31px;
-  margin-left: 31px;
+.site-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 3.5rem; 
+  padding-right: 3.5rem; 
 }
 
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+.full-width-screen {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
 
 body{
   background-color: white;
   color: black;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 h1 {

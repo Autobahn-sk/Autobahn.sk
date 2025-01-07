@@ -1,35 +1,73 @@
 <template>
-    <div class="site-layout mt-20">
-        <h2 class="text-4xl font-bold text-black">Preskúmať všetky vozidlá</h2>
-        <div class="inline-flex my-9">
-          <div class="">
-            <h5>Odporúčané</h5>
-          </div>
-          <div>
-            <h5>Nové autá</h5>
-          </div>
-          <div>
-            <h5>Používané autá</h5>
-          </div>
-        </div>
-        <div class="">
-            <Ad />
-        </div>
+  <div class="md:mt-20 mt-10">
+    <h2 class="subtitle subtitle-40 font-bold text-black">
+      <strong>Preskúmať všetky vozidlá</strong>
+    </h2>
+    <div class="my-9">
+      <div class="select-bar flex gap-9">
+        <a class="active">Odporúčané</a>
+        <a>Nové autá</a>
+        <a>Používané autá</a>
+      </div>
+      <hr class="mt-3 bg-light-gray h-[0.06rem]">
     </div>
+    <div>
+      <Ad />
+    </div>
+  </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 import Ad from '@/components/app@_components/ad-card.vue';
 
 export default defineComponent({
   components: {
-    Ad
-  }
+    Ad,
+  },
+  mounted() {
+    const links = document.querySelectorAll('.select-bar a');
+
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        links.forEach(function (l) {
+          l.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  },
 });
 </script>
 
-
 <style scoped>
 
+.select-bar a:hover {
+  cursor: pointer;
+}
+
+.select-bar a.active {
+  text-decoration-line: underline !important;
+  text-decoration-color: #405ff2 !important;
+  text-underline-offset: 17px;
+  text-decoration-thickness: 3px;
+}
+
+@media (max-width: 768px) {
+  .select-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .select-bar a {
+    display: inline-block;
+    position: relative;
+  }
+
+  .select-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
 </style>

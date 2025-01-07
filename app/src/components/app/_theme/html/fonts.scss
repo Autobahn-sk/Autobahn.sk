@@ -8,3 +8,38 @@
         font-weight: 800;
     }
 }
+
+body{
+    font-family: "DM Sans", sans-serif;
+}
+
+.subtitle {
+    &-40 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: bold;
+    }
+
+    &-32 {
+        font-size: 32px;
+        line-height: 29.9px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .subtitle {
+        &-40 {
+            font-size: 30px;
+            line-height: 28px;
+            font-weight: bold;
+        }
+    }
+}
+
+.text {
+    &-20 {
+        font-size: 20px;
+        line-height: 18px;
+    }
+}
