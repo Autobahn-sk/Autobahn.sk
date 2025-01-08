@@ -1,0 +1,46 @@
+[
+    {
+        "Price": "Zadarmo",
+        "Plan": "Základný plán",
+        "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
+        "First benefit": "50 Zobrazení",
+        "Second benefit": "1 Žiadosť Za 3 Hodiny",
+        "Third benefit": "Presnejšie Vyhladávanie",
+        "Fourth benefit": "5 Revízií",
+        "Fifth benefit": "7 dní Čas Dodania",
+        "Sixth benefit": "Podpora Produktov"
+    },
+    {
+        "Price": "$39",
+        "Plan": "Štandardný plán",
+        "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
+        "First benefit": "60 Zobrazení",
+        "Second benefit": "150 Dní Viditeľnosť",
+        "Third benefit": "Presnejšie Vyhladávanie",
+        "Fourth benefit": "8 revízií",
+        "Fifth benefit": "4 dni Čas Dodania",
+        "Sixth benefit": "Podpora Produktov"
+    },
+    {
+        "Price": "$89",
+        "Plan": "Rozšírený plán",
+        "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
+        "First benefit": "80 Zobrazení",
+        "Second benefit": "200 Dní Viditeľnosť",
+        "Third benefit": "Presnejšie Vyhladávanie",
+        "Fourth benefit": "10 Revízií",
+        "Fifth benefit": "2 dni Čas Dodania",
+        "Sixth benefit": "Podpora Produktov"
+    },
+    {
+        "Price": "$129",
+        "Plan": "Podnikový plán",
+        "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
+        "First benefit": "100 Zobrazení",
+        "Second benefit": "365 Dní Viditeľnosť",
+        "Third benefit": "Presnejšie Vyhladávanie",
+        "Fourth benefit": "30 Revízií",
+        "Fifth benefit": "0 dní Čas Dodania",
+        "Sixth benefit": "Podpora Produktov"
+    }
+]
