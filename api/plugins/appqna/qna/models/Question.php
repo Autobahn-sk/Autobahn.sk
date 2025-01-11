@@ -1,9 +1,8 @@
 <?php namespace AppQna\Qna\Models;
 
-use AppGuidance\Step\Enums\InformationType;
-use AppQna\Qna\Classes\Enums\QuestionCategoryEnum;
-use Illuminate\Validation\Rule;
 use Model;
+use Illuminate\Validation\Rule;
+use AppQna\Qna\Classes\Enums\QuestionCategoryEnum;
 
 /**
  * Question Model

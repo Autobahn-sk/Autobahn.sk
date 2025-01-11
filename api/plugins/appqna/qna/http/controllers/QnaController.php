@@ -9,7 +9,13 @@ class QnaController extends Controller
 {
     public function __invoke()
     {
-        $questions = Question::isPublished()->orderBy('sort_order')->get();
+		$category = request()->input('category');
+
+        $questions = Question::isPublished()
+			->when($category, function($query, $category) {
+				return $query->where('category', $category);
+			})
+			->orderBy('sort_order')->get();
 
         $response = QuestionResource::collection($questions);
 

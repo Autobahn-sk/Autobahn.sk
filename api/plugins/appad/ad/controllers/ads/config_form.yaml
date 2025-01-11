@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Ad
+
+# Model Form Field configuration
+form: $/appad/ad/models/ad/fields.yaml
+
+# Model Class name
+modelClass: AppAd\Ad\Models\Ad
+
+# Default redirect location
+defaultRedirect: appad/ad/ads
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appad/ad/ads/update/:id
+    redirectClose: appad/ad/ads
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appad/ad/ads
+    redirectClose: appad/ad/ads
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
