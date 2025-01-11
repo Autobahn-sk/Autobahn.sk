@@ -19,8 +19,6 @@ Cieľom našej maturitnej práce je vytvoriť komunitný portál pre širšiu ve
 
 - História ceny - funkcia, ktorá používateľovi ukáže, ako sa cena podobných áut na trhu vyvíjala v čase, a tak mu pomôže rozhodnúť, či je auto výhodné kúpiť práve teraz.
 
-- Predplatné pre servis autobobilu a na spotrebný materiál - možnosť predplatiť si pravidelné servisné prehliadky so zmluvným servisom / zaslanie autodielov, ktoré sú relevantné pre ich vozidlo.
-
-- Chatbot pre rýchlu podporu - použitie AI chatbota, pre jednoduchú a rýchlu asistenciu s vyhľadávaním áut, náhradných dielov alebo zodpovedanie technických otázok týkajúcich sa nemeckých áut.
+- Predplatné pre servis automobilu a na spotrebný materiál - možnosť predplatiť si pravidelné servisné prehliadky so zmluvným servisom / zaslanie autodielov, ktoré sú relevantné pre ich vozidlo.
 
 - Odborné Q&A - sekcia fóra, kde môžu používatelia klásť otázky a odpovedať na ne špecialisti na nemecké autá alebo mechanici.
