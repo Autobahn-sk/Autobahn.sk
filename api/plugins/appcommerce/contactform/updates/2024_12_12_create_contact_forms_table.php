@@ -1,16 +1,15 @@
-<?php namespace contactform\updates;
+<?php namespace AppCommerce\ContactForm\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateContactFormsTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
         Schema::create('appcommerce_contactform_contact_forms', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->id();
 
             $table->string('email')->nullable()->index();
 			$table->string('name')->nullable();
@@ -27,4 +26,4 @@ class CreateContactFormsTable extends Migration
     {
         Schema::dropIfExists('appcommerce_contactform_contact_forms');
     }
-}
+};

@@ -7,13 +7,15 @@ use October\Rain\Database\Updates\Migration;
 
 return new class extends Migration
 {
-    public function up(): void
+    public function up()
     {
         Schema::create('appqna_qna_questions', function (Blueprint $table) {
             $table->id();
 
             $table->text('question');
             $table->text('answer');
+
+			$table->text('category')->nullable();
 
 			$table->boolean('is_published')->default(false);
 
@@ -29,13 +31,14 @@ return new class extends Migration
             $question = new Question();
             $question->question = $faq['question'];
             $question->answer = $faq['answer'];
+			$question->category = $faq['category'];
 			$question->is_published = $faq['is_published'];
             $question->sort_order = $faq['sort_order'];
             $question->save();
         }
     }
 
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('appqna_qna_questions');
     }

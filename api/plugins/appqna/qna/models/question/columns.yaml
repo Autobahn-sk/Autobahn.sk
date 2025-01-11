@@ -11,6 +11,9 @@ columns:
         type: summary
         sortable: false
         searchable: false
+    category:
+        label: Category
+        type: selectable
     is_published:
         label: Is Published
         type: switch

@@ -1,5 +1,8 @@
 <?php namespace AppQna\Qna\Models;
 
+use AppGuidance\Step\Enums\InformationType;
+use AppQna\Qna\Classes\Enums\QuestionCategoryEnum;
+use Illuminate\Validation\Rule;
 use Model;
 
 /**
@@ -9,10 +12,8 @@ use Model;
  */
 class Question extends Model
 {
-	use \October\Rain\Database\Traits\Validation;
-
 	use \October\Rain\Database\Traits\Sortable;
-
+	use \October\Rain\Database\Traits\Validation;
 	use \October\Rain\Database\Traits\SoftDelete;
 
 	public $table = 'appqna_qna_questions';
@@ -26,5 +27,15 @@ class Question extends Model
 	public function scopeIsPublished($query)
 	{
 		return $query->where('is_published', true);
+	}
+
+	public function beforeValidate()
+	{
+		$this->rules['category'] = Rule::in(QuestionCategoryEnum::values()) . '|string';
+	}
+
+	public function getCategoryOptions()
+	{
+		return QuestionCategoryEnum::optionsForBackend();
 	}
 }

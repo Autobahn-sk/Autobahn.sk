@@ -4,7 +4,7 @@ use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class addEmailVerify extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -27,4 +27,4 @@ class addEmailVerify extends Migration
 			$table->dropColumn('is_email_verified');
 		});
     }
-}
+};

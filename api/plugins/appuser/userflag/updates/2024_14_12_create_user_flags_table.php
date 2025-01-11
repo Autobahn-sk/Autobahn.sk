@@ -1,16 +1,15 @@
 <?php namespace AppUser\UserFlag\Updates;
 
-use October\Rain\Support\Facades\Schema;
+use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateUserFlagsTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
         Schema::create('appuser_userflag_user_flags', function(Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
+			$table->id();
 
             $table->nullableMorphs('flaggable');
             $table->unsignedBigInteger('user_id')->index()->nullable();
@@ -29,4 +28,4 @@ class CreateUserFlagsTable extends Migration
     {
         Schema::dropIfExists('appuser_userflag_user_flags');
     }
-}
+};

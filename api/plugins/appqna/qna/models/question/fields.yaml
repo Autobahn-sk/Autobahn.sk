@@ -5,13 +5,17 @@
 fields:
     question:
         label: Question
-        span: left
         type: text
+        span: full
     answer:
         label: Answer
-        span: left
         type: textarea
+        span: full
         size: large
+    category:
+        label: Category
+        type: dropdown
+        emptyOption: -- No Category --
     is_published:
         label: Is Published
         type: switch

@@ -1,6 +1,6 @@
-<?php namespace AppUtil\Util\Classes;
+<?php namespace AppUtil\Util\Classes\utils;
 
-class BooleanValue
+class BooleanValueUtil
 {
     public static function getBooleanValue($input): ?bool
     {

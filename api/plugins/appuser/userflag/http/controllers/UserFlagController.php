@@ -5,8 +5,8 @@ use Illuminate\Http\Request;
 use RainLab\User\Models\User;
 use Illuminate\Routing\Controller;
 use AppUser\UserFlag\Models\UserFlag;
-use AppUtil\Util\Classes\BooleanValue;
 use AppApi\ApiResponse\Resources\ApiResource;
+use AppUtil\Util\Classes\Utils\BooleanValueUtil;
 use AppUser\UserFlag\Http\Resources\UserFlagResource;
 
 class UserFlagController extends Controller
@@ -25,7 +25,7 @@ class UserFlagController extends Controller
             'type'          => $request->input('type')
         ]);
 
-        $flag->value = BooleanValue::getBooleanValue($request->input('value'));
+        $flag->value = BooleanValueUtil::getBooleanValue($request->input('value'));
         $flag->text = $request->input('text');
 
         $flag->save();

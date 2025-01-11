@@ -3,6 +3,7 @@
         "id": 1,
         "question": "Do you offer a free trial?",
         "answer": "Yes, we provide a 30-day free trial. Additionally, you can schedule a complimentary 30-minute onboarding session to help you get started quickly.",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 1
     },
@@ -10,6 +11,7 @@
         "id": 2,
         "question": "Is it possible to switch my subscription plan later?",
         "answer": "I'm not sure. Can you clarify?",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 2
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "question": "What are the terms for canceling the service?",
         "answer": "I'm not sure. Can you clarify?",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 3
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "question": "Can I include additional details on an invoice?",
         "answer": "I'm not sure. Can you clarify?",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 4
     },
@@ -31,6 +35,7 @@
         "id": 5,
         "question": "What is the process for billing?",
         "answer": "I'm not sure. Can you clarify?",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 5
     },
@@ -38,6 +43,7 @@
         "id": 6,
         "question": "How can I update the email address on my account?",
         "answer": "I'm not sure. Can you clarify?",
+        "category": "PAYMENT",
         "is_published": true,
         "sort_order": 6
     }
