@@ -9,7 +9,6 @@ Cieľom našej maturitnej práce je vytvoriť komunitný portál pre širšiu ve
   - Vue.js, BootStrap, Tailwind UI
 - Backend
   - OctoberCMS, MySQL, PHP
-  - Node.js (Optional)
 
 ### Funkcionality
 - AI vyhľadávanie automobilov - použitím umelej inteligencie, chceme docieliť jednoduchší výber automobilu pre potencionálneho zákazníka.
