@@ -1,8 +1,8 @@
 <template>
-    <form action="" class="input-wrapper">
-        <input type="text" :placeholder="placeholderText">
-        <button class="button text-base font-medium text-white">Hladať</button>
-        <img src="./_img/OpenAILogo.svg" alt="">
+    <form action="" class="input-wrapper relative inline-block w-full">
+        <input class="w-[51.8rem] h-[4.1rem] rounded-[4.1rem] bg-white text-black pl-[3.75rem]" type="text" :placeholder="placeholderText">
+        <button class="text-base bg-purple font-medium text-white absolute top-[0.5rem] right-[0.5rem] border-none w-[11.75rem] h-[3rem] rounded-[3.3rem]">Hladať</button>
+        <img class="absolute top-[1rem] left-[0.9rem] border-none" src="./_img/OpenAILogo.svg" alt="">
     </form>
 </template>
 
@@ -34,30 +34,6 @@ export default {
 
 <style scoped>
 
-.input-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.input-wrapper button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    border: none;
-    cursor: pointer;
-    width: 11.75rem;
-    height: 3rem;
-    background-color: #405FF2;
-    border-radius: 3.3rem;
-}
-
-.input-wrapper img {
-    position: absolute;
-    top: 17px;
-    left: 15px;
-    border: none;
-}
 
 .input-wrapper button::before {
     display: inline-block;
@@ -69,15 +45,6 @@ export default {
     background-size: contain;
     margin-bottom: -4px;
     margin-right: 5px;
-}
-
-.input-wrapper input {
-    width: 51.8rem;
-    height: 4.1rem;
-    border-radius: 4.1rem;
-    background-color: white;
-    color: #050B20;
-    padding-left: 3.75rem;
 }
 
 input::placeholder {

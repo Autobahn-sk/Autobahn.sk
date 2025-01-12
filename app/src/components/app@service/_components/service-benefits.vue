@@ -1,11 +1,9 @@
 <template>
-    <div class="flex flex-col lg:flex-row justify-between items-start my-24 gap-24">
-        <div class="lg:w-1/3 flex items-center justify-center h-[350px]">
-            <h2 class="subtitle subtitle-40 text-center lg:text-left w-100">
-                Sme najlepší v tom, na čom Vám <span class="underline decoration-3 underline-offset-8 decoration-[#405FF2] ">záleží</span>
-            </h2>
+    <div class="site-layout bg-[#F9FBFC] h-auto md:h-[23.9rem] rounded-xl">
+        <div class="pr-11 pt-12">
+            <h2 class="subtitle-32">Zákaznícke benefity</h2>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-2/3">
+        <div class="flex flex-row flex-wrap md:flex-nowrap gap-6 mt-14 pb-12 md:pb-0">
             <Benefit
                 icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
                     <g clip-path='url(#clip0_53_3114)'>
@@ -44,8 +42,9 @@
                 </svg>"
                 title="Špeciálne ponuky financovania"
                 description="Špeciálne finančné ponuky, ktoré vám umožňujú dosiahnuť finančné ciele rýchlejšie a výhodnejšie."
-                titleClass="text-lg font-bold"
+                titleClass="text-base font-bold"
                 descriptionClass="text-gray-500"
+                widthClass = "w-[95%]"
             />
             <Benefit
                 icon="<svg width='61' height='60' viewBox='0 0 61 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -72,8 +71,9 @@
                 </svg>"
                 title="Dôveryhodný predajca"
                 description="Dôveryhodný predajca áut, ktorý prináša kvalitu a spoľahlivosť pri každom predaji."
-                titleClass="text-lg font-bold"
+                titleClass="text-base font-bold"
                 descriptionClass="text-gray-500"
+                widthClass = "w-[95%]"
             />
             <Benefit
                 icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -110,6 +110,7 @@
                 description="Transparentná cenotvorba vám prináša jasný prehľad o všetkých nákladoch."
                 titleClass="text-lg font-bold"
                 descriptionClass="text-gray-500"
+                widthClass = "w-[95%]"
             />
             <Benefit
                 icon="<svg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -133,28 +134,20 @@
                 description="Odborný autoservis s dôrazom na kvalitu a precíznosť. Naši skúsení technici sa postarajú o vaše vozidlo so starostlivosťou."
                 titleClass="text-lg font-bold"
                 descriptionClass="text-gray-500"
+                widthClass = "w-[95%]"
             />
-        </div>
+      </div>
     </div>
-</template>
-
-<script>
-import { defineComponent } from 'vue';
-import Benefit from "@/components/app@_components/benefit.vue";
-
-
-export default defineComponent({
+  </template>
+  
+  <script>
+  import { defineComponent } from "vue";
+  import Benefit from "@/components/app@_components/benefit.vue";
+  
+  export default defineComponent({
     components: {
-        Benefit
+      Benefit,
     },
-});
-</script>
-
-
-<style>
-
-.text-row h2{
-    width: 55%;
-}
-
-</style>
+  });
+  </script>
+  

@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Servis',
     component: () => import('@/components/app@service/service.vue'),  
   },
+  {
+    path: '/diagnostika',
+    name: 'Diagnostika',
+    component: () => import('@/components/app@part/part.vue'),  
+  }
 ];
 
 const router = createRouter({

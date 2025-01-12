@@ -32,11 +32,11 @@ components: {
   
 <style scoped>
 
-  @media screen and (max-width: 640px) {
-        .ad-site-layout {
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;  
-        }
+@media screen and (max-width: 640px) {
+    .ad-site-layout {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;  
     }
+}
 
 </style>

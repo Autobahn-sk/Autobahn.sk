@@ -1,7 +1,7 @@
 <template>
     <header class="hero-layout full-width-screen align-middle relative bg-dark-blue h-[4.8rem]">
         <div class="inline-flex flex-row justify-between w-full text-white">
-            <h1 class="logo logo-20">AUTOBAHN.SK</h1>
+            <a href="/" class="logo logo-20">AUTOBAHN.SK</a>
             <nav class="inline-flex space-x-7 desktopmenu">
                 <a href="/" class="font-medium">Domov</a>
                 <a href="/servis" class="font-medium">Virtuálny Servis</a>

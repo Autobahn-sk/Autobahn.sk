@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "Price": "Zadarmo",
         "Plan": "Základný plán",
         "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
@@ -11,6 +12,7 @@
         "Sixth benefit": "Podpora Produktov"
     },
     {
+        "id": 2,
         "Price": "$39",
         "Plan": "Štandardný plán",
         "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
@@ -22,6 +24,7 @@
         "Sixth benefit": "Podpora Produktov"
     },
     {
+        "id": 3,
         "Price": "$89",
         "Plan": "Rozšírený plán",
         "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
@@ -33,6 +36,7 @@
         "Sixth benefit": "Podpora Produktov"
     },
     {
+        "id": 4,
         "Price": "$129",
         "Plan": "Podnikový plán",
         "Description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
