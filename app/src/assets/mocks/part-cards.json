@@ -49,17 +49,94 @@
         "tag": "Motor"
     },
     {
-        "id": 7,
+        "id": 8,
         "store": "AUTOKELLY",
         "title": "Angel Eyes Xenonové svetlá pre BMW E90",
         "price": "$199",
         "tag": "Body Kit"
     },
     {
-        "id": 8,
+        "id": 9,
         "store": "AUTOKELLY",
         "title": "Kit Brembo DT BMW",
         "price": "$359",
         "tag": "Podvozok"
+    },
+    {
+        "id": 10,
+        "store": "AUTOKELLY",
+        "title": "Alternátor pre BMW e46",
+        "price": "$459",
+        "tag": "Motor"
+    },
+    {
+        "id": 11,
+        "store": "AUTOKELLY",
+        "title": "Carbon Fiber PVC Car Rear",
+        "price": "$420",
+        "tag": "Body Kit"
+    },
+    {
+        "id": 12,
+        "store": "AUTOKELLY",
+        "title": "Michelin Defender LTX M/S",
+        "price": "$140",
+        "tag": "Podvozok"
+    },
+    {
+        "id": 13,
+        "store": "AUTOKELLY",
+        "title": "Car Rear View Mirrors 5K",
+        "price": "$185",
+        "tag": "Exteriér"
+    },
+    {
+        "id": 14,
+        "store": "AUTOKELLY",
+        "title": "MOMO Racing Volant",
+        "price": "$60",
+        "tag": "Doplnky"
+    },
+    {
+        "id": 15,
+        "store": "AUTOKELLY",
+        "title": "Carbon Fiber PVC Car Rear",
+        "price": "$220",
+        "tag": "Body Kit"
+    },
+    {
+        "id": 16,
+        "store": "AUTOKELLY",
+        "title": "Sports Safety Bike Helmet",
+        "price": "$95",
+        "tag": "Doplnky"
+    },
+    {
+        "id": 17,
+        "store": "AUTOKELLY",
+        "title": "Alternátor pre BMW e46",
+        "price": "$118",
+        "tag": "Motor"
+    },
+    {
+        "id": 18,
+        "store": "AUTOKELLY",
+        "title": "Angel Eyes Xenonové svetlá pre BMW E90",
+        "price": "$199",
+        "tag": "Body Kit"
+    },
+    {
+        "id": 19,
+        "store": "AUTOKELLY",
+        "title": "Alternátor pre BMW e46",
+        "price": "$118",
+        "tag": "Motor"
+    },
+    {
+        "id": 20,
+        "store": "AUTOKELLY",
+        "title": "Angel Eyes Xenonové svetlá pre BMW E90",
+        "price": "$199",
+        "tag": "Body Kit"
     }
 ]
