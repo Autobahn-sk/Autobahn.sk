@@ -1,0 +1,35 @@
+.border-purple {
+  border-color: #405FF2;
+}
+
+.text-purple {
+  color: #405FF2;
+}
+.text-main-black {
+  color: #050B20;
+}
+.text-yellow {
+  color: #E1C03F;
+}
+
+.bg-black {
+  background-color: #35394A;
+}
+.bg-light-black {
+  background-color: #35394A;
+}
+.bg-dark-blue {
+  background-color: #1A2E4F;
+}
+.bg-violet {
+  background-color: #F9FBFC;
+}
+.bg-dark-violet {
+  background-color: #F2F4FE;
+}
+.bg-purple {
+  background-color: #405FF2;
+}
+.bg-light-gray {
+  background-color: #F9FBFC;
+}/*# sourceMappingURL=colors.css.map */

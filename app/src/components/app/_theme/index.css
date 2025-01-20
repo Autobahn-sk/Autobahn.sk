@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap");
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+  cursor: pointer;
+}
+
+.hero-layout {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1.6rem;
+}
+
+.site-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.full-width-screen {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+body {
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+} */
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+@font-face {
+  font-family: "Star7";
+  src: url(@/assets/fonts/STAR7.ttf);
+}
+.logo {
+  font-family: "DM Sans", sans-serif;
+}
+.logo-20 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.partsText {
+  font-family: "Star7";
+  letter-spacing: 4.61px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.subtitle-40 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+}
+.subtitle-32 {
+  font-size: 32px;
+  line-height: 29.9px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .subtitle-40 {
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+}
+.text-20 {
+  font-size: 20px;
+  line-height: 18px;
+}
+
+button {
+  border-radius: 9px;
+}
+
+.border-purple {
+  border-color: #405FF2;
+}
+
+.text-purple {
+  color: #405FF2;
+}
+.text-main-black {
+  color: #050B20;
+}
+.text-yellow {
+  color: #E1C03F;
+}
+
+.bg-black {
+  background-color: #35394A;
+}
+.bg-light-black {
+  background-color: #35394A;
+}
+.bg-dark-blue {
+  background-color: #1A2E4F;
+}
+.bg-violet {
+  background-color: #F9FBFC;
+}
+.bg-dark-violet {
+  background-color: #F2F4FE;
+}
+.bg-purple {
+  background-color: #405FF2;
+}
+.bg-light-gray {
+  background-color: #F9FBFC;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;/*# sourceMappingURL=index.css.map */
