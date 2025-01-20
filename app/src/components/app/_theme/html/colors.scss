@@ -1,3 +1,9 @@
+.border {
+    &-purple {
+        border-color: #405FF2;
+    }
+}
+
 .text {
     &-purple {
         color: #405FF2;
@@ -5,6 +11,10 @@
     
     &-main-black {
         color: #050B20;
+    }
+
+    &-yellow {
+        color: #E1C03F;
     }
 }
 

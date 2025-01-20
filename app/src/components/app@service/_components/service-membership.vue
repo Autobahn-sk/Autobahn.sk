@@ -15,7 +15,7 @@
   
   <script>
   import { defineComponent } from 'vue';
-  import MembershipCard from '@/components/app@_components/service-membership-card.vue';
+  import MembershipCard from '@/components/app@service/_components/service-membership-card.vue';
   import MembershipCardData from '@/assets/mocks/service-membership-cards.json';
   
   export default defineComponent({

@@ -1,0 +1,45 @@
+<template>
+    <span class="">
+        <div class="w-[270px] h-auto border-[#E9E9E9] border rounded overflow-hidden rounded-2xl relative">
+            <div class="flex justify-center items-center">
+                <img class="w-5/6" src="@/assets/img/PartImage.png" alt="Part Image">
+            </div>
+            <div class="px-5 py-4">
+                <div>
+                    <h5 class="text-xs partsText font-bold text-yellow">{{item.store}}</h5>
+                    <h3 class="text-base mt-1">{{item.title}}</h3>
+                </div>
+                <div class="mt-1">
+                    <div class="w-full flex">
+                        <h4 class="text-lg font-bold text-left">Od {{item.price}}</h4>
+                    </div>
+                    <div class="mt-3.5 mb-2">
+                        <button class="border border-purple flex inline-flex w-full justify-center items-center rounded-lg py-3 hover:bg-[#405FF2] hover:text-white text-purple">
+                            <svg class="hover:color-[#FFF]" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0858 11.1506H13.5299C13.1473 11.1506 12.8384 10.8408 12.8384 10.4591C12.8384 10.0774 13.1473 9.76758 13.5299 9.76758H16.0858C16.4675 9.76758 16.7773 10.0774 16.7773 10.4591C16.7773 10.8408 16.4675 11.1506 16.0858 11.1506Z" fill="#405FF2"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.10108 19.4465C6.99689 19.4465 6.91206 19.5313 6.91206 19.6355C6.91206 19.8448 7.29102 19.8448 7.29102 19.6355C7.29102 19.5313 7.20527 19.4465 7.10108 19.4465ZM7.10108 20.8295C6.44274 20.8295 5.90796 20.2938 5.90796 19.6355C5.90796 18.9772 6.44274 18.4424 7.10108 18.4424C7.75942 18.4424 8.29512 18.9772 8.29512 19.6355C8.29512 20.2938 7.75942 20.8295 7.10108 20.8295Z" fill="#405FF2"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.502 19.4465C17.3987 19.4465 17.3139 19.5313 17.3139 19.6355C17.3148 19.8467 17.6928 19.8448 17.6919 19.6355C17.6919 19.5313 17.6061 19.4465 17.502 19.4465ZM17.502 20.8295C16.8436 20.8295 16.3088 20.2938 16.3088 19.6355C16.3088 18.9772 16.8436 18.4424 17.502 18.4424C18.1612 18.4424 18.6969 18.9772 18.6969 19.6355C18.6969 20.2938 18.1612 20.8295 17.502 20.8295Z" fill="#405FF2"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.97983 7.74262L6.53582 14.3555C6.57639 14.8644 6.99223 15.2462 7.50027 15.2462H17.5662C18.0466 15.2462 18.4569 14.8884 18.5251 14.4136L19.4011 8.36592C19.4214 8.22208 19.3854 8.07824 19.2978 7.96206C19.2111 7.84496 19.0839 7.76936 18.94 7.74907C18.7473 7.75645 10.7505 7.74538 5.97983 7.74262ZM7.49843 16.6292C6.2841 16.6292 5.25602 15.6814 5.15736 14.4689L4.31277 4.42419L2.92326 4.18446C2.54614 4.11807 2.29443 3.76124 2.35897 3.38413C2.42536 3.00701 2.78956 2.76175 3.15838 2.82076L5.07622 3.15269C5.38511 3.20709 5.62023 3.46342 5.64697 3.77692L5.86365 6.35955C19.0267 6.36509 19.0691 6.37154 19.1328 6.37892C19.6463 6.4536 20.0981 6.72192 20.4061 7.13499C20.7141 7.54714 20.8431 8.05519 20.7694 8.56416L19.8944 14.6109C19.7293 15.7616 18.7298 16.6292 17.568 16.6292H7.49843Z" fill="#405FF2"/>
+                            </svg>
+                            <span class="text-base font-medium pl-2">Prejsť na eshop</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+</template>
+
+<script>
+
+export default {
+    name: "PartCard",
+    props: {
+        item: {
+            type: Object,
+            required: true
+        }
+    }
+};
+
+</script>

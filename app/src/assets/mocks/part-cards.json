@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "store": "AUTOKELLY",
+        "title": "Sada predných kotúčov",
+        "price": "$120",
+        "tag": "Podvozok"
+    },
+    {
+        "id": 2,
+        "store": "AUTOKELLY",
+        "title": "Michelin Defender LTX M/S",
+        "price": "$150",
+        "tag": "Podvozok"
+    },
+    {
+        "id": 3,
+        "store": "AUTOKELLY",
+        "title": "Car Rear View Mirrors 5K",
+        "price": "$185",
+        "tag": "Exteriér"
+    },
+    {
+        "id": 4,
+        "store": "AUTOKELLY",
+        "title": "MOMO Racing Volant",
+        "price": "$60",
+        "tag": "Doplnky"
+    },
+    {
+        "id": 5,
+        "store": "AUTOKELLY",
+        "title": "Carbon Fiber PVC Car Rear",
+        "price": "$220",
+        "tag": "Body Kit"
+    },
+    {
+        "id": 6,
+        "store": "AUTOKELLY",
+        "title": "Sports Safety Bike Helmet",
+        "price": "$95",
+        "tag": "Doplnky"
+    },
+    {
+        "id": 7,
+        "store": "AUTOKELLY",
+        "title": "Alternátor pre BMW e46",
+        "price": "$118",
+        "tag": "Motor"
+    },
+    {
+        "id": 7,
+        "store": "AUTOKELLY",
+        "title": "Angel Eyes Xenonové svetlá pre BMW E90",
+        "price": "$199",
+        "tag": "Body Kit"
+    },
+    {
+        "id": 8,
+        "store": "AUTOKELLY",
+        "title": "Kit Brembo DT BMW",
+        "price": "$359",
+        "tag": "Podvozok"
+    }
+]
