@@ -5,7 +5,7 @@
             <nav class="inline-flex space-x-7 desktopmenu">
                 <a href="/" class="font-medium">Domov</a>
                 <a href="/servis" class="font-medium">Virtuálny Servis</a>
-                <a class="font-medium">Q&A</a>
+                <a href="/q&a" class="font-medium">Q&A</a>
                 <a class="font-medium">O Nás</a>
             </nav>
             <div class="login-button desktopmenu">

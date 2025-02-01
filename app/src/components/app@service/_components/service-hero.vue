@@ -1,7 +1,7 @@
 <template>
     <div class="w-full align-middle">
         <Header/>
-        <section class="flex flex-row md:flex-row items-center justify-center site-layout sm:w-full mt-[5.8rem] mb-[6rem] text-center md:text-left">
+        <section class="flex flex-col md:flex-row items-center justify-center site-layout sm:w-full mt-[5.8rem] mb-[6rem] text-center md:text-left">
         <div class="flex-col">
             <h1 class="subtitle-40 font-bold w-full md:w-[80%]">Ponúkame Online Diagnostiku Vášho Auta!</h1>
             <p class="w-full md:w-[80%] mt-7">Pomocou AI Vám prinášame online diagnostiku

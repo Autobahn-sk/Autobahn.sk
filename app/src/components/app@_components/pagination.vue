@@ -21,7 +21,7 @@
             <button 
                 v-for="page in visiblePages" 
                 :key="page"
-                :class="{'active': currentPage === page, 'text-blue-500': currentPage !== page}"
+                :class="{'active': currentPage === page, 'text-black': currentPage !== page}"
                 @click="changePage(page)"
                 class="cursor-pointer py-2 px-3 rounded-full"
             >
