@@ -35,6 +35,10 @@ export default {
                 {
                     question: 'Aké nástroje máte k dispozícii, aby ste mi pomohli nájsť to správne auto pre mňa?',
                     answer: 'The company is open Monday through Friday from 9am to 5pm.'
+                },
+                {
+                    question: 'Aké nástroje máte k dispozícii, aby ste mi pomohli nájsť to správne auto pre mňa?',
+                    answer: 'The company is open Monday through Friday from 9am to 5pm.'
                 }
             ]
         };
