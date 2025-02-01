@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    user:
+        label: User
+        type: recordfinder
+        title: Find user
+        nameFrom: username
+        descriptionFrom: email
+        list: ~/plugins/rainlab/user/models/user/columns.yaml
+        recordsPerPage: 10
+        span: full
+    reportable_type:
+        label: Reportable type
+        span: auto
+        type: dropdown
+    reportable_id:
+        label: Reportable ID
+        span: auto
+        type: number

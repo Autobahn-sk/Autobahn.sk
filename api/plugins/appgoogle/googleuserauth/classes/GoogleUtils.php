@@ -48,7 +48,7 @@ class GoogleUtils
     private static function _getGoogleProfile()
     {
         $client = new Google_Client([
-            'client_id' => self::getClientId(input('platform', 'web'))
+            'client_id' => env('GOOGLE_CLIENT_ID')
         ]);
 
         $payload = $client->verifyIdToken(input('code'));
@@ -61,15 +61,5 @@ class GoogleUtils
             'email'       => $payload['email'],
             'picture'     => $payload['picture'] ?? null
         ];
-    }
-
-    private static function getClientId($platform)
-    {
-        switch ($platform) {
-            case 'ios':
-                return env('GOOGLE_CLIENT_ID_IOS');
-            default:
-                return env('GOOGLE_CLIENT_ID');
-        }
     }
 }

@@ -32,14 +32,14 @@ class VerifyEmailResendApiController extends UserApiController
         $email = $user->email;
         Cache::store('file')->put('email_'.$user->id, $email, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
 
-        $email_verification_code = rand(10000, 99999);
-        Cache::store('file')->put('email_verification_'.$user->id, $email_verification_code, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
+        $emailVerificationCode = rand(10000, 99999);
+        Cache::store('file')->put('email_verification_'.$user->id, $emailVerificationCode, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
         $user->email = $user->getOriginal('email');
 
-        $isSent = Event::fire('appuser.userapi.sendEmailVerificationCode', [$user, $email, $email_verification_code], true);
+        $isSent = Event::fire('appuser.userapi.sendEmailVerificationCode', [$user, $email, $emailVerificationCode], true);
 
         if ($isSent === false) {
-            Mail::send('appuser.userapi::mail.user_send_email_verification_code', ['code' => $email_verification_code], function ($message) use ($email) {
+            Mail::send('appuser.userapi::mail.user_send_email_verification_code', ['code' => $emailVerificationCode], function ($message) use ($email) {
                 $message->to($email);
             });
         }
@@ -47,9 +47,9 @@ class VerifyEmailResendApiController extends UserApiController
         return $afterProcess = UserApiHook::hook(
             'afterProcess',
             [$this],
-            function () use ($email_verification_code) {
+            function () use ($emailVerificationCode) {
                 return ApiResource::success(
-                    data: config('app.debug') ? ['email_verification_code' => $email_verification_code] : null
+                    data: config('app.debug') ? ['email_verification_code' => $emailVerificationCode] : null
                 );
             }
         );

@@ -1,0 +1,13 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+answers:
+    label: Comments
+    manage:
+        form: $/appchat/comment/models/comment/fields.yaml
+        list: $/appchat/comment/models/comment/columns.yaml
+    view:
+        list: $/appchat/comment/models/comment/columns.yaml
+        toolbarButtons: create|delete
+        recordUrl: appchat/comment/comments/update/:id

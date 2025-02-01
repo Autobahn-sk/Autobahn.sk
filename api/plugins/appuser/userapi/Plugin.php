@@ -72,7 +72,7 @@ class Plugin extends PluginBase
 	public function registerMailTemplates()
 	{
 		return [
-			'appuser.userapi::mail.user_send_email_verification_code',
+			'appuser.userapi::mail.user_send_email_verification_code'
 		];
 	}
 }

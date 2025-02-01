@@ -8,7 +8,7 @@ class GoogleAuth
     public static function hookUserApiBeforeLogin()
     {
         Event::listen('appuser.userapi.beforeLogin', function () {
-            if (post('social') != 'google') {
+            if (input('social') != 'google') {
                 return;
             }
 

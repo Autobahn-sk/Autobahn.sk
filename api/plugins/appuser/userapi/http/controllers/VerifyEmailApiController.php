@@ -33,7 +33,7 @@ class VerifyEmailApiController extends UserApiController
                 throw new BadRequestException('Code is required');
             }
             $user = User::where('email', $params['email'])->firstOrFail();
-            $user_id = $user->id;
+            $userId = $user->id;
             $user = Auth::loginUsingId($user->id);
             $token = JWTAuth::fromUser($user);
 
@@ -46,28 +46,29 @@ class VerifyEmailApiController extends UserApiController
                 throw new BadRequestException('Code is required');
             }
             $user = Auth::loginUsingId($user->id);
-            $user_id = $user->id;
+			$userId = $user->id;
             $token = JWTAuth::fromUser($user);
             // add token to headers
             request()->headers->set('Authorization', 'Bearer '.$token);
         }
 
-        $email_verification_code = Cache::store('file')->get('email_verification_'.$user_id);
+        $emailVerificationCode = Cache::store('file')->get('email_verification_'.$userId);
 
-        if ($email_verification_code != $params['code']) {
+        if ($emailVerificationCode != $params['code']) {
             throw new BadRequestException('Invalid code');
         }
 
-        $verified_email = Cache::store('file')->get('email_'.$user_id);
-        if (!$verified_email) {
+        $verifiedEmail = Cache::store('file')->get('email_'.$userId);
+        if (!$verifiedEmail) {
             throw new BadRequestException('Invalid email');
         }
-        $user->email = $verified_email;
-        $user->username = $verified_email;
-        $user->is_email_verified = 1;
+
+        $user->email = $verifiedEmail;
+        $user->is_email_verified = true;
         $user->save();
-        Cache::store('file')->forget('email_verification_'.$user_id);
-        Cache::store('file')->forget('email_'.$user_id);
+
+        Cache::store('file')->forget('email_verification_'.$userId);
+        Cache::store('file')->forget('email_'.$userId);
 
         return $afterProcess = UserApiHook::hook('afterProcess', [$this, $response], function () {
             return ApiResource::success();

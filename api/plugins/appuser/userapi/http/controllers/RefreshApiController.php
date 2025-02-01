@@ -21,7 +21,14 @@ class RefreshApiController extends UserApiController
 
         $user = JWTAuth::setToken($newToken)->authenticate();
 
-        Event::fire('appuser.userapi.beforeReturnUser', [$user]);
+		$user->touchLastSeen();
+
+		$ipAddress = request()->ip();
+		if ($ipAddress) {
+			$user->touchIpAddress($ipAddress);
+		}
+
+		Event::fire('appuser.userapi.beforeReturnUser', [$user]);
 
         $userResourceClass = config('appuser.userapi::resources.user');
         $response = [

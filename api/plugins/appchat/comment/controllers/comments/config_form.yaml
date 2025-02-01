@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Comment
+
+# Model Form Field configuration
+form: $/appchat/comment/models/comment/fields.yaml
+
+# Model Class name
+modelClass: AppChat\Comment\Models\Comment
+
+# Default redirect location
+defaultRedirect: appchat/comment/comments
+
+# Create page
+create:
+    title: Create Comment
+    redirect: appchat/comment/comments/update/:id
+    redirectClose: appchat/comment/comments
+
+# Update page
+update:
+    title: Edit Comment
+    redirect: appchat/comment/comments
+    redirectClose: appchat/comment/comments
+
+# Preview page
+preview:
+    title: Preview Comment

@@ -44,6 +44,7 @@ class Plugin extends PluginBase
     public function boot()
     {
 		UserExtendIsSeller::addIsSellerToColumns();
+		UserExtendIsSeller::addIsSellerToFieldsFilterScopes();
 		UserExtendIsSeller::addIsSellerToFields();
 		UserExtendIsSeller::addIsSellerToResource();
 		UserExtendIsSeller::addIsSellerAsFillable();

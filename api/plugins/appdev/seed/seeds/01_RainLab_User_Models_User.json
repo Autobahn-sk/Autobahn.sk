@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Seller",
+        "email": "testing+seler@autobahn.sk",
+        "username": "seller",
+        "password": "12345678",
+        "password_confirmation": "12345678",
+        "phone_number": "+421900000000",
+        "is_email_verified": true,
+        "is_phone_number_verified": true,
+        "is_published": true,
+        "gdpr_consent": true,
+        "newsletter_subscriber": true,
+        "is_seller": true,
+        "is_activated": true,
+        "activated_at": "2025-01-25 00:00:00",
+        "is_guest": false
+    },
+    {
+        "id": 2,
+        "name": "User",
+        "email": "testing+user@autobahn.sk",
+        "username": "user",
+        "password": "12345678",
+        "password_confirmation": "12345678",
+        "phone_number": "+421911111111",
+        "is_email_verified": true,
+        "is_phone_number_verified": true,
+        "is_published": true,
+        "gdpr_consent": true,
+        "newsletter_subscriber": true,
+        "is_seller": false,
+        "is_activated": true,
+        "activated_at": "2025-01-25 00:00:00",
+        "is_guest": false
+    }
+]

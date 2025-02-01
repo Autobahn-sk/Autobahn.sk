@@ -41,19 +41,19 @@ class InfoUpdateApiController extends UserApiController
                 );
             }
 
-            $new_email = $data['email'];
-            $email_verification_code = rand(10000, 99999);
+            $newEmail = $data['email'];
+            $emailVerificationCode = rand(10000, 99999);
 
-            $isSent = Event::fire('appuser.userapi.sendEmailVerificationCode', [&$user, $new_email, $email_verification_code]);
+            $isSent = Event::fire('appuser.userapi.sendEmailVerificationCode', [&$user, $newEmail, $emailVerificationCode]);
 
             if (!$isSent) {
-                Cache::store('file')->put('email_'.$user->id, $new_email, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
+                Cache::store('file')->put('email_'.$user->id, $newEmail, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
 
-                Cache::store('file')->put('email_verification_'.$user->id, $email_verification_code, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
+                Cache::store('file')->put('email_verification_'.$user->id, $emailVerificationCode, now()->addMinutes(config('appuser.userapi::email_verification_code_expiration_time')));
                 $user->email = $user->getOriginal('email');
 
-                Mail::send('appuser.userapi::mail.user_send_email_verification_code', ['code' => $email_verification_code], function ($message) use ($new_email) {
-                    $message->to($new_email)->subject('Overenie emailu');
+                Mail::send('appuser.userapi::mail.user_send_email_verification_code', ['code' => $emailVerificationCode], function ($message) use ($newEmail) {
+                    $message->to($newEmail)->subject('Overenie emailu');
                 });
             }
         }

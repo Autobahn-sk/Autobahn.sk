@@ -28,6 +28,23 @@ class UserExtendIsSeller
 		});
 	}
 
+	public static function addIsSellerToFieldsFilterScopes()
+	{
+		Users::extendListFilterScopes(function($filter) {
+			$filter->addScopes([
+				'is_seller' => [
+					'label'      => 'Is Seller',
+					'type'       => 'switch',
+					'default'    => 0,
+					'conditions' => [
+						'is_seller = false',
+						'is_seller = true'
+					]
+				]
+			]);
+		});
+	}
+
 	public static function addIsSellerToFields()
 	{
 		Users::extendFormFields(function(Form $form, $model) {

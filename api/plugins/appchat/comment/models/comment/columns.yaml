@@ -1,0 +1,30 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    commentable_type:
+        label: Commentable type
+        searchable: true
+    commentable_id:
+        label: Commentable ID
+        searchable: true
+        type: number
+    creatable_type:
+        label: Creatable type
+        searchable: true
+    creatable_id:
+        label: Creatable ID
+        searchable: true
+        type: number
+    created_at:
+        label: Created at
+        searchable: true
+        type: datetime
+    updated_at:
+        label: Updated at
+        searchable: true
+        type: datetime

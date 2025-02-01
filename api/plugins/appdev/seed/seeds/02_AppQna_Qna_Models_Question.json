@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "question": "Ponúkate možnosti financovania pri kúpe vozidla?",
+    "answer": "Áno, ponúkame rôzne možnosti financovania prostredníctvom našich dôveryhodných partnerov 💰. Náš tím vám pomôže nájsť plán, ktorý vyhovuje vášmu rozpočtu. O financovanie môžete požiadať online alebo navštíviť našu predajňu pre osobnú asistenciu.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "question": "Môžem vymeniť svoje aktuálne vozidlo?",
+    "answer": "Áno, prijímame vozidlá na protiúčet 🚗. Náš tím posúdi stav vášho vozidla, počet najazdených kilometrov a trhovú hodnotu, aby vám poskytol férovú ponuku. Proces môžete začať pomocou nášho online nástroja na ohodnotenie alebo návštevou našej predajne.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 2
+  },
+  {
+    "id": 3,
+    "question": "Poskytujete históriu vozidla?",
+    "answer": "Áno, ku každému vozidlu v našom inventári poskytujeme podrobnú správu o histórii vozidla 📜. Tieto správy obsahujú informácie o predchádzajúcich majiteľoch, histórii nehôd, servisných záznamoch a ďalších dôležitých údajoch.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 3
+  },
+  {
+    "id": 4,
+    "question": "Môžem si naplánovať skúšobnú jazdu pred kúpou?",
+    "answer": "Samozrejme! Odporúčame zákazníkom naplánovať si skúšobnú jazdu 🚘, aby sa uistili, že vozidlo spĺňa ich očakávania. Testovaciu jazdu si môžete rezervovať cez našu webovú stránku alebo kontaktovaním našej predajne.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 4
+  },
+  {
+    "id": 5,
+    "question": "Majú vaše vozidlá záruku?",
+    "answer": "Áno, mnohé z našich vozidiel sú dodávané s obmedzenou zárukou 🔧. Ponúkame aj možnosti rozšírenej záruky pre dodatočné krytie. Pre viac informácií sa obráťte na náš predajný tím.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 5
+  },
+  {
+    "id": 6,
+    "question": "Ponúkate doručenie vozidla až domov?",
+    "answer": "Áno, ponúkame doručenie vozidla priamo k vám domov 🏠🚗 pre vaše pohodlie. Možnosti doručenia a ceny sa líšia v závislosti od vašej polohy. Kontaktujte náš predajný tím pre viac informácií.",
+    "category": "GENERAL",
+    "is_published": true,
+    "sort_order": 6
+  },
+  {
+    "id": 7,
+    "question": "Ponúkate bezplatnú skúšobnú verziu?",
+    "answer": "Áno, ponúkame 30-dňovú bezplatnú skúšobnú verziu 🎉, ktorá vám umožní plne preskúmať našu platformu. Okrem toho poskytujeme aj bezplatné 30-minútové úvodné školenie na rýchle oboznámenie sa s funkciami.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 7
+  },
+  {
+    "id": 8,
+    "question": "Je možné neskôr zmeniť môj predplatný plán?",
+    "answer": "Áno, svoj predplatný plán môžete kedykoľvek zmeniť 🔄. Zmeny sa prejavia podľa vášho fakturačného cyklu a akékoľvek poplatky alebo kredity budú upravené podľa potreby.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 8
+  },
+  {
+    "id": 9,
+    "question": "Aké sú podmienky zrušenia služby?",
+    "answer": "Svoje predplatné môžete kedykoľvek zrušiť v nastaveniach účtu ❌. Vaša služba zostane aktívna do konca aktuálneho fakturačného obdobia a nebudú vám účtované ďalšie poplatky. Vrátenie peňazí za nevyužité obdobia neposkytujeme, pokiaľ nie je uvedené inak v našich podmienkach vrátenia peňazí.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 9
+  },
+  {
+    "id": 10,
+    "question": "Môžem na faktúre uviesť dodatočné údaje?",
+    "answer": "Áno, na faktúru môžete pridať ďalšie údaje 🧾, ako napríklad názov spoločnosti, IČ DPH alebo fakturačnú adresu. Tieto údaje môžete upraviť v nastaveniach účtu pred ďalším fakturačným cyklom.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 10
+  },
+  {
+    "id": 11,
+    "question": "Ako prebieha fakturácia?",
+    "answer": "Fakturácia prebieha opakovane podľa vášho zvoleného predplatného plánu 💳. Platby sú automaticky spracované pomocou platobnej metódy uvedenej vo vašom účte. Faktúru za každé fakturačné obdobie si môžete stiahnuť vo svojom účte.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 11
+  },
+  {
+    "id": 12,
+    "question": "Ako môžem aktualizovať e-mailovú adresu na svojom účte?",
+    "answer": "Ak chcete aktualizovať svoju e-mailovú adresu ✉️, prejdite do nastavení účtu a otvorte sekciu profilových alebo kontaktných informácií. Postupujte podľa pokynov na zadanie novej e-mailovej adresy a jej overenie. Ak potrebujete pomoc, kontaktujte náš tím podpory.",
+    "category": "PAYMENT",
+    "is_published": true,
+    "sort_order": 12
+  }
+]

@@ -36,6 +36,8 @@ class LoginApiController extends UserApiController
             throw new ForbiddenException('rainlab.user::lang.account.banned');
         }
 
+		$user->touchLastSeen();
+
         $ipAddress = request()->ip();
         if ($ipAddress) {
             $user->touchIpAddress($ipAddress);

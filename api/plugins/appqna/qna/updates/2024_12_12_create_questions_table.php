@@ -1,7 +1,6 @@
 <?php namespace AppQna\Qna\Updates;
 
 use Schema;
-use AppQna\Qna\Models\Question;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
@@ -24,18 +23,6 @@ return new class extends Migration
             $table->timestamps();
 			$table->softDeletes();
 		});
-
-        $faqs = json_decode(file_get_contents(__DIR__.'/../seeds/faqs.json'), true);
-
-        foreach ($faqs as $faq) {
-            $question = new Question();
-            $question->question = $faq['question'];
-            $question->answer = $faq['answer'];
-			$question->category = $faq['category'];
-			$question->is_published = $faq['is_published'];
-            $question->sort_order = $faq['sort_order'];
-            $question->save();
-        }
     }
 
     public function down()

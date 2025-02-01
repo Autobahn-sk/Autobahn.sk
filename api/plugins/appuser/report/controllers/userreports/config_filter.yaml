@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    reportable_type:
+        label: Reportable type
+        type: group
+        conditions: reportable_type in (:filtered)
+        modelClass: AppUser\Report\Models\UserReport
+        options: getReportableTypeOptions
