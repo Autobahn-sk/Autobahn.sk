@@ -10,18 +10,20 @@ class UsersControllerExtend
 {
 	public static function extend()
 	{
-		UsersControllerExtend::updateListColumns_addAdsCount();
-		UsersControllerExtend::updateListColumns_addLastLogin();
-		UsersControllerExtend::updateListColumns_removeSurname();
-		UsersControllerExtend::updateListColumns_addIsPublished();
-		UsersControllerExtend::updateListFilterScopes_addIsPublished();
-		UsersControllerExtend::updateFormFields_addUsername();
-		UsersControllerExtend::updateFormFields_removeSurname();
-		UsersControllerExtend::updateFormFields_makeNameFullSpan();
-		UsersControllerExtend::updateFormFields_addSuperUser();
-		UsersControllerExtend::updateFormFields_addIsPublished();
-		UsersControllerExtend::updateFormFields_addGDPRConsent();
-		UsersControllerExtend::updateFormFields_addNewsletterSubscriber();
+		self::updateListColumns_addLastLogin();
+		self::updateListColumns_addAdsCount();
+		self::updateListColumns_removeSurname();
+		self::updateListColumns_addIsPublished();
+		self::updateListFilterScopes_addIsPublished();
+		self::updateFormFields_addUsername();
+		self::updateFormFields_removeSurname();
+		self::updateFormFields_makeNameFullSpan();
+		self::updateFormFields_addSuperUser();
+		self::updateFormFields_addIsPublished();
+		self::updateFormFields_addGDPRConsent();
+		self::updateFormFieldsAddIsEmailVerified();
+		self::updateFormFields_addNewsletterSubscriber();
+		self::updateFormFields_addPhoneNumber();
 	}
 
 	public static function updateListColumns_addLastLogin()
@@ -241,6 +243,28 @@ class UsersControllerExtend
 		});
 	}
 
+	public static function updateFormFieldsAddIsEmailVerified()
+	{
+		Users::extendFormFields(function(Form $form, $model) {
+			if (!$model instanceof User) {
+				return;
+			}
+			if ($form->alias !== 'form') {
+				return;
+			}
+
+			$form->addFields([
+				'is_email_verified' => [
+					'label' => 'Is email verified',
+					'type'  => 'switch',
+					'span'  => 'right',
+					'on'    => 'Yes',
+					'off'   => 'No'
+				]
+			]);
+		});
+	}
+
 	public static function updateFormFields_addNewsletterSubscriber()
 	{
 		Users::extendFormFields(function(Form $form, $model) {
@@ -255,9 +279,29 @@ class UsersControllerExtend
 				'newsletter_subscriber' => [
 					'label' => 'Newsletter subscriber',
 					'type'  => 'switch',
-					'span'  => 'right',
+					'span'  => 'left',
 					'on'    => 'Yes',
 					'off'   => 'No'
+				]
+			]);
+		});
+	}
+
+	public static function updateFormFields_addPhoneNumber()
+	{
+		Users::extendFormFields(function(Form $form, $model) {
+			if (!$model instanceof User) {
+				return;
+			}
+			if ($form->alias !== 'form') {
+				return;
+			}
+
+			$form->addTabFields([
+				'phone_number' => [
+					'label' => 'Phone number',
+					'span'  => 'full',
+					'tab'   => 'rainlab.user::lang.user.account'
 				]
 			]);
 		});

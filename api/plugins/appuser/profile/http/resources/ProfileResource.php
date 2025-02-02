@@ -1,6 +1,7 @@
 <?php namespace AppUser\Profile\Http\Resources;
 
 use October\Rain\Support\Facades\Event;
+use AppAd\Ad\Classes\Enums\AdStatusEnum;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProfileResource extends JsonResource
@@ -15,13 +16,9 @@ class ProfileResource extends JsonResource
             'username'    => $this->username,
             'name'        => $this->name,
 			'surname'     => $this->surname,
-            'avatar'      => [
-                'path'         => $this->avatar->getThumb(self::$avatarWidth, self::$avatarHeight, ['mode' => 'crop']),
-                'file_name'     => $this->avatar->file_name,
-                'content_type' => $this->avatar->content_type
-            ],
-            'posts'       => PostResource::collection(
-                $this->posts()->where('is_published', true)->get()
+            'avatar'      => $this->avatar,
+            'ads'         => AdResource::collection(
+                $this->ads()->where('status', AdStatusEnum::PUBLISHED->value)->get()
             )
         ];
 

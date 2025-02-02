@@ -3,6 +3,7 @@
 use AppAd\Ad\Models\Ad;
 use Rainlab\User\Models\User;
 use RainLab\User\Facades\Auth;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use AppUser\UserApi\Facades\JWTAuth;
 use AppUser\UserFlag\Models\UserFlag;
@@ -11,21 +12,24 @@ use AppCommerce\Newsletter\Classes\Services\NewsletterService;
 
 class UserModelExtend
 {
+	const INTERNATIONAL_PHONE_NUMBER = '/^\+[1-9][0-9]{7,14}$/';
+
 	public static function extend()
 	{
-		UserModelExtend::extendUser_addAdRelationToUser();
-		UserModelExtend::extendUser_addCasts();
-		UserModelExtend::extendUser_addFillable();
-		UserModelExtend::beforeCreate_setDefaultAvatar();
-		UserModelExtend::beforeUpdate_subscribeOrUnsubscribeNewsletter();
-		UserModelExtend::extendUserResource();
-		UserModelExtend::addBookmarksRelationToUser();
-		UserModelExtend::addVisitsRelationToUser();
-		UserModelExtend::addIsPublishedScope();
-		UserModelExtend::deleteUserFlags_onUserDelete();
-		UserModelExtend::bindEvent_creatVisitFlagWhenSpecificUserIsRequested();
-		UserModelExtend::beforeLogin_enableUsernameLogin();
-		UserModelExtend::register_subscribeToNewsletter();
+		self::extendUser_addAdRelationToUser();
+		self::extendUser_addCasts();
+		self::extendUser_addFillable();
+		self::extendUser_addRules();
+		self::beforeCreate_setDefaultAvatar();
+		self::beforeUpdate_subscribeOrUnsubscribeNewsletter();
+		self::extendUserResource();
+		self::addBookmarksRelationToUser();
+		self::addVisitsRelationToUser();
+		self::addIsPublishedScope();
+		self::deleteUserFlags_onUserDelete();
+		self::bindEvent_creatVisitFlagWhenSpecificUserIsRequested();
+		self::beforeLogin_enableUsernameLogin();
+		self::register_subscribeToNewsletter();
 	}
 
 	public static function extendUser_addCasts(): void
@@ -42,7 +46,6 @@ class UserModelExtend
 				'last_ip_address' => 'string',
 				'phone_number' => 'string',
 				'is_email_verified' => 'boolean',
-				'is_phone_number_verified' => 'boolean',
 				'is_published' => 'boolean',
 				'gdpr_consent' => 'boolean',
 				'newsletter_subscriber' => 'boolean'
@@ -61,7 +64,6 @@ class UserModelExtend
 				'last_ip_address',
 				'phone_number',
 				'is_email_verified',
-				'is_phone_number_verified',
 				'is_published',
 				'gdpr_consent',
 				'newsletter_subscriber'
@@ -72,15 +74,24 @@ class UserModelExtend
 	public static function extendUser_addRules(): void
 	{
 		User::extend(function(User $user) {
-			$user->rules['gdpr_consent'] = [
-				'accepted',
-				'required',
-				'boolean'
-			];
+			$user->bindEvent('model.beforeValidate', function () use ($user) {
+				$user->rules['phone_number'] = [
+					'required',
+					'string',
+					'regex:'.self::INTERNATIONAL_PHONE_NUMBER,
+					Rule::unique('users', 'phone_number')->ignore($user->id),
+				];
 
-			$user->rules['newsletter_subscriber'] = [
-				'boolean'
-			];
+				$user->rules['gdpr_consent'] = [
+					'accepted',
+					'required',
+					'boolean'
+				];
+
+				$user->rules['newsletter_subscriber'] = [
+					'boolean'
+				];
+			});
 		});
 	}
 
@@ -157,10 +168,9 @@ class UserModelExtend
     public static function extendUserResource()
     {
         Event::listen('appuser.userapi.user.beforeReturnResource', function (&$data, User $user) {
-			$data['is_email_verified'] = $user->is_email_verified;
-			$data['is_phone_number_verified'] = $user->is_phone_number_verified;
-			$data['bookmarks'] = AdResource::collection($user->bookmarks->pluck('flaggable'));
-            $data['ads'] = AdResource::collection($user->ads()->where('is_published', true)->orderByDesc('created_at')->get());
+			$data['is_email_verified'] = (bool) $user->is_email_verified;
+//			$data['bookmarks'] = AdResource::collection($user->bookmarks->pluck('flaggable'));
+//			$data['ads'] = AdResource::collection($user->ads);
         });
     }
 

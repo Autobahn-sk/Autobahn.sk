@@ -1,6 +1,6 @@
 <?php namespace AppUtil\Importer\Classes\Parsers;
 
-use Exception;
+use AppApi\ApiException\Exceptions\BadRequestException;
 
 class HeaderParser
 {
@@ -33,7 +33,7 @@ class HeaderParser
             
             // Check if model is allowed
             if (!array_key_exists($modelAlias, $aliases)) {
-                throw new Exception('Changing ' . $modelAlias . ' is not allowed');
+                throw new BadRequestException('Changing ' . $modelAlias . ' is not allowed');
             }
             
             // attribute and meta data from header item
@@ -73,7 +73,7 @@ class HeaderParser
         // more than 2x dot nesting is not allowed
         $thirdDotElement = last(explode($modelAttr, $headerItem));
         if ($thirdDotElement !== "") {
-            throw new Exception('3rd dot element: ' . $thirdDotElement . ' is not allowed');
+            throw new BadRequestException('3rd dot element: ' . $thirdDotElement . ' is not allowed');
         }
         
         return [$modelAlias, $modelAttr];

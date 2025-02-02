@@ -3,6 +3,7 @@
 use Exception;
 use Illuminate\Support\Arr;
 use October\Rain\Support\Facades\Yaml;
+use AppApi\ApiException\Exceptions\BadRequestException;
 
 /*
  * Prepare records
@@ -183,7 +184,7 @@ class RecordsParser
             try {
                 return Yaml::parse($value);
             } catch (Exception $exception) {
-                throw new Exception($exception->getMessage() . ' error occurred while yaml parsing' . $value);
+                throw new BadRequestException($exception->getMessage() . ' error occurred while yaml parsing' . $value);
             }
         }
         

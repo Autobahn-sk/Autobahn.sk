@@ -8,6 +8,17 @@ use October\Rain\Support\Facades\Event;
 
 class UserExtendIsSeller
 {
+	public static function extend()
+	{
+		self::addIsSellerToColumns();
+		self::addIsSellerToFieldsFilterScopes();
+		self::addIsSellerToFields();
+		self::addIsSellerToResource();
+		self::extendUser_addCasts();
+		self::extendUser_addFillable();
+		self::extendUser_addRules();
+	}
+	
 	public static function addIsSellerToColumns()
 	{
 		Users::extendListColumns(function(Lists $list, $model) {
@@ -70,22 +81,33 @@ class UserExtendIsSeller
 			$data['is_seller'] = $user->is_seller;
 		});
 	}
-
-	public static function addIsSellerAsFillable()
+	
+	public static function extendUser_addCasts(): void
 	{
-		User::extend(function (User $user){
+		User::extend(function(User $user) {
+			$user->addCasts([
+				'is_seller' => 'boolean'
+			]);
+		});
+	}
+
+	public static function extendUser_addFillable(): void
+	{
+		User::extend(function(User $user) {
 			$user->addFillable([
 				'is_seller'
 			]);
 		});
 	}
 
-	public static function addIsSellerRules()
+	public static function extendUser_addRules(): void
 	{
-		User::extend(function($user) {
-			$user->rules['is_seller'] = [
-				'boolean'
-			];
+		User::extend(function(User $user) {
+			$user->bindEvent('model.beforeValidate', function () use ($user) {
+				$user->rules['is_seller'] = [
+					'boolean'
+				];
+			});
 		});
 	}
 }

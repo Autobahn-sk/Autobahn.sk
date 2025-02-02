@@ -6,7 +6,6 @@ use AppUser\UserApi\Classes\UserApiHook;
 use Illuminate\Support\Facades\Validator;
 use AppApi\ApiResponse\Resources\ApiResource;
 use October\Rain\Exception\ValidationException;
-use AppApi\ApiException\Exceptions\NotFoundException;
 use AppApi\ApiException\Exceptions\BadRequestException;
 
 class ResetApiController extends UserApiController
@@ -37,24 +36,23 @@ class ResetApiController extends UserApiController
 
         $user = User::where('email', $params['email'])->first();
 
-        if (!$user) {
-            throw new NotFoundException('User not found');
-        }
-        // get reser code from cache
-        $resetCode = Cache::store('file')->get('reset_code_'.$user->id);
-        if (!$resetCode) {
-            throw new BadRequestException('Reset code not found');
-        }
+        if ($user) {
+			// get reser code from cache
+			$resetCode = Cache::store('file')->get('reset_code_'.$user->id);
+			if (!$resetCode) {
+				throw new BadRequestException('Reset code not found');
+			}
 
-        if ($resetCode != $params['code']) {
-            throw new BadRequestException('Invalid reset code');
+			if ($resetCode != $params['code']) {
+				throw new BadRequestException('Invalid reset code');
+			}
+
+			$user->password = $params['password'];
+			$user->password_confirmation = $params['password_confirmation'];
+			$user->save();
+
+			Cache::store('file')->forget('reset_code_'.$user->id);
         }
-
-        $user->password = $params['password'];
-        $user->password_confirmation = $params['password_confirmation'];
-        $user->save();
-
-        Cache::store('file')->forget('reset_code_'.$user->id);
 
         return $afterProcess = UserApiHook::hook('afterProcess', [$this, $response], function () {
             return ApiResource::success();

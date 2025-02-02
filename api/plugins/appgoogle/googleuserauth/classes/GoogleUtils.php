@@ -1,10 +1,10 @@
 <?php namespace AppGoogle\GoogleUserAuth\Classes;
 
-use Exception;
 use Google_Client;
 use System\Models\File;
 use AppUser\UserApi\Models\User;
 use Illuminate\Support\Facades\Event;
+use AppApi\ApiException\Exceptions\BadRequestException;
 
 class GoogleUtils
 {
@@ -53,7 +53,7 @@ class GoogleUtils
 
         $payload = $client->verifyIdToken(input('code'));
 
-        if (!$payload) throw new Exception("Couldn't login.");
+        if (!$payload) throw new BadRequestException("Couldn't login.");
 
         return [
             'given_name'  => $payload['given_name'],

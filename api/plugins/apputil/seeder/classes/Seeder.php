@@ -4,6 +4,7 @@ use Exception;
 use Illuminate\Support\Facades\Event;
 use October\Rain\Database\ModelException;
 use AppUtil\Seeder\Facades\SeederProviders;
+use AppApi\ApiException\Exceptions\BadRequestException;
 
 class Seeder
 {
@@ -63,7 +64,7 @@ class Seeder
             $provider = $seeder->getProvider();
 
             if (!$provider) {
-                throw new Exception('Format not supported');
+                throw new BadRequestException('Format not supported');
             }
 
             $data = $provider->getData($seeder->inputData);
@@ -96,12 +97,12 @@ class Seeder
                 $errors[] = sprintf('%s (%s)', $field, implode(', ', $error));
             }
 
-            throw new Exception(sprintf('Validation errors in %s model on fields: %s',
+            throw new BadRequestException(sprintf('Validation errors in %s model on fields: %s',
                 get_class($exception->getModel()),
                 implode(', ', $errors)
             ));
         } catch (Exception $exception) {
-            throw new Exception(sprintf('Model: %s Error: %s', class_basename($model), $exception->getMessage()));
+            throw new BadRequestException(sprintf('Model: %s Error: %s', class_basename($model), $exception->getMessage()));
         }
 
         return $processedModels;

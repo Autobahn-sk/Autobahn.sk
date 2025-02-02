@@ -1,6 +1,5 @@
 <?php namespace AppUser\UserFlag\Http\Controllers;
 
-use Exception;
 use Illuminate\Http\Request;
 use RainLab\User\Models\User;
 use Illuminate\Routing\Controller;
@@ -8,6 +7,7 @@ use AppUser\UserFlag\Models\UserFlag;
 use AppApi\ApiResponse\Resources\ApiResource;
 use AppUtil\Util\Classes\Utils\BooleanValueUtil;
 use AppUser\UserFlag\Http\Resources\UserFlagResource;
+use AppApi\ApiException\Exceptions\BadRequestException;
 
 class UserFlagController extends Controller
 {
@@ -106,7 +106,7 @@ class UserFlagController extends Controller
     protected function _getModelClassFromAlias($model)
     {
         if (!array_key_exists($model, config('appuser.userflag::aliases', []))) {
-            throw new Exception('Model not allowed');
+            throw new BadRequestException('Model not allowed');
         }
 
         return config('appuser.userflag::aliases.' . $model . '.model');

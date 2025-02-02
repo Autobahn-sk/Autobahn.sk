@@ -38,7 +38,7 @@ class VerifyEmailResendApiController extends UserApiController
 
         $isSent = Event::fire('appuser.userapi.sendEmailVerificationCode', [$user, $email, $emailVerificationCode], true);
 
-        if ($isSent === false) {
+        if (!$isSent) {
             Mail::send('appuser.userapi::mail.user_send_email_verification_code', ['code' => $emailVerificationCode], function ($message) use ($email) {
                 $message->to($email);
             });

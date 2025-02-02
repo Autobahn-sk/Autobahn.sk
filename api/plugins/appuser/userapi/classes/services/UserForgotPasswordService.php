@@ -1,5 +1,6 @@
 <?php namespace AppUser\UserApi\Classes\Services;
 
+use Cache;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Event;
 
@@ -14,7 +15,8 @@ class UserForgotPasswordService
 
     public function sendResetCode()
     {
-        $resetPasswordCode = $this->user->getResetPasswordCode();
+        $resetPasswordCode = Cache::store('file')->get('reset_code_'.$this->user->id);
+
         $isSent = Event::fire('appuser.userapi.sendResetPasswordCode', [$this->user, $resetPasswordCode], true);
 
         if (!$isSent) {
@@ -25,7 +27,7 @@ class UserForgotPasswordService
                     $this->user->email,
                     $resetPasswordCode,
                 ])),
-                'code' => $resetPasswordCode,
+                'code' => $resetPasswordCode
             ];
 
             Mail::send('rainlab.user::mail.restore', $data, function ($message) {
