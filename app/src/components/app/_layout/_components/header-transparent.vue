@@ -6,7 +6,7 @@
                 <a class="font-medium">Domov</a>
                 <a href="/servis" class="font-medium">Virtuálny Servis</a>
                 <a href="/qna" class="font-medium">Q&A</a>
-                <a class="font-medium">O Nás</a>
+                <a href="/about" class="font-medium">O Nás</a>
             </nav>
             <div class="login-button desktopmenu">
                 <a class="font-medium">Prihlásiť sa</a>
