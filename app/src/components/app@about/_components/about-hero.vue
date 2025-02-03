@@ -18,6 +18,22 @@
                     </p>
                 </div>
             </div>
+            <div class="container mx-auto mt-12 flex flex-wrap md:flex-nowrap gap-6">
+                <div class="flex flex-col gap-6 w-full md:w-auto">
+                    <img class="w-full h-auto rounded-3xl aspect-square object-cover md:w-[166px] md:h-[258.09px]" src="../_img/about-image1.png" alt="About Us Image 1">
+                    <img class="w-full h-auto rounded-3xl aspect-square object-cover md:w-[166px] md:h-[166.81px]" src="../_img/about-image2.png" alt="About Us Image 2">
+                </div>
+                <div class="flex justify-center w-full md:w-auto">
+                    <img class="w-full h-auto rounded-3xl aspect-square object-cover md:w-[475.76px] md:h-[453.1px]" src="../_img/about-image3.png" alt="About Us Image 3">
+                </div>
+                <div class="flex flex-col gap-6 w-full md:w-auto">
+                    <img class="w-full h-auto rounded-3xl aspect-square object-cover md:w-[475.76px] md:h-[251.72px]" src="../_img/about-image4.png" alt="About Us Image 4">
+                    <div class="flex gap-3">
+                        <img class="w-1/2 h-auto aspect-square rounded-3xl object-cover md:w-[176.21px] md:h-[176.21px]" src="../_img/about-image5.png" alt="About Us Image 5">
+                        <img class="w-1/2 h-auto aspect-square rounded-3xl object-cover md:w-[276.06px] md:h-[176.21px]" src="../_img/about-image6.png" alt="About Us Image 6">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

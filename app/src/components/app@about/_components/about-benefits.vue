@@ -1,12 +1,10 @@
 <template>
-    <div class="site-layout bg-[#F9FBFC] h-auto md:h-[23.9rem] rounded-xl">
-        <div class="pr-11 pt-12">
-            <h2 class="subtitle-32">Zákaznícke benefity</h2>
-        </div>
-        <div class="flex flex-row flex-wrap md:flex-nowrap gap-6 mt-14 pb-12 md:pb-0">
-            <div class="flex flex-col md:w-1/4">
-                <Benefit
-                    icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <div class="mt-[96px] container mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 large-site-lauyout">
+        <h1 class="col-span-full text-center md:text-left font-extrabold text-3xl mb-8">Prečo Si Vybrať Nás?</h1>
+
+        <div class="flex flex-col">
+            <Benefit
+                icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
                         <g clip-path='url(#clip0_53_3114)'>
                         <g clip-path='url(#clip1_53_3114)'>
                             <g clip-path='url(#clip2_53_3114)'>
@@ -41,17 +39,17 @@
                         </clipPath>
                         </defs>
                     </svg>"
-                    title="Špeciálne ponuky financovania"
-                    description="Špeciálne finančné ponuky, ktoré vám umožňujú dosiahnuť finančné ciele rýchlejšie a výhodnejšie."
-                    titleClass="text-base font-bold"
-                    descriptionClass="text-gray-500"
-                    widthClass = "w-full"
-                />
-            </div>
+                title="Špeciálne ponuky financovania"
+                description="Špeciálne finančné ponuky, ktoré vám umožňujú dosiahnuť finančné ciele rýchlejšie a výhodnejšie."
+                titleClass="text-base font-bold"
+                descriptionClass="text-gray-500 text-sm"
+                widthClass="w-full"
+            />
+        </div>
 
-            <div class="flex flex-col md:w-1/4">
-                <Benefit
-                    icon="<svg width='61' height='60' viewBox='0 0 61 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <div class="flex flex-col">
+            <Benefit
+                icon="<svg width='61' height='60' viewBox='0 0 61 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
                     <g clip-path='url(#clip0_53_3133)'>
                         <g clip-path='url(#clip1_53_3133)'>
                         <path d='M30.5 2.34375V7.03125' stroke='#FF5CF4' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
@@ -73,17 +71,17 @@
                         </clipPath>
                     </defs>
                     </svg>"
-                    title="Dôveryhodný predajca"
-                    description="Dôveryhodný predajca áut, ktorý prináša kvalitu a spoľahlivosť pri každom predaji."
-                    titleClass="text-base font-bold"
-                    descriptionClass="text-gray-500"
-                    widthClass = "w-full"
-                />
-            </div>
+                title="Dôveryhodný predajca"
+                description="Dôveryhodný predajca áut, ktorý prináša kvalitu a spoľahlivosť pri každom predaji."
+                titleClass="text-base font-bold"
+                descriptionClass="text-gray-500 text-sm"
+                widthClass="w-full md:w-5/6"
+            />
+        </div>
 
-            <div class="flex flex-col md:w-1/4">
-                <Benefit
-                    icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <div class="flex flex-col">
+            <Benefit
+                icon="<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'>
                     <g clip-path='url(#clip0_53_3146)'>
                         <g clip-path='url(#clip1_53_3146)'>
                         <g clip-path='url(#clip2_53_3146)'>
@@ -113,17 +111,17 @@
                         </clipPath>
                     </defs>
                     </svg>"
-                    title="Transparentná cenotvorba"
-                    description="Transparentná cenotvorba vám prináša jasný prehľad o všetkých nákladoch."
-                    titleClass="text-base font-bold"
-                    descriptionClass="text-gray-500"
-                    widthClass = "w-full"
-                />
-            </div>
+                title="Transparentná cenotvorba"
+                description="Transparentná cenotvorba vám prináša jasný prehľad o všetkých nákladoch."
+                titleClass="text-base font-bold"
+                descriptionClass="text-gray-500 text-sm"
+                widthClass="w-full md:w-5/6"
+            />
+        </div>
 
-            <div class="flex flex-col md:w-1/4">
-                <Benefit
-                    icon="<svg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <div class="flex flex-col">
+            <Benefit
+                icon="<svg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'>
                     <g clip-path='url(#clip0_53_3161)'>
                         <g clip-path='url(#clip1_53_3161)'>
                         <path d='M24.0465 4.95312C20.3452 4.95312 16.9904 7.13083 15.4836 10.5114L9.38656 24.1906C5.73148 24.4418 2.84375 27.4843 2.84375 31.2031V36.5938C2.84375 39.8298 5.46711 42.4531 8.70312 42.4531H10.3092C10.3179 42.0022 10.3293 41.5514 10.3438 41.1005C9.9623 40.323 9.74727 39.449 9.74727 38.5245L9.64062 34.3672C9.64062 31.2927 10.2662 30.1094 12.5483 29.6497C13.6331 29.4311 14.5413 28.692 14.9858 27.6786L22.5148 10.5114C24.0215 7.13083 27.3764 4.95312 31.0777 4.95312H24.0465Z' fill='#EEF1FB'/>
@@ -140,17 +138,16 @@
                         </clipPath>
                     </defs>
                     </svg>"
-                    title="Odborný autoservis"
-                    description="Odborný autoservis s dôrazom na kvalitu a precíznosť. Naši skúsení technici sa postarajú o vaše vozidlo so starostlivosťou."
-                    titleClass="text-base font-bold"
-                    descriptionClass="text-gray-500"
-                    widthClass = "w-full"
-                />
-            </div>  
+                title="Odborný autoservis"
+                description="Odborný autoservis s dôrazom na kvalitu a precíznosť. Naši skúsení technici sa postarajú o vaše vozidlo so starostlivosťou."
+                titleClass="text-base font-bold"
+                descriptionClass="text-gray-500 text-sm"
+                widthClass="w-full md:w-full"
+            />
         </div>
     </div>
 </template>
-  
+
 <script>
 import { defineComponent } from "vue";
 import Benefit from "@/components/app@_components/benefit.vue";
@@ -161,4 +158,3 @@ import Benefit from "@/components/app@_components/benefit.vue";
     },
   });
 </script>
-  
