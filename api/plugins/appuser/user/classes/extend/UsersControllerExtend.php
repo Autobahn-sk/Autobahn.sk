@@ -299,7 +299,7 @@ class UsersControllerExtend
 
 			$form->addTabFields([
 				'phone_number' => [
-					'label' => 'Phone number',
+					'label' => 'Phone Number',
 					'span'  => 'full',
 					'tab'   => 'rainlab.user::lang.user.account'
 				]
