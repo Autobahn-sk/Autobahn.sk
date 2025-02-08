@@ -152,9 +152,9 @@
 import { defineComponent } from "vue";
 import Benefit from "@/components/app@_components/benefit.vue";
   
-  export default defineComponent({
+export default defineComponent({
     components: {
-      Benefit,
+        Benefit,
     },
-  });
+});
 </script>

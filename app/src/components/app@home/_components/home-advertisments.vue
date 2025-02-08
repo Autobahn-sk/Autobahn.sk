@@ -1,5 +1,5 @@
 <template>
-<div class="bg-violet full-width-screen w-screen">
+    <div class="bg-violet full-width-screen w-screen">
         <div class="site-layout pt-20 pb-20 flex flex-wrap md:flex-nowrap gap-6">
             <div class="flex-shrink-0 w-full md:w-1/2 flex justify-start">
                 <img src="../_img/advertismentAdd.png" alt="" class="max-w-full h-auto">

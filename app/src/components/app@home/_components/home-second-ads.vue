@@ -24,8 +24,8 @@
         <div class="mt-12">
           <Ad />
         </div>
-        <div class="add-cards-buttons my-20 flex inline-flex gap-6">
-            <button class="flex justify-center">
+        <div class="my-20 flex inline-flex gap-6">
+            <button class="flex justify-center w-[60px] h-[40px] border-2 border-white rounded-[30px] hover:bg-[#35394A]">
                 <svg class="mt-3" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_53_3380)">
                     <path d="M2.56006 6C2.56006 5.76 2.65339 5.56 2.84006 5.4L8.00006 0.240001C8.16006 0.0799999 8.35339 0 8.58006 0C8.80673 0 9.00673 0.0799999 9.18006 0.240001C9.35339 0.400001 9.44006 0.6 9.44006 0.84C9.44006 1.08 9.34672 1.28 9.16006 1.44L4.60006 6L9.16006 10.56C9.32006 10.72 9.40006 10.92 9.40006 11.16C9.40006 11.4 9.32006 11.6 9.16006 11.76C9.00006 11.92 8.80673 12 8.58006 12C8.35339 12 8.16006 11.92 8.00006 11.76L2.84006 6.6C2.65339 6.44 2.56006 6.24 2.56006 6Z" fill="white"/>
@@ -37,7 +37,7 @@
                     </defs>
                 </svg>
             </button>
-            <button class="flex justify-center">
+            <button class="flex justify-center w-[60px] h-[40px] border-2 border-white rounded-[30px] hover:bg-[#35394A]">
                 <svg class="mt-3" width="12" height="12" transform="rotate(180)" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_53_3380)">
                     <path d="M2.56006 6C2.56006 5.76 2.65339 5.56 2.84006 5.4L8.00006 0.240001C8.16006 0.0799999 8.35339 0 8.58006 0C8.80673 0 9.00673 0.0799999 9.18006 0.240001C9.35339 0.400001 9.44006 0.6 9.44006 0.84C9.44006 1.08 9.34672 1.28 9.16006 1.44L4.60006 6L9.16006 10.56C9.32006 10.72 9.40006 10.92 9.40006 11.16C9.40006 11.4 9.32006 11.6 9.16006 11.76C9.00006 11.92 8.80673 12 8.58006 12C8.35339 12 8.16006 11.92 8.00006 11.76L2.84006 6.6C2.65339 6.44 2.56006 6.24 2.56006 6Z" fill="white"/>
@@ -94,17 +94,6 @@ mounted() {
   text-decoration-color: white;
   text-underline-offset: 17px;
   text-decoration-thickness: 3px;
-}
-
-.add-cards-buttons  button {
-  border: solid 2px #ffff;
-  border-radius: 30px;
-  width: 60px;
-  height: 40px;
-}
-
-.add-cards-buttons  button:focus {
-  background-color: #35394A;
 }
 
 @media screen and (max-width: 1270px) {

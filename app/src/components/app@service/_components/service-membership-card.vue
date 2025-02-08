@@ -6,25 +6,20 @@
     <h4 class="mt-3.5 text-lg">{{ item.Plan }}</h4>
     <p class="text-base mt-4">{{ item.Description }}</p>
     <div class="mt-4">
-      <div class="flex items-center align-middle mb-3"
-        v-for="(benefit, index) in benefits"
-        :key="index"
-      >
-        <div 
-          class="bg-dark-violet w-6 h-6 rounded-full flex items-center justify-center"
-          :style="{ backgroundColor: isSecondCard ? '#FFF' : '' }"
-        >
+      <div class="flex items-center align-middle mb-5"
+        v-for="(benefit, index) in benefits" :key="index">
+        <div class="bg-dark-violet w-6 h-6 rounded-full flex items-center justify-center"
+          :style="{ backgroundColor: isSecondCard ? '#FFF' : '' }">
           <font-awesome-icon :icon="['fas', 'check']" :style="{ color: '#405ff2' }" />
         </div>
         <h5 class="ml-2">{{ benefit }}</h5>
       </div>
       <div class="mt-6">
         <button class="border"
-        :class="{
+          :class="{
             'border-[#405FF2] pr-20 pl-20 py-4 text-purple hover:bg-[#405FF2] hover:text-white': !isSecondCard,
             'border-white bg-white text-purple pr-20 pl-20 py-4 hover:border-[#FFF] hover:bg-[#405FF2] hover:text-white ]': isSecondCard
-          }"
-        >
+          }">
           Zakúpiť
         </button>
       </div>

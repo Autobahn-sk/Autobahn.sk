@@ -1,43 +1,26 @@
 <template>
-    <div class="brands inline-flex flex gap-6">
-        <button>
-            <img src="@/components/app@_components/_img/audiLogo.png" alt="">
-            <h5 class="text-base">Audi</h5>
-        </button>
-        <button>
-            <img src="@/components/app@_components/_img/bmwLogo.png" alt="">
-            <h5 class="text-base">Bmw</h5>
-        </button>
-        <button>
-            <img src="@/components/app@_components/_img/fordLogo.png" alt="">
-            <h5 class="text-base">Ford</h5>
-        </button>
-        <button>
-            <img src="@/components/app@_components/_img/mercedesLogo.png" alt="">
-            <h5 class="text-base">Mercedes Benz</h5>
-        </button>
-        <button>
-            <img src="@/components/app@_components/_img/peugeotLogo.png" alt="">
-            <h5 class="text-base">Peugeot</h5>
-        </button>
-        <button>
-            <img src="@/components/app@_components/_img/volkswagenLogo.png" alt="">
-            <h5 class="text-base">VolksWagen</h5>
+    <div class="flex gap-4">
+        <button class="w-[156px] h-[135px] hover:bg-gray-50 border border-solid border-[#E9E9E9] rounded-[12px] flex flex-col items-center justify-center">
+            <img class="w-auto h-16 object-contain" :src="BrandImage" alt="BrandImage">
+            <h5 class="text-base mt-2">{{ BrandName }}</h5>
         </button>
     </div>
 </template>
 
-<style scoped>
+<script>
 
-    .brands button {
-        width: 156px;
-        height: 135px;
-        border: solid 1px #E9E9E9;
-        border-radius: 12px;
+export default {
+    name: 'Brands',
+    props: {
+        BrandName: {
+            type: String,
+            required: true
+        },
+        BrandImage: {
+            type: String,
+            required: true
+        }
     }
+}
 
-    .brands button img {
-        margin: auto;
-    }
-
-</style>
+</script>

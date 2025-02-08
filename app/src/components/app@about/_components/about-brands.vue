@@ -1,7 +1,7 @@
 <template>
-    <div class="mt-20 ml-10 mr-10 sm:ml-10 sm:mr-10 mb-16"> 
-        <div class="w-full flex justify-between flex-wrap md:flex-nowrap text-center md:text-left">
-            <h3 class="subtitle subtitle-32">Prezrite si naše prémiové značky</h3>
+    <div class="mt-[96px] mr-10 ml-10 mb-[96px]">
+        <div class="flex w-full justify-between flex-wrap md:flex-nowrap text-center md:text-left">
+            <h3 class="subtitle-32">Prezrite si naše prémiové značky</h3>
             <div class="flex justify-start mx-auto md:mx-0 mt-6 md:mt-0">
                 <a href="" class="text-black mr-2">Všetky značky</a>
                 <svg class="mt-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
