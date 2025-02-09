@@ -2,7 +2,7 @@
     <div class="full-width-screen bg-[#F9FBFC]">
         <div class="large-site-lauyout flex-col justify-center items-center pt-[96px] pb-[96px]">
             <h3 class="subtitle-32 text-center md:text-left">Čo hovoria naši zákazníci</h3>
-            <div class="mt-[44px] flex justify-center items-center flex-row gap-6 flex-wrap md:flex-nowrap">
+            <div class="mt-[44px] flex justify-center drop-shadow-xl items-center flex-row gap-6 flex-wrap md:flex-nowrap">
                 <div class="bg-white w-[363px] h-auto pt-6 pb-6 pr-6 pl-6 rounded-2xl" v-for="(testimonial, index) in testimonialsData" :key="index"> 
                     <div class="flex justify-between w-full">
                         <h3 class="text-lg font-medium">{{testimonial.text}}</h3>
@@ -22,27 +22,27 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col gap-6">
-                <button class="flex justify-center w-[60px] h-[40px] bg-white border-2 border-yellow-800 rounded-[30px] hover:bg-[#35394A]">
-                    <svg class="mt-3" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_53_3380)">
-                        <path d="M2.56006 6C2.56006 5.76 2.65339 5.56 2.84006 5.4L8.00006 0.240001C8.16006 0.0799999 8.35339 0 8.58006 0C8.80673 0 9.00673 0.0799999 9.18006 0.240001C9.35339 0.400001 9.44006 0.6 9.44006 0.84C9.44006 1.08 9.34672 1.28 9.16006 1.44L4.60006 6L9.16006 10.56C9.32006 10.72 9.40006 10.92 9.40006 11.16C9.40006 11.4 9.32006 11.6 9.16006 11.76C9.00006 11.92 8.80673 12 8.58006 12C8.35339 12 8.16006 11.92 8.00006 11.76L2.84006 6.6C2.65339 6.44 2.56006 6.24 2.56006 6Z" fill="white"/>
+            <div class="flex gap-6 mt-20">
+                <button class="flex justify-center w-[60px] h-[40px] bg-white border border-[#E9E9E9] rounded-[30px] hover:bg-[#F9F9F9]">
+                    <svg class="mt-2.5" width="15" height="15" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_239_8683)">
+                        <path d="M2.70312 5.24841C2.70312 5.05307 2.77909 4.89029 2.93102 4.76007L7.13076 0.560325C7.26099 0.430099 7.41834 0.364987 7.60283 0.364987C7.78731 0.364987 7.95009 0.430099 8.09117 0.560325C8.23225 0.690549 8.30278 0.85333 8.30278 1.04867C8.30278 1.244 8.22682 1.40679 8.07489 1.53701L4.36349 5.24841L8.07489 8.95981C8.20512 9.09004 8.27023 9.25282 8.27023 9.44816C8.27023 9.64349 8.20512 9.80627 8.07489 9.9365C7.94467 10.0667 7.78731 10.1318 7.60283 10.1318C7.41834 10.1318 7.26099 10.0667 7.13076 9.9365L2.93102 5.73675C2.77909 5.60653 2.70312 5.44375 2.70312 5.24841Z" fill="#050B20"/>
                         </g>
                         <defs>
-                        <clipPath id="clip0_53_3380">
-                        <rect width="12" height="12" fill="white" transform="matrix(1 0 0 -1 0 12)"/>
+                        <clipPath id="clip0_239_8683">
+                        <rect width="9.76685" height="9.76685" fill="white" transform="matrix(1 0 0 -1 0.619629 10.1318)"/>
                         </clipPath>
                         </defs>
                     </svg>
                 </button>
-                <button class="flex justify-center w-[60px] h-[40px] border-2 border-white rounded-[30px] hover:bg-[#35394A]">
-                    <svg class="mt-3" width="12" height="12" transform="rotate(180)" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_53_3380)">
-                        <path d="M2.56006 6C2.56006 5.76 2.65339 5.56 2.84006 5.4L8.00006 0.240001C8.16006 0.0799999 8.35339 0 8.58006 0C8.80673 0 9.00673 0.0799999 9.18006 0.240001C9.35339 0.400001 9.44006 0.6 9.44006 0.84C9.44006 1.08 9.34672 1.28 9.16006 1.44L4.60006 6L9.16006 10.56C9.32006 10.72 9.40006 10.92 9.40006 11.16C9.40006 11.4 9.32006 11.6 9.16006 11.76C9.00006 11.92 8.80673 12 8.58006 12C8.35339 12 8.16006 11.92 8.00006 11.76L2.84006 6.6C2.65339 6.44 2.56006 6.24 2.56006 6Z" fill="white"/>
+                <button class="flex justify-center w-[60px] h-[40px] bg-white border border-[#E9E9E9] rounded-[30px] hover:bg-[#F9F9F9]">
+                    <svg class="mt-2.5" width="15" height="15" transform="rotate(180)" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_239_8683)">
+                        <path d="M2.70312 5.24841C2.70312 5.05307 2.77909 4.89029 2.93102 4.76007L7.13076 0.560325C7.26099 0.430099 7.41834 0.364987 7.60283 0.364987C7.78731 0.364987 7.95009 0.430099 8.09117 0.560325C8.23225 0.690549 8.30278 0.85333 8.30278 1.04867C8.30278 1.244 8.22682 1.40679 8.07489 1.53701L4.36349 5.24841L8.07489 8.95981C8.20512 9.09004 8.27023 9.25282 8.27023 9.44816C8.27023 9.64349 8.20512 9.80627 8.07489 9.9365C7.94467 10.0667 7.78731 10.1318 7.60283 10.1318C7.41834 10.1318 7.26099 10.0667 7.13076 9.9365L2.93102 5.73675C2.77909 5.60653 2.70312 5.44375 2.70312 5.24841Z" fill="#050B20"/>
                         </g>
                         <defs>
-                        <clipPath id="clip0_53_3380">
-                        <rect width="12" height="12" fill="white" transform="matrix(1 0 0 -1 0 12)"/>
+                        <clipPath id="clip0_239_8683">
+                        <rect width="9.76685" height="9.76685" fill="white" transform="matrix(1 0 0 -1 0.619629 10.1318)"/>
                         </clipPath>
                         </defs>
                     </svg>

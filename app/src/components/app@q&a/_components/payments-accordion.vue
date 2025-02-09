@@ -2,7 +2,6 @@
     <div class="mt-16 mb-56">
         <div class="w-3/4 flex justify-center flex-col mx-auto">
             <h1 class="subtitle-32 mb-9 flex justify-center">Platby</h1>
-
             <div v-if="loading" class="flex justify-center items-center">
                 <div class="animate-spin border-t-2 border-blue-500 border-solid rounded-full w-10 h-10"></div>
             </div>

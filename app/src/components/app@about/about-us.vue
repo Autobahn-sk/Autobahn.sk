@@ -5,6 +5,8 @@
         <SubscriptionRevenue />
         <Brands />
         <Testimonials />
+        <FAQ/>
+        <Footer />
     </div>
 </template>
 
@@ -15,6 +17,8 @@ import Benefits from '@/components/app@about/_components/about-benefits.vue'
 import SubscriptionRevenue from '@/components/app@about/_components/about-subscription-revenue.vue'
 import Brands from '@/components/app@about/_components/about-brands.vue'
 import Testimonials from '@/components/app@about/_components/about-testimonials.vue'
+import FAQ from '@/components/app@about/_components/about-faq.vue'
+import Footer from '@/components/app/_layout/_components/footer.vue'  
 
 export default defineComponent({
     components: {
@@ -22,7 +26,9 @@ export default defineComponent({
         Benefits,
         SubscriptionRevenue,
         Brands,
-        Testimonials
+        Testimonials,
+        FAQ,
+        Footer
     }
 })
 
