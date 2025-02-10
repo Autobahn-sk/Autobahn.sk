@@ -2,7 +2,7 @@
     <div class="mt-[93px] mb-[155px]">
         <div class="w-3/4 flex justify-center flex-col mx-auto">
             <h1 class="subtitle-32 mb-9 flex justify-center text-center">Často kladené otázky</h1>
-                <div class="mt-3" v-for="(question, index) in questionsData" :key="index">
+                <div class="cursor-pointer mt-3" v-for="(question, index) in questionsData" :key="index">
                     <button class="accordion flex justify-between rounded-none rounded-t-lg pt-[18px] pr-[18px] pl-[18px] pb-[18px] hover:bg-[#F9FBFC] color-[#444] w-full outline-none border-none text-left cursor-pointer"
                         @click="toggleAccordion(index)" 
                         :class="{ 'bg-[#F9FBFC]': activeIndex === index }">
