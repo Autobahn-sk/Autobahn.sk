@@ -193,7 +193,7 @@ class UsersControllerExtend
 				'is_published' => [
 					'label'      => 'Is published',
 					'type'       => 'switch',
-					'default'    => 0,
+					'default'    => true,
 					'conditions' => [
 						'is_published = false',
 						'is_published = true'
@@ -236,6 +236,8 @@ class UsersControllerExtend
 					'label'    => 'Agreed with Terms and Conditions',
 					'type'     => 'switch',
 					'span'     => 'left',
+					'default'  => true,
+					'required' => true,
 					'on'       => 'Yes',
 					'off'      => 'No'
 				]
@@ -299,9 +301,10 @@ class UsersControllerExtend
 
 			$form->addTabFields([
 				'phone_number' => [
-					'label' => 'Phone Number',
-					'span'  => 'full',
-					'tab'   => 'rainlab.user::lang.user.account'
+					'label'    => 'Phone Number',
+					'span'     => 'full',
+					'required' => true,
+					'tab'      => 'rainlab.user::lang.user.account'
 				]
 			]);
 		});

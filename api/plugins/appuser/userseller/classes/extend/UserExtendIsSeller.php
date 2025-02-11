@@ -88,7 +88,7 @@ class UserExtendIsSeller
 	public static function addIsSellerToResource()
 	{
 		Event::listen('appuser.userapi.user.beforeReturnResource', function(&$data, User $user){
-			$data['is_seller'] = $user->is_seller;
+			$data['is_seller'] = (bool) $user->is_seller;
 		});
 	}
 	
