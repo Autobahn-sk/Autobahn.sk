@@ -1,23 +1,17 @@
-<?php
-
-namespace AppUser\User\Http\Middlewares;
+<?php namespace AppUser\UserSeller\Http\Middlewares;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Lang;
-use WApi\ApiException\Exceptions\WForbiddenException;
+use AppApi\ApiException\Exceptions\ForbiddenException;
 
-class IsAgentMiddleware
+class IsSellerMiddleware
 {
-    public function handle($request, Closure $next)
-    {
-        $user = Auth::user();
-        if (! $user->isAgent()) {
-            throw new WForbiddenException(
-                Lang::get('appuser.user::error.USER_NOT_AGENT'),
-            );
-        }
+	public function handle($request, Closure $next)
+	{
+		$user = auth()->user();
+		if (!$user->isSeller()) {
+			throw new ForbiddenException('You are not a seller.');
+		}
 
-        return $next($request);
-    }
+		return $next($request);
+	}
 }

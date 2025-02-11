@@ -23,10 +23,9 @@ class GoogleUtils
     private static function _createAccounts($googleProfile)
     {
         $params = [
-            'email'   => $googleProfile['email'],
-            'name'    => $googleProfile['given_name'] ?? '',
-            'surname' => $googleProfile['family_name'] ?? ''
-        ];
+            'email' => $googleProfile['email'],
+            'name'  => $googleProfile['given_name'] ?? ' ' . $googleProfile['family_name'] ?? '',
+		];
 
         $password = md5(time() . \Str::random(30));
         $params['password'] = $password;

@@ -10,6 +10,7 @@ class UserExtendIsSeller
 {
 	public static function extend()
 	{
+		self::addMethods();
 		self::addIsSellerToColumns();
 		self::addIsSellerToFieldsFilterScopes();
 		self::addIsSellerToFields();
@@ -17,6 +18,15 @@ class UserExtendIsSeller
 		self::extendUser_addCasts();
 		self::extendUser_addFillable();
 		self::extendUser_addRules();
+	}
+
+	public static function addMethods()
+	{
+		User::extend(function ($model) {
+			$model->addDynamicMethod('isSeller', function () use ($model) {
+				return $model->is_seller;
+			});
+		});
 	}
 	
 	public static function addIsSellerToColumns()
