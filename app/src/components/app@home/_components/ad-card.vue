@@ -1,6 +1,6 @@
 <template>
-    <span class="flex flex-wrap gap-6 justify-center">
-        <div class="card-props border-solid border-slate-50 border-2 rounded overflow-hidden shadow-lg rounded-2xl relative" v-for="item in data" :key="item.id">
+    <span class="flex">
+        <div class="border-solid border-slate-50 border-2 rounded overflow-hidden shadow-lg rounded-2xl relative">
             <div class="save-button absolute">
                 <button>
                     <svg width="14" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,12 +67,12 @@
 </template>
 
 <script>
-import jsonData from '@/assets/mocks/ad-cards.json'
 
 export default {
-    data() {
-        return {
-            data: jsonData
+    props: {
+        item: {
+            type: Object,
+            required: true
         }
     }
 }

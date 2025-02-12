@@ -12,31 +12,50 @@
       <hr class="mt-3 bg-light-gray h-[0.06rem]">
     </div>
     <div>
-      <Ad />
+      <Ad class="mt-3 flex-row"
+        v-for="item in recentAds"
+        :key="item.id"
+        :item="item"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import Ad from '@/components/app@_components/ad-card.vue';
+import Ad from '@/components/app@home/_components/ad-card.vue';
+import AdsData from '@/assets/mocks/ad-cards.json'
 
 export default defineComponent({
-  components: {
-    Ad,
-  },
-  mounted() {
-    const links = document.querySelectorAll('.select-bar a');
-
-    links.forEach(function (link) {
-      link.addEventListener('click', function () {
-        links.forEach(function (l) {
-          l.classList.remove('active');
+    components: {
+      Ad,
+    },
+    data() {
+      return {
+        recentAds: []
+      };
+    },
+    mounted() {
+      const links = document.querySelectorAll('.select-bar a');
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          links.forEach(function (l) {
+            l.classList.remove('active');
+          });
+          link.classList.add('active');
         });
-        link.classList.add('active');
       });
-    });
-  },
+    },
+    created() {
+      this.loadRecentAds();
+    },
+    methods: {
+    loadRecentAds() {
+      this.recentAds = [...AdsData]
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+        .slice(0, 5);
+    }
+  }
 });
 </script>
 
