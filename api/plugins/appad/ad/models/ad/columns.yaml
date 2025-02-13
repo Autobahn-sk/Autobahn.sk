@@ -6,3 +6,16 @@ columns:
     id:
         label: ID
         searchable: true
+    title:
+        label: Title
+        searchable: true
+    user[name]:
+        label: User
+        searchable: true
+    status:
+        label: Status
+        type: selectable
+        searchable: true
+    created_at:
+        label: Created At
+        searchable: true

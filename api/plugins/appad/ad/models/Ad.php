@@ -26,12 +26,14 @@ class Ad extends Model
      * @var array rules for validation
      */
     public $rules = [
-		'title' => 'required|string',
-		'description' => 'required|string',
-		'user_id' => 'required|integer|exists:users,id',
-		'youtube_url' => 'nullable|url',
-		'images' => 'nullable|array',
-		'images.*' => 'nullable|integer|exists:system_files,id',
+		'title'           => 'required|string',
+		'description'     => 'required|string',
+		'user_id'         => 'required|integer|exists:users,id',
+		'location'        => 'required|string',
+		'google_place_id' => 'nullable|string',
+		'youtube_url'     => 'nullable|url',
+		'images'          => 'nullable|array',
+		'images.*'        => 'nullable|integer|exists:system_files,id',
 	];
 
 	/**
@@ -42,7 +44,25 @@ class Ad extends Model
 		'description',
 		'status',
 		'user_id',
+		'location',
+		'google_place_id',
 		'youtube_url',
+	];
+
+	public $attributeNames = [
+		'title'           => 'Názov',
+		'description'     => 'Popis',
+		'user_id'         => 'Používateľ',
+		'location'        => 'Lokácia',
+		'google_place_id' => 'Google Place ID',
+		'youtube_url'     => 'Youtube URL',
+		'images'          => 'Obrázky',
+	];
+
+	public $customMessages = [
+		'required' => 'Pole :attribute je povinné',
+		'exists'   => 'Pole :attribute neexistuje',
+		'date'     => 'Pole :attribute musí byť dátum'
 	];
 
 	/*
@@ -91,5 +111,10 @@ class Ad extends Model
 	public function scopeIsArchived($query)
 	{
 		return $query->where('status', AdStatusEnum::ARCHIVED->value);
+	}
+
+	public function getStatusOptions()
+	{
+		return AdStatusEnum::toArray();
 	}
 }

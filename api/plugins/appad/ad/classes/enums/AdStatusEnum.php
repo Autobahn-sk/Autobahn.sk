@@ -11,4 +11,13 @@ enum AdStatusEnum: string
 	case PUBLISHED = 'PUBLISHED';
 
 	case ARCHIVED = 'ARCHIVED';
+
+	public static function toArray()
+	{
+		return [
+			self::DRAFT->value => 'Draft',
+			self::PUBLISHED->value => 'Published',
+			self::ARCHIVED->value => 'Archived'
+		];
+	}
 }

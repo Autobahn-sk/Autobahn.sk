@@ -1,6 +1,6 @@
 {
     "name": "appgoogle/googleuserauth",
-    "description": "Implement google login with google/apiclient package.",
+    "description": "No description provided yet...",
     "type": "october-plugin",
     "require": {
         "google/apiclient": "^2.13"

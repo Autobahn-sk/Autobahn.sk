@@ -29,6 +29,9 @@ return new class extends Migration
 
 			$table->integer('user_id')->unsigned()->index();
 
+			$table->string('location')->nullable();
+			$table->string('google_place_id')->nullable();
+
 			$table->text('youtube_url')->nullable();
 
 			$table->timestamps();

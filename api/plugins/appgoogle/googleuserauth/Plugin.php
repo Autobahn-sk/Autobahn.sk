@@ -6,7 +6,8 @@ use AppGoogle\GoogleUserAuth\Classes\Extend\Hook\GoogleAuth;
 class Plugin extends PluginBase
 {
     public $require = [
-        'AppUser.UserApi'
+        'AppUser.UserApi',
+		'AppApi.ApiException'
     ];
 
     public function pluginDetails()

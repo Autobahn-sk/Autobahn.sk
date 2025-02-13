@@ -6,3 +6,6 @@ fields:
     id:
         label: ID
         disabled: true
+    title:
+        label: Title
+        disabled: true
