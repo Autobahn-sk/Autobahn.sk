@@ -1,5 +1,5 @@
 <template>
-    <span class="flex">
+    <span class="flex justify-center">
         <div class="border-solid border-slate-50 border-2 rounded overflow-hidden shadow-lg rounded-2xl relative">
             <div class="save-button absolute">
                 <button>
