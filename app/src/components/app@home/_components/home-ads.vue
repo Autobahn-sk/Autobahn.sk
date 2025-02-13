@@ -11,8 +11,9 @@
       </div>
       <hr class="mt-3 bg-light-gray h-[0.06rem]">
     </div>
-    <div>
-      <Ad class="mt-3 flex-row"
+    <div class="flex flex-wrap gap-4">
+      <Ad
+        class="flex-row"
         v-for="item in recentAds"
         :key="item.id"
         :item="item"
