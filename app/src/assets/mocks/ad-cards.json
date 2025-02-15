@@ -14,16 +14,16 @@
             "phone": "+421 911 123 456",
             "adress": "Senec, Bratislavský Kraj",   
             "color": "Silver",
+            "drive": "RWD",
             "power": "160KW",
             "engine": "3.5 R6",
-            "gearbox": "Manuálna",
-            "fuel": "Benzín",
-            "kilometres": "197 430 km",
             "condition": "Veľmi dobrý stav",
-            "body": "Coupe",
-            "drive": "RWD",
-            "doors": "2",
-            "seats": "4"
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "6",
+            "seats": "4",
+            "vin": "WBSBL92040JR12345"
         }
     },
     {
