@@ -4,9 +4,27 @@
         "title": "BMW E46 M3",
         "description": "3.5 R6 160KW Coupe RWD",
         "kilometres": "197 430 km",
+        "year": "2003",
         "fuel": "Benzín",
         "gearbox": "Manuálna",
-        "price": "$25,000"
+        "price": 35999,
+        "details": {
+            "firstPrice": 40000,
+            "user": "Patrik",
+            "phone": "+421 911 123 456",
+            "adress": "Senec, Bratislavský Kraj",   
+            "color": "Silver",
+            "power": "160KW",
+            "engine": "3.5 R6",
+            "gearbox": "Manuálna",
+            "fuel": "Benzín",
+            "kilometres": "197 430 km",
+            "condition": "Veľmi dobrý stav",
+            "body": "Coupe",
+            "drive": "RWD",
+            "doors": "2",
+            "seats": "4"
+        }
     },
     {
         "id": 2,
@@ -15,7 +33,7 @@
         "kilometres": "205 315 km",
         "fuel": "Benzín",
         "gearbox": "Manuálna",
-        "price": "$36,999"
+        "price": 36999
     },
     {
         "id": 3,
@@ -24,7 +42,7 @@
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     },
     {
         "id": 4,
@@ -33,7 +51,7 @@
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     },
     {
         "id": 5,
@@ -42,7 +60,7 @@
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     },
     {
         "id": 6,
@@ -51,24 +69,24 @@
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "AUDI RS6",
         "description": "4.2 V10 240KW Combi RWD",
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     },
     {
-        "id": 6,
+        "id": 8,
         "title": "AUDI RS6",
         "description": "4.2 V10 240KW Combi RWD",
         "kilometres": "142 030 km",
         "fuel": "Benzín",
         "gearbox": "Automat",
-        "price": "$28,321"
+        "price": 28321
     }
 ]

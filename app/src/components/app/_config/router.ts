@@ -8,6 +8,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/components/app@home/home.vue'),
   },
   {
+    path: '/ad/:id',
+    name: 'Detail Inzerátu',
+    component: () => import('@/components/app@ad/ad.vue'),
+    props: true
+  },
+  {
     path: '/servis',  
     name: 'Servis',
     component: () => import('@/components/app@service/service.vue'),  
@@ -26,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'AboutUs',
     component: () => import('@/components/app@about/about-us.vue'),  
-  }
+  },
 ];
 
 const router = createRouter({

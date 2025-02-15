@@ -104,7 +104,7 @@
             <hr class="bg-light-black h-[0.06rem] border-none">
             <div class="py-7 flex justify-between flex-wrap">
                 <div class="flex justify-center md:justify-start text-center">
-                    <p class="text-white">© 2024 autobahn.sk Všetky práva vyhradené.</p>
+                    <p class="text-white">© {{ getCurrentYear }} autobahn.sk Všetky práva vyhradené.</p>
                 </div>
                 <div class="text-white flex gap-0 md:gap-3.5 justify-center flex-wrap text-center items-center">
                     <a class="mt-2 md:mt-0" href="">Podmienky používania</a>
@@ -127,6 +127,11 @@ export default defineComponent({
   components: {
     Header,
     Searchbar
+  },
+  computed: {
+    getCurrentYear() {
+      return new Date().getFullYear();
+    }
   }
 });
 </script>

@@ -1,7 +1,7 @@
 <template>
     <span class="flex justify-center">
-        <div class="border-solid border-slate-50 border-2 rounded overflow-hidden shadow-lg rounded-2xl relative">
-            <div class="save-button absolute">
+        <div class="border-solid w-[280px] border-slate-50 border-2 rounded overflow-hidden shadow-lg rounded-2xl relative">
+            <div class="save-button right-0 mt-4 mr-4 pr-2.5 pl-2.5 pt-2 rounded-full bg-white absolute">
                 <button>
                     <svg width="14" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_90_5388)">
@@ -52,9 +52,9 @@
                 </div>
                 <div class="mb-2">
                     <div class="w-full flex justify-between">
-                        <h4 class="text-lg font-bold">{{item.price}}</h4>
+                        <h4 class="text-lg font-bold">${{item.price}}</h4>
                         <div class="inline-flex view-ad mt-1">
-                            <a class="text text-purple text-sm" href="">Zobraziť inzerát</a>
+                            <a @click.prevent="goToDetail" class="text text-purple text-sm" href="#">Zobraziť inzerát</a>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0) scale(1, 1)">
                                 <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#405ff2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #4a92f3;"/>
                             </svg>
@@ -74,26 +74,11 @@ export default {
             type: Object,
             required: true
         }
+    },
+    methods: {
+        goToDetail() {
+            this.$router.push(`/ad/${this.item.id}`); 
+        }
     }
 }
 </script>
-
-<style scoped>
-
-.card-props{
-    width: 280px;
-    background-color: white;
-}
-
-.save-button{
-    right: 0;
-    margin-top: 19px;
-    margin-right: 19px;
-    background-color: white;
-    padding-top: 8px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 100%;
-}
-
-</style>

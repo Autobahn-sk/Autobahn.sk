@@ -54,7 +54,7 @@ export default defineComponent({
     loadRecentAds() {
       this.recentAds = [...AdsData]
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-        .slice(0, 5);
+        .slice(0, 8);
     }
   }
 });
