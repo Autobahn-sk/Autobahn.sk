@@ -24,6 +24,7 @@ class UsersControllerExtend
 		self::updateFormFieldsAddIsEmailVerified();
 		self::updateFormFields_addNewsletterSubscriber();
 		self::updateFormFields_addPhoneNumber();
+		self::updateFormFields_addLocationAndGooglePlaceId();
 	}
 
 	public static function updateListColumns_addLastLogin()
@@ -305,6 +306,31 @@ class UsersControllerExtend
 					'span'     => 'full',
 					'required' => true,
 					'tab'      => 'rainlab.user::lang.user.account'
+				]
+			]);
+		});
+	}
+
+	public static function updateFormFields_addLocationAndGooglePlaceId()
+	{
+		Users::extendFormFields(function(Form $form, $model) {
+			if (!$model instanceof User) {
+				return;
+			}
+			if ($form->alias !== 'form') {
+				return;
+			}
+
+			$form->addTabFields([
+				'location' => [
+					'label' => 'Location',
+					'span'  => 'left',
+					'tab'   => 'rainlab.user::lang.user.account'
+				],
+				'google_place_id' => [
+					'label' => 'Google Place ID',
+					'span'  => 'right',
+					'tab'   => 'rainlab.user::lang.user.account'
 				]
 			]);
 		});

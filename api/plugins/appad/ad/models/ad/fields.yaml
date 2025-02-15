@@ -3,9 +3,57 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
     title:
         label: Title
-        disabled: true
+        span: left
+    images:
+        label: Images
+        type: fileupload
+        mode: image
+        span: right
+    slug:
+        label: Slug
+        span: left
+    description:
+        label: Description
+        type: richeditor
+        size: small
+    attachments:
+        label: Attachments
+        type: fileupload
+        mode: file
+        span: full
+    status:
+        label: Status
+        type: dropdown
+        span: left
+    user:
+        label: User
+        type: recordfinder
+        title: Find user
+        nameFrom: name
+        descriptionFrom: email
+        list: ~/plugins/rainlab/user/models/user/columns.yaml
+        recordsPerPage: 10
+        span: right
+    location:
+        label: Location
+        span: left
+    google_place_id:
+        label: Google Place ID
+        span: right
+tabs:
+    fields:
+#        vehicle:
+#            tab: Vehicle
+#            label: Content
+#            type: textarea
+        prices:
+            tab: Finances
+            label: Prices
+            type: repeater
+            form:
+                fields:
+                    price:
+                        label: Price
+                        type: number

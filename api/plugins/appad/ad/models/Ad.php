@@ -3,7 +3,9 @@
 use Model;
 use System\Models\File;
 use RainLab\User\Models\User;
+use AppAd\AdPrice\Models\Price;
 use Illuminate\Validation\Rule;
+use AppAd\AdVehicle\Models\Vehicle;
 use AppAd\Ad\Classes\Enums\AdStatusEnum;
 
 /**
@@ -28,12 +30,15 @@ class Ad extends Model
     public $rules = [
 		'title'           => 'required|string',
 		'description'     => 'required|string',
+		'status'          => 'required|string',
+		'user' 		      => 'required',
 		'user_id'         => 'required|integer|exists:users,id',
-		'location'        => 'required|string',
+		'prices'          => 'required|array',
+		'location'        => 'required_without:google_place_id|string',
 		'google_place_id' => 'nullable|string',
 		'youtube_url'     => 'nullable|url',
-		'images'          => 'nullable|array',
-		'images.*'        => 'nullable|integer|exists:system_files,id',
+		'images'          => 'required|array',
+		'attachments'     => 'nullable|array',
 	];
 
 	/**
@@ -47,22 +52,6 @@ class Ad extends Model
 		'location',
 		'google_place_id',
 		'youtube_url',
-	];
-
-	public $attributeNames = [
-		'title'           => 'Názov',
-		'description'     => 'Popis',
-		'user_id'         => 'Používateľ',
-		'location'        => 'Lokácia',
-		'google_place_id' => 'Google Place ID',
-		'youtube_url'     => 'Youtube URL',
-		'images'          => 'Obrázky',
-	];
-
-	public $customMessages = [
-		'required' => 'Pole :attribute je povinné',
-		'exists'   => 'Pole :attribute neexistuje',
-		'date'     => 'Pole :attribute musí byť dátum'
 	];
 
 	/*
@@ -85,13 +74,31 @@ class Ad extends Model
 	 * @var array relations
 	 */
 	public $belongsTo = [
-		'user' => User::class
+		'user' => User::class,
+	];
+
+	public $hasOne = [
+		'vehicle' => [
+			Vehicle::class,
+			'key' => 'id',
+			'otherKey' => 'id'
+		]
+	];
+
+	public $hasMany = [
+		'prices' => [
+			Price::class,
+			'key' => 'ad_id',
+			'otherKey' => 'id'
+		]
 	];
 
 	public $attachMany = [
-		'images' => File::class
+		'images' => File::class,
+		'attachments' => File::class
 	];
 
+	// Events
 	public function beforeValidate()
 	{
 		$this->rules['status'] = Rule::in(AdStatusEnum::values()) . '|required|string';
@@ -116,5 +123,10 @@ class Ad extends Model
 	public function getStatusOptions()
 	{
 		return AdStatusEnum::toArray();
+	}
+
+	public function getCurrentPriceAttribute()
+	{
+		return $this->prices()->orderByDesc('created_at')->first();
 	}
 }

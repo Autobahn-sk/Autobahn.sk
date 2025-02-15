@@ -9,6 +9,13 @@ columns:
     title:
         label: Title
         searchable: true
+    description:
+        label: Description
+        type: summary
+        searchable: true
+    current_price[price]:
+        label: Price (EUR)
+        searchable: true
     user[name]:
         label: User
         searchable: true
@@ -17,5 +24,10 @@ columns:
         type: selectable
         searchable: true
     created_at:
-        label: Created At
+        label: Created at
         searchable: true
+        type: datetime
+    updated_at:
+        label: Updated at
+        searchable: true
+        type: datetime

@@ -7,7 +7,8 @@ Route::group([
     'prefix'      => 'api/v1',
     'namespace'  => 'AppCommerce\ContactForm\Http\Controllers',
     'middleware' => [
-        'api'
+		'api',
+		'throttle:60,1'
     ]
 ], function (Router $router) {
     $router

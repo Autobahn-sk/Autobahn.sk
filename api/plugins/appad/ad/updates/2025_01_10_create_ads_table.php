@@ -19,7 +19,6 @@ return new class extends Migration
     {
         Schema::create('appad_ad_ads', function(Blueprint $table) {
             $table->id();
-
 			$table->string('slug')->unique();
 
 			$table->string('title');
@@ -28,11 +27,12 @@ return new class extends Migration
 			$table->string('status')->default(AdStatusEnum::DRAFT->value);
 
 			$table->integer('user_id')->unsigned()->index();
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->string('location')->nullable();
 			$table->string('google_place_id')->nullable();
 
-			$table->text('youtube_url')->nullable();
+			$table->string('youtube_url')->nullable();
 
 			$table->timestamps();
 			$table->softDeletes();

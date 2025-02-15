@@ -10,6 +10,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 			$table->string('phone_number')->nullable();
+			$table->string('location')->nullable();
+			$table->string('google_place_id')->nullable();
 			$table->boolean('is_email_verified')->default(false);
 			$table->boolean('is_published')->default(true);
 			$table->boolean('gdpr_consent')->default(false);
@@ -21,6 +23,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('phone_number');
+			$table->dropColumn('location');
+			$table->dropColumn('google_place_id');
 			$table->dropColumn('is_email_verified');
 			$table->dropColumn('is_published');
 			$table->dropColumn('gdpr_consent');

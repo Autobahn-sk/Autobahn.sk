@@ -14,6 +14,8 @@ class UserResource extends JsonResource
             'username' => $this->username,
             'email' => $this->email,
             'phone_number' => $this->phone_number,
+			'location' => $this->location,
+			'google_place_id' => $this->google_place_id,
             'last_login' => $this->last_login,
             'last_seen' => $this->last_seen,
             'activated_at' => $this->activated_at,
@@ -22,7 +24,10 @@ class UserResource extends JsonResource
             'deleted_at' => $this->deleted_at,
             'is_activated' => (bool) $this->is_activated,
             'is_guest' => (bool) $this->is_guest,
-            'is_superuser' => (bool) $this->is_superuser
+            'is_superuser' => (bool) $this->is_superuser,
+			'is_email_verified' => (bool) $this->is_email_verified,
+//			'ads' => AdResource::collection($this->ads),
+//			'bookmarks' => AdResource::collection($this->bookmarks->pluck('flaggable')),
         ];
         if (config('app.debug')) {
             $data['activation_code'] = $this->activation_code;

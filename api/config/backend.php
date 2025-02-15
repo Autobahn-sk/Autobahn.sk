@@ -194,7 +194,7 @@ return [
     |
     */
 
-    'timezone' => env('APP_TIMEZONE', 'UTC'),
+    'timezone' => env('BACKEND_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------

@@ -3,7 +3,6 @@
 use AppAd\Ad\Models\Ad;
 use Rainlab\User\Models\User;
 use RainLab\User\Facades\Auth;
-use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use AppUser\UserApi\Facades\JWTAuth;
 use AppUser\UserFlag\Models\UserFlag;
@@ -22,7 +21,6 @@ class UserModelExtend
 		self::extendUser_addRules();
 		self::beforeCreate_setDefaultAvatar();
 		self::beforeUpdate_subscribeOrUnsubscribeNewsletter();
-		self::extendUserResource();
 		self::addBookmarksRelationToUser();
 		self::addVisitsRelationToUser();
 		self::addIsPublishedScope();
@@ -45,6 +43,8 @@ class UserModelExtend
 				'created_ip_address' => 'string',
 				'last_ip_address' => 'string',
 				'phone_number' => 'string',
+				'location' => 'string',
+				'google_place_id' => 'string',
 				'is_email_verified' => 'boolean',
 				'is_published' => 'boolean',
 				'gdpr_consent' => 'boolean',
@@ -63,6 +63,8 @@ class UserModelExtend
 				'created_ip_address',
 				'last_ip_address',
 				'phone_number',
+				'location',
+				'google_place_id',
 				'is_email_verified',
 				'is_published',
 				'gdpr_consent',
@@ -78,8 +80,16 @@ class UserModelExtend
 				$user->rules['phone_number'] = [
 					'required',
 					'string',
-					'regex:'.self::INTERNATIONAL_PHONE_NUMBER,
-					Rule::unique('users', 'phone_number')->ignore($user->id),
+					'regex:'.self::INTERNATIONAL_PHONE_NUMBER
+				];
+
+				$user->rules['location'] = [
+					'string',
+					'required_without:google_place_id'
+				];
+
+				$user->rules['google_place_id'] = [
+					'string'
 				];
 
 				$user->rules['gdpr_consent'] = [
@@ -162,15 +172,6 @@ class UserModelExtend
                 Ad::class,
                 'order' => 'created_at desc'
             ];
-        });
-    }
-
-    public static function extendUserResource()
-    {
-        Event::listen('appuser.userapi.user.beforeReturnResource', function (&$data, User $user) {
-			$data['is_email_verified'] = (bool) $user->is_email_verified;
-//			$data['bookmarks'] = AdResource::collection($user->bookmarks->pluck('flaggable'));
-//			$data['ads'] = AdResource::collection($user->ads);
         });
     }
 
