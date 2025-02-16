@@ -18,7 +18,6 @@ return new class extends Migration
     {
         Schema::create('appad_advehicle_vehicles', function(Blueprint $table) {
             $table->id();
-			$table->foreign('id')->references('id')->on('appad_ad_ads');
 
 
 

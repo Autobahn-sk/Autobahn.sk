@@ -1,6 +1,8 @@
 <?php namespace AppAd\AdPrice\Models;
 
 use Model;
+use AppAd\Ad\Models\Ad;
+use RainLab\User\Models\User;
 
 /**
  * PriceOffer Model
@@ -10,8 +12,9 @@ use Model;
 class PriceOffer extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+	use \October\Rain\Database\Traits\SoftDelete;
 
-    /**
+	/**
      * @var string table name
      */
     public $table = 'appad_adprice_price_offers';
@@ -19,5 +22,17 @@ class PriceOffer extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+		'price' => 'required|numeric',
+		'ad_id' => 'required|integer|exists:appad_ad_ads,id',
+		'user_id' => 'required|integer|exists:users,id'
+	];
+
+	/**
+	 * @var array relations
+	 */
+	public $belongsTo = [
+		'ad' => Ad::class,
+		'user' => User::class
+	];
 }

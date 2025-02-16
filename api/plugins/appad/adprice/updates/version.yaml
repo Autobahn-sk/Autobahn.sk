@@ -1,3 +1,4 @@
 v1.0.1:
   - First version of AdPrice
   - 2025_01_15_create_prices_table.php
+  - 2025_01_15_create_price_offers_table.php

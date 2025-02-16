@@ -11,6 +11,7 @@ use AppAd\Ad\Models\Ad;
 class Vehicle extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+	use \October\Rain\Database\Traits\SoftDelete;
 
 	public $incrementing = false;
 

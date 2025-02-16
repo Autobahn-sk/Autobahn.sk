@@ -27,7 +27,6 @@ return new class extends Migration
 			$table->string('status')->default(AdStatusEnum::DRAFT->value);
 
 			$table->integer('user_id')->unsigned()->index();
-			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->string('location')->nullable();
 			$table->string('google_place_id')->nullable();

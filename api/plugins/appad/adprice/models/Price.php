@@ -11,8 +11,9 @@ use AppAd\Ad\Models\Ad;
 class Price extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+	use \October\Rain\Database\Traits\SoftDelete;
 
-    /**
+	/**
      * @var string table name
      */
     public $table = 'appad_adprice_prices';
@@ -21,7 +22,8 @@ class Price extends Model
      * @var array rules for validation
      */
     public $rules = [
-		'price' => 'required|numeric'
+		'price' => 'required|numeric',
+		'ad_id' => 'required|integer|exists:appad_ad_ads,id'
 	];
 
 	/**
@@ -29,5 +31,9 @@ class Price extends Model
 	 */
 	public $belongsTo = [
 		'ad' => Ad::class
+	];
+
+	public $hasMany = [
+		'price_offers' => PriceOffer::class
 	];
 }

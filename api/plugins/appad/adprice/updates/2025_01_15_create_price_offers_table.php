@@ -18,8 +18,16 @@ return new class extends Migration
     {
         Schema::create('appad_adprice_price_offers', function(Blueprint $table) {
             $table->id();
-            $table->timestamps();
-        });
+
+			$table->decimal('price', 10, 2)->nullable();
+
+			$table->integer('ad_id')->unsigned()->nullable()->index();
+
+			$table->integer('user_id')->unsigned()->nullable()->index();
+
+			$table->timestamps();
+			$table->softDeletes();
+		});
     }
 
     /**
