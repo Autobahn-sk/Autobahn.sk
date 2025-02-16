@@ -24,6 +24,39 @@
             "pistons": "6",
             "seats": "4",
             "vin": "WBSBL92040JR12345"
+        },
+        "cardescription": {
+            "description": "Predám BMW E46 M3 3.5 R6 160KW Coupe RWD, 197 430 km, 2003, Benzín, Manuálna prevodovka, 35999€",
+            "additional": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis, in pharetra urna euismod. Morbi aliquam ut turpis sit amet ultrices. Vestibulum mattis blandit nisl, et tristique elit scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut rutrum risus et nunc pretium scelerisque.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Klimatizácia", "Digitálny otáčkomer", "Vyhrievaný volant", "Kožené sedačky", "Panoramatická strecha", "Tachometer", "Dotykový Displej" ],
+            "security": [ "ABS", "Brzdový asistent", "Detská poistka", "Vodičov airbag", "Centrálne zamykanie", "Kontrola stability", "Trakčná kontrola" ],
+            "exterior": [ "Predné hmlovky", "Daždový sensor", "Detská poistka", "Zadný spoiler", "Elektrické okná" ],
+            "comfort": [ "Android Auto", "Apple CarPlay", "Bluetooth", "HomeLink", "Posilovač riadenia" ]
+        },
+        "dimensions": {
+            "length": "4950 mm",
+            "height": "1550 mm",
+            "gauge": "2580 mm",
+            "height2": "1850 mm",   
+            "volume": "480",
+            "volume2": "850",
+            "match": "2100 mm",
+            "match2": "2140 mm",
+            "kilograms": "1550",
+            "maxkilograms": "1200",
+            "maxkilograms2": "400",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "80",
+            "maxkilograms": "1000",
+            "maxkilograms2": "1100",
+            "kg": "350",   
+            "rotating": "6500"
         }
     },
     {

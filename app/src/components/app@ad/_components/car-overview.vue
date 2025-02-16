@@ -120,7 +120,7 @@
                 <div class="flex-row"> 
                   <h2 class="text-2xl font-medium">Prehľad o aute</h2>
                 </div>
-                <div class="flex gap-4 justify-center md:justify-start md:gap-44 flex-wrap mt-4">
+                <div class="flex gap-4 md:gap-44 flex-wrap mt-4">
                   <div class="flex flex-col">
                     <CarInfo
                       icon="
@@ -314,6 +314,7 @@
                   />
                  </div>    
                 </div>
+                <hr class="mt-8 border-[#E1E1E1]">
               </div>
             </div>
             <div class="flex-col md:mt-0 mt-5">
@@ -397,6 +398,176 @@
               </div>
             </div>
           </div>
+          <div class="mt-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-medium">Popis</h2>
+            <div class="mt-5">
+              <p>{{ad.cardescription.description}}</p>
+              <p class="mt-4">{{ad.cardescription.additional}}</p>
+            </div>
+            <div class="flex md:flex-nowrap flex-wrap gap-4 justify-center md:justify-start">
+              <div v-if="hasReport" class="mt-6">
+                <button class="hover:bg-indigo-200 text-purple bg-messy-violet font-medium text-red flex items-center justify-center gap-2 pr-5 pl-5 py-3 rounded-[9px]"> 
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_63_1364)">
+                    <path d="M6.59999 8.39951C6.43999 8.39951 6.29999 8.33951 6.17999 8.21951C6.05999 8.09951 5.99999 7.95951 5.99999 7.79951V5.99951C5.95999 5.75951 6.04999 5.56951 6.26999 5.42951C6.48999 5.28951 6.70999 5.28951 6.92999 5.42951C7.14999 5.56951 7.23999 5.75951 7.19999 5.99951V7.79951C7.19999 7.95951 7.13999 8.09951 7.01999 8.21951C6.89999 8.33951 6.75999 8.39951 6.59999 8.39951ZM8.99999 8.39951C8.83999 8.39951 8.69999 8.33951 8.57999 8.21951C8.45999 8.09951 8.39999 7.95951 8.39999 7.79951V5.39951C8.39999 5.23951 8.45999 5.10951 8.57999 5.00951C8.69999 4.90951 8.83999 4.85951 8.99999 4.85951C9.15999 4.85951 9.29999 4.90951 9.41999 5.00951C9.53999 5.10951 9.59999 5.23951 9.59999 5.39951V7.79951C9.59999 7.95951 9.53999 8.09951 9.41999 8.21951C9.29999 8.33951 9.15999 8.39951 8.99999 8.39951ZM11.4 8.39951C11.24 8.39951 11.1 8.33951 10.98 8.21951C10.86 8.09951 10.8 7.95951 10.8 7.79951V4.19951C10.76 3.95951 10.85 3.76951 11.07 3.62951C11.29 3.48951 11.51 3.48951 11.73 3.62951C11.95 3.76951 12.04 3.95951 12 4.19951V7.79951C12 7.95951 11.94 8.09951 11.82 8.21951C11.7 8.33951 11.56 8.39951 11.4 8.39951ZM13.8 17.9995H4.19999C3.51999 17.9995 2.94999 17.7695 2.48999 17.3095C2.02999 16.8495 1.79999 16.2795 1.79999 15.5995V4.73951C1.79999 4.29951 1.88999 3.86951 2.06999 3.44951C2.24999 3.02951 2.51999 2.67951 2.87999 2.39951L4.97999 0.719513C5.49999 0.239511 6.11999 -0.000488281 6.83999 -0.000488281H13.8C14.48 -0.000488281 15.05 0.229511 15.51 0.689512C15.97 1.14951 16.2 1.71951 16.2 2.39951V15.5995C16.2 16.2795 15.97 16.8495 15.51 17.3095C15.05 17.7695 14.48 17.9995 13.8 17.9995ZM6.83999 1.19951C6.43999 1.19951 6.07999 1.33951 5.75999 1.61951L3.65999 3.35951C3.21999 3.71951 2.99999 4.17951 2.99999 4.73951V15.5995C2.99999 15.9195 3.11999 16.1995 3.35999 16.4395C3.59999 16.6795 3.87999 16.7995 4.19999 16.7995H13.8C14.12 16.7995 14.4 16.6795 14.64 16.4395C14.88 16.1995 15 15.9195 15 15.5995V2.39951C15 2.07951 14.88 1.79951 14.64 1.55951C14.4 1.31951 14.12 1.19951 13.8 1.19951H6.83999ZM12.6 14.3995H5.39999C5.15999 14.4395 4.96999 14.3495 4.82999 14.1295C4.68999 13.9095 4.68999 13.6895 4.82999 13.4695C4.96999 13.2495 5.15999 13.1595 5.39999 13.1995H12.6C12.84 13.1595 13.03 13.2495 13.17 13.4695C13.31 13.6895 13.31 13.9095 13.17 14.1295C13.03 14.3495 12.84 14.4395 12.6 14.3995ZM12.6 11.3995H5.39999C5.23999 11.3995 5.10999 11.3395 5.00999 11.2195C4.90999 11.0995 4.85999 10.9595 4.85999 10.7995C4.85999 10.6395 4.90999 10.4995 5.00999 10.3795C5.10999 10.2595 5.23999 10.1995 5.39999 10.1995H12.6C12.84 10.1595 13.03 10.2495 13.17 10.4695C13.31 10.6895 13.31 10.9095 13.17 11.1295C13.03 11.3495 12.84 11.4395 12.6 11.3995Z" fill="#405FF2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_63_1364">
+                    <rect width="18" height="18" fill="white" transform="matrix(1 0 0 -1 0 18)"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  Report-Auta.pdf
+                </button>
+              </div>
+              <div v-if="hasBrochure" class="md:mt-6">
+                <button class="hover:bg-indigo-200 text-purple bg-messy-violet font-medium text-red flex items-center justify-center gap-2 pr-5 pl-5 py-3 rounded-[9px]"> 
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_63_1364)">
+                    <path d="M6.59999 8.39951C6.43999 8.39951 6.29999 8.33951 6.17999 8.21951C6.05999 8.09951 5.99999 7.95951 5.99999 7.79951V5.99951C5.95999 5.75951 6.04999 5.56951 6.26999 5.42951C6.48999 5.28951 6.70999 5.28951 6.92999 5.42951C7.14999 5.56951 7.23999 5.75951 7.19999 5.99951V7.79951C7.19999 7.95951 7.13999 8.09951 7.01999 8.21951C6.89999 8.33951 6.75999 8.39951 6.59999 8.39951ZM8.99999 8.39951C8.83999 8.39951 8.69999 8.33951 8.57999 8.21951C8.45999 8.09951 8.39999 7.95951 8.39999 7.79951V5.39951C8.39999 5.23951 8.45999 5.10951 8.57999 5.00951C8.69999 4.90951 8.83999 4.85951 8.99999 4.85951C9.15999 4.85951 9.29999 4.90951 9.41999 5.00951C9.53999 5.10951 9.59999 5.23951 9.59999 5.39951V7.79951C9.59999 7.95951 9.53999 8.09951 9.41999 8.21951C9.29999 8.33951 9.15999 8.39951 8.99999 8.39951ZM11.4 8.39951C11.24 8.39951 11.1 8.33951 10.98 8.21951C10.86 8.09951 10.8 7.95951 10.8 7.79951V4.19951C10.76 3.95951 10.85 3.76951 11.07 3.62951C11.29 3.48951 11.51 3.48951 11.73 3.62951C11.95 3.76951 12.04 3.95951 12 4.19951V7.79951C12 7.95951 11.94 8.09951 11.82 8.21951C11.7 8.33951 11.56 8.39951 11.4 8.39951ZM13.8 17.9995H4.19999C3.51999 17.9995 2.94999 17.7695 2.48999 17.3095C2.02999 16.8495 1.79999 16.2795 1.79999 15.5995V4.73951C1.79999 4.29951 1.88999 3.86951 2.06999 3.44951C2.24999 3.02951 2.51999 2.67951 2.87999 2.39951L4.97999 0.719513C5.49999 0.239511 6.11999 -0.000488281 6.83999 -0.000488281H13.8C14.48 -0.000488281 15.05 0.229511 15.51 0.689512C15.97 1.14951 16.2 1.71951 16.2 2.39951V15.5995C16.2 16.2795 15.97 16.8495 15.51 17.3095C15.05 17.7695 14.48 17.9995 13.8 17.9995ZM6.83999 1.19951C6.43999 1.19951 6.07999 1.33951 5.75999 1.61951L3.65999 3.35951C3.21999 3.71951 2.99999 4.17951 2.99999 4.73951V15.5995C2.99999 15.9195 3.11999 16.1995 3.35999 16.4395C3.59999 16.6795 3.87999 16.7995 4.19999 16.7995H13.8C14.12 16.7995 14.4 16.6795 14.64 16.4395C14.88 16.1995 15 15.9195 15 15.5995V2.39951C15 2.07951 14.88 1.79951 14.64 1.55951C14.4 1.31951 14.12 1.19951 13.8 1.19951H6.83999ZM12.6 14.3995H5.39999C5.15999 14.4395 4.96999 14.3495 4.82999 14.1295C4.68999 13.9095 4.68999 13.6895 4.82999 13.4695C4.96999 13.2495 5.15999 13.1595 5.39999 13.1995H12.6C12.84 13.1595 13.03 13.2495 13.17 13.4695C13.31 13.6895 13.31 13.9095 13.17 14.1295C13.03 14.3495 12.84 14.4395 12.6 14.3995ZM12.6 11.3995H5.39999C5.23999 11.3995 5.10999 11.3395 5.00999 11.2195C4.90999 11.0995 4.85999 10.9595 4.85999 10.7995C4.85999 10.6395 4.90999 10.4995 5.00999 10.3795C5.10999 10.2595 5.23999 10.1995 5.39999 10.1995H12.6C12.84 10.1595 13.03 10.2495 13.17 10.4695C13.31 10.6895 13.31 10.9095 13.17 11.1295C13.03 11.3495 12.84 11.4395 12.6 11.3995Z" fill="#405FF2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_63_1364">
+                    <rect width="18" height="18" fill="white" transform="matrix(1 0 0 -1 0 18)"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  Brožúra-Auta.pdf
+                </button>
+              </div>
+            </div>
+            <hr class="mt-8 border-[#E1E1E1]">
+          </div>
+          <div class="mt-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-medium">Funkcie</h2>
+            <div class="flex flex-wrap mt-8 justify-start gap-6">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-medium">Interiér</h3>
+                <div class="mt-2 flex gap-3" v-for="feature in ad.functions.interior" :key="feature">
+                  <div class="bg-messy-violet w-[24px] h-[24px] flex items-center justify-center rounded-full">
+                    <font-awesome-icon :icon="['fas', 'check']" size="sm" :style="{ color: '#405ff2' }" />
+                  </div>
+                  {{feature}}
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-lg font-medium">Bezpečnosť</h3>
+                <div class="mt-2 flex gap-3" v-for="feature in ad.functions.security" :key="feature">
+                  <div class="bg-messy-violet w-[24px] h-[24px] flex items-center justify-center rounded-full">
+                    <font-awesome-icon :icon="['fas', 'check']" size="sm" :style="{ color: '#405ff2' }" />
+                  </div>
+                  {{feature}}
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-lg font-medium">Exteriér</h3>
+                <div class="mt-2 flex gap-3" v-for="feature in ad.functions.exterior" :key="feature">
+                  <div class="bg-messy-violet w-[24px] h-[24px] flex items-center justify-center rounded-full">
+                    <font-awesome-icon :icon="['fas', 'check']" size="sm" :style="{ color: '#405ff2' }" />
+                  </div>
+                  {{feature}}
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-lg font-medium">Komfort & Pohodlie</h3>
+                <div class="mt-2 flex gap-3" v-for="feature in ad.functions.comfort" :key="feature">
+                  <div class="bg-messy-violet w-[24px] h-[24px] flex items-center justify-center rounded-full">
+                    <font-awesome-icon :icon="['fas', 'check']" size="sm" :style="{ color: '#405ff2' }" />
+                  </div>
+                  {{feature}}
+                </div>
+              </div>
+            </div>
+            <hr class="mt-8 border-[#E1E1E1]">
+          </div>
+          <div class="mt-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-medium">Dimenzie & Kapacity</h2>
+            <div class="flex flex-wrap md:flex-nowrap mt-8 justify-start md:gap-16 gap-4">
+              <div class="flex-col">
+                <div class="flex">
+                  <p class="w-[287px]">Dĺžka</p>
+                  <p>{{ad.dimensions.length}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Dĺžka</p>
+                  <p>{{ad.dimensions.height}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Rozchod kolies</p>
+                  <p>{{ad.dimensions.gauge}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Objem batožinového priestoru </p>
+                  <p>{{ad.dimensions.height2}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Výška (vrátane strešných nosičov)</p>
+                  <p>{{ad.dimensions.volume}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Objem batožinového priestoru (sedadlá dole)</p>
+                  <p>{{ad.dimensions.volume2}}</p>
+                </div>
+              </div>
+              <div class="flex-col">
+                <div class="flex">
+                  <p class="w-[287px]">Šírka</p>
+                  <p>{{ad.dimensions.length}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Šírka (vrátane zrkadiel)</p>
+                  <p>{{ad.dimensions.height}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Hrubá hmotnosť vozidla (kg)</p>
+                  <p>{{ad.dimensions.gauge}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Max. Hmotnosť nákladu (kg)</p>
+                  <p>{{ad.dimensions.height2}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Max. Zaťaženie strechy (kg)</p>
+                  <p>{{ad.dimensions.volume}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Počet miest na sedenie</p>
+                  <p>{{ad.dimensions.volume2}}</p>
+                </div>
+              </div>
+            </div>
+            <hr class="mt-8 border-[#E1E1E1]">
+          </div>
+          <div class="mt-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-medium">Doplnkové údaje</h2>
+            <div class="flex flex-wrap md:flex-nowrap mt-8 justify-start md:gap-16 gap-4">
+              <div class="flex-col">
+                <div class="flex">
+                  <p class="w-[287px]">Objem palivovej nádrže (litre)</p>
+                  <p>{{ad.additionaldata.fueltankcapacity}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Max. Vlečná hmotnosť - brzdená (kg)</p>
+                  <p>{{ad.additionaldata.maxkilograms}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Max. Ťažné zariadenie - nebrzdené (kg)</p>
+                  <p>{{ad.additionaldata.maxkilograms2}}</p>
+                </div>
+              </div>
+              <div class="flex-col">
+                <div class="flex">
+                  <p class="w-[287px]">Pohotovostná hmotnosť (kg)</p>
+                  <p>{{ad.additionaldata.kg}}</p>
+                </div>
+                <div class="flex mt-4">
+                  <p class="w-[287px]">Polomer otáčania</p>
+                  <p>{{ad.additionaldata.rotating}}</p>
+                </div>
+              </div>
+            </div>
+            <hr class="mt-8 border-[#E1E1E1]">
+          </div>
       </div>
       <div v-else class="mt-24 flex flex-col items-center gap-6">
         <p class="text-5xl font-bold">Inzerát nebol nájdený</p>
@@ -448,6 +619,12 @@ export default defineComponent({
   computed: {
     hasFirstPrice() {
       return this.ad?.details?.firstPrice; 
+    },
+    hasReport() {
+      return this.ad?.cardescription?.report == true; 
+    },
+    hasBrochure() {
+      return this.ad?.cardescription?.brochure == true; 
     },
     moneySaved() {
       return this.firstPrice - this.secondPrice;
