@@ -35,6 +35,7 @@
   
   .bg-image {
     background-image: url("../_img/Background.png");
+    background-color: black;
   } 
   
 </style>

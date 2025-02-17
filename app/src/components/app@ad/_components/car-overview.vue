@@ -505,7 +505,7 @@
                   <p>{{ad.dimensions.volume}}</p>
                 </div>
                 <div class="flex mt-4">
-                  <p class="w-[287px]">Objem batožinového priestoru (sedadlá dole)</p>
+                  <p class="w-[287px]">Objem batožinového priestoru</p>
                   <p>{{ad.dimensions.volume2}}</p>
                 </div>
               </div>
