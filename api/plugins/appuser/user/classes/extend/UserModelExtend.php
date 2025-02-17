@@ -11,7 +11,7 @@ use AppCommerce\Newsletter\Classes\Services\NewsletterService;
 
 class UserModelExtend
 {
-	const INTERNATIONAL_PHONE_NUMBER = '/^\+[1-9][0-9]{7,14}$/';
+	const INTERNATIONAL_PHONE_NUMBER_REGEX = '/^\+[1-9][0-9]{7,14}$/';
 
 	public static function extend()
 	{
@@ -26,6 +26,7 @@ class UserModelExtend
 		self::addIsPublishedScope();
 		self::deleteUserFlags_onUserDelete();
 		self::bindEvent_creatVisitFlagWhenSpecificUserIsRequested();
+		self::bindEvent_softDeleteUserFlagsOnUserDeleteAndRestore();
 		self::beforeLogin_enableUsernameLogin();
 		self::register_subscribeToNewsletter();
 	}
@@ -80,7 +81,7 @@ class UserModelExtend
 				$user->rules['phone_number'] = [
 					'required',
 					'string',
-					'regex:'.self::INTERNATIONAL_PHONE_NUMBER
+					'regex:'.self::INTERNATIONAL_PHONE_NUMBER_REGEX
 				];
 
 				$user->rules['location'] = [
@@ -205,6 +206,34 @@ class UserModelExtend
             ]);
         });
     }
+
+	public static function bindEvent_softDeleteUserFlagsOnUserDeleteAndRestore()
+	{
+		User::extend(function (User $user) {
+			$user->bindEvent('model.beforeDelete', function () use ($user) {
+				UserFlag::where('user_id', $user->id)
+					->orWhere(function ($query) use ($user) {
+						$query->where([
+							'flaggable_type' => 'RainLab\User\Models\User',
+							'flaggable_id'   => $user->id
+						]);
+					})
+					->delete();
+			});
+
+			$user->bindEvent('model.afterRestore', function () use ($user) {
+				UserFlag::onlyTrashed()
+					->where('user_id', $user->id)
+					->orWhere(function ($query) use ($user) {
+						$query->where([
+							'flaggable_type' => 'RainLab\User\Models\User',
+							'flaggable_id'   => $user->id
+						]);
+					})
+					->restore();
+			});
+		});
+	}
 
 	public static function beforeLogin_enableUsernameLogin()
 	{

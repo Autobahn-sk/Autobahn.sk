@@ -2,10 +2,10 @@
 
 use AppUtil\Util\Classes\Traits\EnumResourceTrait;
 
-enum VehicleConditionEnum: string
+enum VehicleTransmissionEnum: string
 {
 	use EnumResourceTrait;
 
-	case NEW = 'NEW';
-	case USED = 'USED';
+	case MANUAL = 'MANUAL';
+	case AUTOMATIC = 'AUTOMATIC';
 }

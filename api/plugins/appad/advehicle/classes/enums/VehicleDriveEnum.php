@@ -2,10 +2,12 @@
 
 use AppUtil\Util\Classes\Traits\EnumResourceTrait;
 
-enum VehicleTransmissionEnum: string
+enum VehicleDriveEnum: string
 {
 	use EnumResourceTrait;
 
-	case MANUAL = 'MANUAL';
-	case AUTOMATIC = 'AUTOMATIC';
+	case FWD = 'FWD';
+	case RWD = 'RWD';
+	case AWD = 'AWD';
+	case _4WD = '4WD';
 }

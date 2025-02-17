@@ -24,6 +24,7 @@ class PriceOffer extends Model
      */
     public $rules = [
 		'price' => 'required|numeric',
+		'message' => 'nullable|string',
 		'ad_id' => 'required|integer|exists:appad_ad_ads,id',
 		'user_id' => 'required|integer|exists:users,id'
 	];

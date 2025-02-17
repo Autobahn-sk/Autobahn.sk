@@ -6,6 +6,7 @@ use RainLab\User\Models\User;
 use AppAd\AdPrice\Models\Price;
 use Illuminate\Validation\Rule;
 use AppAd\AdVehicle\Models\Vehicle;
+use AppAd\AdPrice\Models\PriceOffer;
 use AppAd\Ad\Classes\Enums\AdStatusEnum;
 
 /**
@@ -74,7 +75,7 @@ class Ad extends Model
 	 * @var array relations
 	 */
 	public $belongsTo = [
-		'user' => User::class,
+		'user' => User::class
 	];
 
 	public $hasOne = [
@@ -88,6 +89,11 @@ class Ad extends Model
 	public $hasMany = [
 		'prices' => [
 			Price::class,
+			'key' => 'ad_id',
+			'otherKey' => 'id'
+		],
+		'price_offers' => [
+			PriceOffer::class,
 			'key' => 'ad_id',
 			'otherKey' => 'id'
 		]
@@ -122,11 +128,35 @@ class Ad extends Model
 
 	public function getStatusOptions()
 	{
-		return AdStatusEnum::toArray();
+		return AdStatusEnum::optionsForBackend();
 	}
 
 	public function getCurrentPriceAttribute()
 	{
 		return $this->prices()->orderByDesc('created_at')->first();
+	}
+
+	public function getHighestPriceAttribute()
+	{
+		if (!$this->prices->count() > 1) {
+			return null;
+		}
+
+		$highestPrice = $this->prices()->orderByDesc('price')->first();
+
+		if ($highestPrice->price == $this->current_price->price) {
+			return null;
+		}
+
+		return $highestPrice;
+	}
+
+	public function getDifferencePriceAttribute()
+	{
+		if (!$this->highest_price) {
+			return null;
+		}
+
+		return $this->highest_price->price - $this->current_price->price;
 	}
 }

@@ -42,18 +42,71 @@ fields:
     google_place_id:
         label: Google Place ID
         span: right
+    youtube_url:
+        label: YouTube URL
+        span: full
 tabs:
     fields:
-#        vehicle:
-#            tab: Vehicle
-#            label: Content
-#            type: textarea
+        vehicle:
+            tab: Vehicle
+            label: Content
+            type: nestedform
+            form:
+                fields:
+                    vin:
+                        label: VIN
+                        type: text
+                    manufacturer:
+                        label: Manufacturer
+                        type: dropdown
+                    model:
+                        label: Model
+                        type: text
+                    body_type:
+                        label: Body Type
+                        type: dropdown
+                    color:
+                        label: Color
+                        type: text
+                    fuel_type:
+                        label: Fuel Type
+                        type: dropdown
+                    drive:
+                        label: Drive
+                        type: dropdown
+                    transmission:
+                        label: Transmission
+                        type: dropdown
+                    cylinders:
+                        label: Cylinders
+                        type: dropdown
+
         prices:
             tab: Finances
             label: Prices
             type: repeater
+            span: left
             form:
                 fields:
                     price:
                         label: Price
                         type: number
+        price_offers:
+            tab: Finances
+            label: Price Offers
+            type: repeater
+            span: right
+            form:
+                fields:
+                    price:
+                        label: Price
+                        type: number
+                        span: left
+                    user:
+                        label: User
+                        type: recordfinder
+                        title: Find user
+                        nameFrom: name
+                        descriptionFrom: email
+                        list: ~/plugins/rainlab/user/models/user/columns.yaml
+                        recordsPerPage: 10

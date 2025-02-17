@@ -32,8 +32,4 @@ class Price extends Model
 	public $belongsTo = [
 		'ad' => Ad::class
 	];
-
-	public $hasMany = [
-		'price_offers' => PriceOffer::class
-	];
 }

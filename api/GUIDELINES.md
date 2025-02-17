@@ -64,12 +64,6 @@ appplugin/plugin
 │   │   └── ExampleRequest.php
 │   └── resources
 │       └── ExampleResource.php
-├── lang
-│   └── en
-│       ├── enums
-│       │   └── example.php
-│       ├── error.php
-│       └── success.php
 ├── models
 │   └── ExampleModel.php
 ├── repositories
@@ -136,21 +130,6 @@ appplugin/plugin
     - Should be properly validated
 - **Resources**
     - Any resources returned by the controllers
-
-### Lang
-
-- Central directory for all the translations
-
-- **en**
-    - Translations specific for the locale, in this case 'en'
-        - **enums**
-            - Enum translations
-        - **error.php**
-            - Error messages translations
-        - **success.php**
-            - Success messages translations
-        - **sms.php**
-            - SMS messages translations
 
 ### Models
 

@@ -1,5 +1,8 @@
 <?php
 
+use RainLab\User\Models\User;
+use AppUser\UserApi\Http\Resources\UserResource;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -11,11 +14,11 @@ return [
     */
 
     'aliases' => [
-//        'aliasName' =>
-//            [
-//                'model'    => 'Some\Plugin\Models\SomeModel',
-//                'resource' => 'Some\Plugin\Http\Resources\SomeResource'
-//            ]
+        'user' =>
+            [
+                'model'    => User::class,
+                'resource' => UserResource::class
+            ]
     ],
     'type'  => [
         'bookmark' => 'Bookmark',
