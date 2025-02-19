@@ -1,23 +1,14 @@
 <?php
 
-use RainLab\User\Models\User;
-use AppUser\UserApi\Http\Resources\UserResource;
+use AppAd\Ad\Models\Ad;
+use AppAd\Ad\Http\Resources\AdSimpleResource;
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | Aliases
-    |--------------------------------------------------------------------------
-    | Aliases are used when Frontend is sending information which model will be
-    | flagged and also which models are allowed to be flagged
-    |
-    */
-
     'aliases' => [
-        'user' =>
+        'ad' =>
             [
-                'model'    => User::class,
-                'resource' => UserResource::class
+                'model'    => Ad::class,
+                'resource' => AdSimpleResource::class
             ]
     ],
     'type'  => [

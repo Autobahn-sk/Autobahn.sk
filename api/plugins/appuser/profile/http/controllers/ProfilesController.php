@@ -15,9 +15,7 @@ class ProfilesController extends Controller
         $loggedUser = JWTAuth::getUser();
 
         $user = User::isPublished()
-            ->where('id', $key)
-            ->orWhere('uuid', $key)
-            ->orWhere('username', $key)
+            ->where('username', $key)
             ->firstOrFail();
 
         if ($loggedUser) {

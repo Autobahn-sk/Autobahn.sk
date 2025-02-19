@@ -40,33 +40,6 @@ class Plugin extends PluginBase
     }
 
     /**
-     * registerComponents used by the frontend.
-     */
-    public function registerComponents()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'AppAd\AdPrice\Components\MyComponent' => 'myComponent',
-        ];
-    }
-
-    /**
-     * registerPermissions used by the backend.
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'appad.adprice.some_permission' => [
-                'tab' => 'AdPrice',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    /**
      * registerNavigation used by the backend.
      */
     public function registerNavigation()

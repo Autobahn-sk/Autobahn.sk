@@ -60,7 +60,7 @@ class Plugin extends PluginBase
     {
         return [
             'userflag' => [
-                'label'       => 'User flags',
+                'label'       => 'User Flags',
                 'url'         => Backend::url('appuser/userflag/userflags'),
                 'icon'        => 'icon-flag',
                 'permissions' => ['appuser.userflag.*'],

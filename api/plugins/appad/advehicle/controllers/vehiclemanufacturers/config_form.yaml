@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Vehicle Manufacturer
+
+# Model Form Field configuration
+form: $/appad/advehicle/models/vehiclemanufacturer/fields.yaml
+
+# Model Class name
+modelClass: AppAd\AdVehicle\Models\VehicleManufacturer
+
+# Default redirect location
+defaultRedirect: appad/advehicle/vehiclemanufacturers
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appad/advehicle/vehiclemanufacturers/update/:id
+    redirectClose: appad/advehicle/vehiclemanufacturers
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appad/advehicle/vehiclemanufacturers
+    redirectClose: appad/advehicle/vehiclemanufacturers
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

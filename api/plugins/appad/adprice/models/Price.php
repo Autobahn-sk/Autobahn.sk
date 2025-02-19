@@ -27,6 +27,13 @@ class Price extends Model
 	];
 
 	/**
+	 * @var array casts
+	 */
+	protected $casts = [
+		'price' => 'float'
+	];
+
+	/**
 	 * @var array relations
 	 */
 	public $belongsTo = [

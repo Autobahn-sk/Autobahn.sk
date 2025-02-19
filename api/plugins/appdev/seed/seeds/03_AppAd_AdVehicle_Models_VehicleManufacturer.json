@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "code": "bmw",
+    "name": "BMW",
+    "sort_order": 1,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/2048px-BMW_logo_%28gray%29.svg.png"
+    }
+  },
+  {
+    "id": 2,
+    "code": "mercedes",
+    "name": "Mercedes-Benz",
+    "sort_order": 2,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1200px-Mercedes-Logo.svg.png"
+    }
+  },
+  {
+    "id": 3,
+    "code": "audi",
+    "name": "Audi",
+    "sort_order": 3,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/1024px-Audi_logo_detail.svg.png"
+    }
+  },
+  {
+    "id": 4,
+    "code": "volkswagen",
+    "name": "Volkswagen",
+    "sort_order": 4,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Volkswagen_-_Logo.svg/2048px-Volkswagen_-_Logo.svg.png"
+    }
+  },
+  {
+    "id": 5,
+    "code": "skoda",
+    "name": "Škoda",
+    "sort_order": 5,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/%C5%A0koda_nieuw.png"
+    }
+  },
+  {
+    "id": 6,
+    "code": "seat",
+    "name": "Seat",
+    "sort_order": 6,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/SEAT_Logo_from_2017.png"
+    }
+  },
+  {
+    "id": 7,
+    "code": "porsche",
+    "name": "Porsche",
+    "sort_order": 7,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Porsche_logo.svg/1200px-Porsche_logo.svg.png"
+    }
+  },
+  {
+    "id": 8,
+    "code": "ferrari",
+    "name": "Ferrari",
+    "sort_order": 8,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DSC00458_%287614921264%29.jpg/1200px-DSC00458_%287614921264%29.jpg"
+    }
+  },
+  {
+    "id": 9,
+    "code": "lamborghini",
+    "name": "Lamborghini",
+    "sort_order": 9,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/1200px-Lamborghini_Logo.svg.png"
+    }
+  },
+  {
+    "id": 10,
+    "code": "tesla",
+    "name": "Tesla",
+    "sort_order": 10,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tesla_logo.png/1200px-Tesla_logo.png"
+    }
+  },
+  {
+    "id": 11,
+    "code": "toyota",
+    "name": "Toyota",
+    "sort_order": 11,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Toyota_logo_%28Red%29.svg/2560px-Toyota_logo_%28Red%29.svg.png"
+    }
+  },
+  {
+    "id": 12,
+    "code": "honda",
+    "name": "Honda",
+    "sort_order": 12,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/2560px-Honda.svg.png"
+    }
+  },
+  {
+    "id": 13,
+    "code": "ford",
+    "name": "Ford",
+    "sort_order": 13,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png"
+    }
+  },
+  {
+    "id": 14,
+    "code": "chevrolet",
+    "name": "Chevrolet",
+    "sort_order": 14,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Chevrolet-logo.png/1200px-Chevrolet-logo.png"
+    }
+  },
+  {
+    "id": 15,
+    "code": "nissan",
+    "name": "Nissan",
+    "sort_order": 15,
+    "logo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Nissan_logo.jpg"
+    }
+  }
+]

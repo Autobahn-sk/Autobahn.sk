@@ -20,23 +20,26 @@ return new class extends Migration
             $table->id();
 
 			$table->string('vin')->unique();
-			$table->string('manufacturer');
+			$table->string('license_plate')->nullable();
+			$table->integer('manufacturer_id')->unsigned()->index();
 			$table->string('model');
 			$table->string('body_type');
-			$table->integer('horsepower');
+			$table->string('color');
+			$table->integer('kilowatts');
 			$table->integer('torque');
 			$table->decimal('displacement', 2, 1);
-			$table->integer('max_speed');
-			$table->string('color');
+			$table->integer('top_speed');
 			$table->string('fuel_type');
 			$table->string('drive');
 			$table->string('transmission');
+			$table->integer('gears');
+			$table->string('engine_type');
 			$table->integer('cylinders');
 			$table->integer('doors');
+			$table->integer('seats');
 			$table->integer('year');
 			$table->integer('mileage');
 			$table->string('condition');
-			$table->string('license_plate')->nullable();
 
 			$table->timestamps();
 			$table->softDeletes();

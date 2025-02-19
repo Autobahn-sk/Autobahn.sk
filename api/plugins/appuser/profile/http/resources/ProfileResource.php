@@ -2,6 +2,7 @@
 
 use October\Rain\Support\Facades\Event;
 use AppAd\Ad\Classes\Enums\AdStatusEnum;
+use AppAd\Ad\Http\Resources\AdSimpleResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProfileResource extends JsonResource
@@ -13,11 +14,10 @@ class ProfileResource extends JsonResource
     {
         $response = [
             'id'          => $this->id,
-            'username'    => $this->username,
-            'name'        => $this->name,
-			'surname'     => $this->surname,
+			'name'        => $this->name,
+			'username'    => $this->username,
             'avatar'      => $this->avatar,
-            'ads'         => AdResource::collection(
+            'ads'         => AdSimpleResource::collection(
                 $this->ads()->where('status', AdStatusEnum::PUBLISHED->value)->get()
             )
         ];

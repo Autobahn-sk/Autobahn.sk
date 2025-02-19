@@ -85,11 +85,13 @@ class UserModelExtend
 				];
 
 				$user->rules['location'] = [
+					'nullable',
 					'string',
 					'required_without:google_place_id'
 				];
 
 				$user->rules['google_place_id'] = [
+					'nullable',
 					'string'
 				];
 

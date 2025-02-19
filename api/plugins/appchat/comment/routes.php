@@ -18,31 +18,29 @@ Route::group([
 		CommentPolicyMiddleware::class
     ],
 ], function(Router $router) {
-    
     $router
-        ->get('comments/{node}/{id}', 'CommentsController@index')
+        ->get('comments/{node}/{id}', 'CommentController@index')
         ->middleware(config('appchat.comment::unregistered_user_allowed_to_read') ? [] : [Auth::class])
         ->name('comments.index');
     
     $router
-        ->post('comments/{node}/{id}', 'CommentsController@store')
-        ->middleware([Auth::class,])
+        ->post('comments/{node}/{id}', 'CommentController@store')
+        ->middleware([Auth::class])
         ->name('comments.store');
     
     $router
-        ->get('comments/{comment}', 'CommentsController@show')
+        ->get('comments/{comment}', 'CommentController@show')
         ->middleware(config('appchat.comment::unregistered_user_allowed_to_read') ? [] : [Auth::class])
         ->name('comments.show');
     
     $router
-        ->delete('comments/{comment}', 'CommentsController@destroy')
-        ->middleware([Auth::class,])
+        ->delete('comments/{comment}', 'CommentController@destroy')
+        ->middleware([Auth::class])
         ->name('comments.destroy');
     
     $router
-        ->match(['put', 'patch',], 'comments/{comment}', 'CommentsController@update')
-        ->middleware([Auth::class,])
+        ->post('comments/{comment}', 'CommentController@update')
+        ->middleware([Auth::class])
         ->name('comments.update');
-
 });
 

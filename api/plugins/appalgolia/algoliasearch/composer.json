@@ -1,0 +1,8 @@
+{
+    "name": "appalgolia/algoliasearch-plugin",
+    "type": "october-plugin",
+    "description": "No description provided yet...",
+    "require": {
+        "algolia/algoliasearch-client-php": "^3.3"
+    }
+}

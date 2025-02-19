@@ -2,6 +2,7 @@
 
 use Cache;
 use October\Rain\Support\Facades\Event;
+use AppAd\Ad\Http\Resources\AdSimpleResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -12,6 +13,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'username' => $this->username,
+			'avatar' => $this->avatar,
             'email' => $this->email,
             'phone_number' => $this->phone_number,
 			'location' => $this->location,
@@ -26,8 +28,8 @@ class UserResource extends JsonResource
             'is_guest' => (bool) $this->is_guest,
             'is_superuser' => (bool) $this->is_superuser,
 			'is_email_verified' => (bool) $this->is_email_verified,
-//			'ads' => AdResource::collection($this->ads),
-//			'bookmarks' => AdResource::collection($this->bookmarks->pluck('flaggable')),
+			'ads' => AdSimpleResource::collection($this->ads),
+			'bookmarks' => AdSimpleResource::collection($this->bookmarks->pluck('flaggable')),
         ];
         if (config('app.debug')) {
             $data['activation_code'] = $this->activation_code;

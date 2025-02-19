@@ -1,3 +1,4 @@
 v1.0.1:
   - First version of AdVehicle
   - 2025_01_11_create_vehicles_table.php
+  - 2025_01_12_create_vehicle_manufacturers_table.php

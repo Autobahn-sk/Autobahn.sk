@@ -10,8 +10,9 @@ class AuthorResource extends JsonResource
         $data = [
             'id'   => $this->id,
             'name' => $this->name,
-            'nickname' => $this->nickname
-        ];
+            'username' => $this->username,
+			'avatar' => $this->avatar
+		];
         
         Event::fire('appchat.comment.author.beforeReturnResource', [&$data, $this->resource]);
         

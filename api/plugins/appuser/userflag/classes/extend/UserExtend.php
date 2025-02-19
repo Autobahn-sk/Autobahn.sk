@@ -5,9 +5,6 @@ use AppUser\UserFlag\Models\UserFlag;
 
 class UserExtend
 {
-    /*
-     * Add method to user for getting flagged models
-     */
     public static function addMethod_getFlaggedModels()
     {
         User::extend(function(User $user) {

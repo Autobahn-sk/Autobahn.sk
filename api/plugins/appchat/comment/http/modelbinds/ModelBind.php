@@ -15,7 +15,10 @@ class ModelBind
         }
         
         if ($request->route()->hasParameter('comment')) {
-            $request->route()->setParameter('comment', Comment::findOrFail((int) $request->route()->parameter('comment')));
+            if (is_numeric($request->route()->parameter('comment'))) {
+				$request->route()->setParameter('comment', Comment::findOrFail((int) $request->route()->parameter('comment')));
+			}
+
             return $next($request);
         }
         

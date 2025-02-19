@@ -159,4 +159,37 @@ class Ad extends Model
 
 		return $this->highest_price->price - $this->current_price->price;
 	}
+
+	public function getBadgeAttribute()
+	{
+		if ($this->difference_price) {
+			return 'price';
+		}
+
+		if ($this->vehicle) {
+			if ($this->vehicle->mileage <= 150000) {
+				return 'mileage';
+			}
+
+			if ($this->vehicle->year >= 2015) {
+				return 'year';
+			}
+		}
+
+		return null;
+	}
+
+	public function getThumbnailAttribute()
+	{
+		return $this->images->first();
+	}
+
+	public function getSummaryAttribute()
+	{
+		if (!$this->vehicle) {
+			return null;
+		}
+
+		return $this->vehicle->displacement . ' ' . $this->vehicle->engine_type . $this->vehicle->cylinders . ' ' . $this->vehicle->kilowatts . 'kW' . ' ' . $this->vehicle->body_type . ' ' . $this->vehicle->drive;
+	}
 }

@@ -2,6 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use AppUser\UserFlag\Classes\Services\UserFlagService;
 
 /**
  * Plugin Information File
@@ -36,7 +37,8 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        //
+		UserFlagService::addTypeStatusToResource('appad.ad.ad.beforeReturnResource', 'bookmark', 'bookmark_by_active_user');
+		UserFlagService::addTypeStatusToResource('appad.ad.adSimple.beforeReturnResource', 'bookmark', 'bookmark_by_active_user');
     }
 
     /**

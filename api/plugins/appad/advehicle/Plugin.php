@@ -40,44 +40,15 @@ class Plugin extends PluginBase
     }
 
     /**
-     * registerComponents used by the frontend.
-     */
-    public function registerComponents()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'AppAd\AdVehicle\Components\MyComponent' => 'myComponent',
-        ];
-    }
-
-    /**
-     * registerPermissions used by the backend.
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'appad.advehicle.some_permission' => [
-                'tab' => 'AdVehicle',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    /**
      * registerNavigation used by the backend.
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'advehicle' => [
-                'label' => 'AdVehicle',
-                'url' => Backend::url('appad/advehicle/mycontroller'),
-                'icon' => 'icon-leaf',
+                'label' => 'Vehicle Manufacturers',
+                'url' => Backend::url('appad/advehicle/vehiclemanufacturers'),
+                'icon' => 'icon-building',
                 'permissions' => ['appad.advehicle.*'],
                 'order' => 500,
             ],
