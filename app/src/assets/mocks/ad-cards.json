@@ -57,6 +57,15 @@
             "maxkilograms2": "1100",
             "kg": "350",   
             "rotating": "6500"
+        },
+        "map": {
+            "latitude": 48.119880,
+            "longitude": 17.126781
+        },
+        "reviews": {
+            "name": "demo",
+            "date": "November 30, 2023",
+            "reviews": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
         }
     },
     {
