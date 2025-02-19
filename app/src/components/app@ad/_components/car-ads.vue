@@ -1,17 +1,9 @@
 <template>
-  <div class="md:mt-20 mt-10">
+  <div class="md:mt-20 mt-10 mb-20">
     <h2 class="subtitle subtitle-40 font-bold text-black">
-      <strong>Preskúmať všetky vozidlá</strong>
+      <strong>Súvisiace inzeráty</strong>
     </h2>
-    <div class="my-9">
-      <div class="select-bar flex gap-9">
-        <a class="active">Odporúčané</a>
-        <a>Nové autá</a>
-        <a>Používané autá</a>
-      </div>
-      <hr class="mt-3 bg-light-gray h-[0.06rem]">
-    </div>
-    <div class="flex flex-wrap gap-4">
+    <div class="flex flex-wrap gap-4 mt-6">
       <Ad
         class="flex-row"
         v-for="item in recentAds"
@@ -54,7 +46,7 @@ export default defineComponent({
     loadRecentAds() {
       this.recentAds = [...AdsData]
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-        .slice(0, 8);
+        .slice(0, 4);
     }
   }
 });

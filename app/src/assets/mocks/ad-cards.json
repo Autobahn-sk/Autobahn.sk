@@ -62,20 +62,106 @@
             "latitude": 48.119880,
             "longitude": 17.126781
         },
-        "reviews": {
-            "name": "demo",
-            "date": "November 30, 2023",
-            "reviews": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
-        }
+        "reviews": [
+            {
+                "id": 1,
+                "name": "demo",
+                "date": "November 30, 2023",
+                "review": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
+            },
+            {
+                "id": 2,
+                "name": "user2",
+                "date": "December 15, 2023",
+                "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor orci sed odio sagittis, nec fermentum velit pharetra."
+            }
+        ],
+        "chart": [
+            { "year": 2016, "price": 28000 },
+            { "year": 2018, "price": 22000 },
+            { "year": 2020, "price": 25000 },
+            { "year": 2022, "price": 23000 },
+            { "year": 2024, "price": 27000 }
+          ]
     },
     {
         "id": 2,
-        "title": "BMW E60 M5",
-        "description": "4.0 V10 270KW Sedan RWD",
-        "kilometres": "205 315 km",
+        "title": "Audi RS4 B7",
+        "description": "4.2 V8 309KW Sedan Quattro",
+        "kilometres": "165 200 km",
+        "year": "2007",
         "fuel": "Benzín",
         "gearbox": "Manuálna",
-        "price": 36999
+        "price": 32999,
+        "details": {
+            "firstPrice": 37000,
+            "user": "Marek",
+            "phone": "+421 902 654 321",
+            "adress": "Košice, Košický Kraj",
+            "color": "Daytona Grey",
+            "drive": "Quattro",
+            "power": "309KW",
+            "engine": "4.2 V8",
+            "condition": "Výborný stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "8",
+            "seats": "5",
+            "vin": "WAUZZZ8E37A123456"
+        },
+        "cardescription": {
+            "description": "Predám Audi RS4 B7 4.2 V8 309KW Sedan Quattro, 165 200 km, 2007, Benzín, Manuálna prevodovka, 32999€",
+            "additional": "RS4 B7 je ikonický športový sedan s atmosférickým motorom 4.2 V8 a pohonom Quattro. Auto je vo výbornom stave, pravidelne servisované, bez vážnych poškodení. Vhodné pre nadšencov športových áut.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Dvojzónová klimatizácia", "Kožené športové sedačky", "Vyhrievané predné sedačky", "Digitálny otáčkomer", "Multifunkčný volant" ],
+            "security": [ "ABS", "ESP", "Airbagy", "Tempomat", "Parkovacie senzory" ],
+            "exterior": [ "Xenónové svetlá", "Zadný difúzor", "Športový výfuk", "Elektricky nastaviteľné spätné zrkadlá" ],
+            "comfort": [ "Bluetooth", "Navigačný systém", "Audi MMI", "Elektrické okná", "Bezklúčové štartovanie" ]
+        },
+        "dimensions": {
+            "length": "4580 mm",
+            "height": "1415 mm",
+            "gauge": "2650 mm",
+            "volume": "460",
+            "kilograms": "1650",
+            "maxkilograms": "2000",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "63",
+            "maxkilograms": "1800",
+            "kg": "370",
+            "rotating": "8250"
+        },
+        "map": {
+            "latitude": 48.716385,
+            "longitude": 21.261074
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "martin",
+                "date": "Január 10, 2024",
+                "review": "Skvelé auto, drží ako pribité na ceste, motor je neskutočný a zvuk je návykový."
+            },
+            {
+                "id": 2,
+                "name": "jakub",
+                "date": "Február 5, 2024",
+                "review": "Jazdím ho už 3 roky, spoľahlivé auto, ale servis je drahý. Inak perfektný stroj!"
+            }
+        ],
+        "chart": [
+            { "year": 2017, "price": 35000 },
+            { "year": 2019, "price": 29000 },
+            { "year": 2021, "price": 31000 },
+            { "year": 2023, "price": 28000 },
+            { "year": 2024, "price": 32999 }
+        ]
     },
     {
         "id": 3,
