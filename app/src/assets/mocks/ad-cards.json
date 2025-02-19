@@ -165,56 +165,494 @@
     },
     {
         "id": 3,
-        "title": "AUDI RS6",
-        "description": "4.2 V10 240KW Combi RWD",
-        "kilometres": "142 030 km",
+        "title": "Audi RS4 B7",
+        "description": "4.2 V8 309KW Sedan Quattro",
+        "kilometres": "165 200 km",
+        "year": "2007",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 32999,
+        "details": {
+            "firstPrice": 37000,
+            "user": "Marek",
+            "phone": "+421 902 654 321",
+            "adress": "Košice, Košický Kraj",
+            "color": "Daytona Grey",
+            "drive": "Quattro",
+            "power": "309KW",
+            "engine": "4.2 V8",
+            "condition": "Výborný stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "8",
+            "seats": "5",
+            "vin": "WAUZZZ8E37A123456"
+        },
+        "cardescription": {
+            "description": "Predám Audi RS4 B7 4.2 V8 309KW Sedan Quattro, 165 200 km, 2007, Benzín, Manuálna prevodovka, 32999€",
+            "additional": "RS4 B7 je ikonický športový sedan s atmosférickým motorom 4.2 V8 a pohonom Quattro. Auto je vo výbornom stave, pravidelne servisované, bez vážnych poškodení. Vhodné pre nadšencov športových áut.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Dvojzónová klimatizácia", "Kožené športové sedačky", "Vyhrievané predné sedačky", "Digitálny otáčkomer", "Multifunkčný volant" ],
+            "security": [ "ABS", "ESP", "Airbagy", "Tempomat", "Parkovacie senzory" ],
+            "exterior": [ "Xenónové svetlá", "Zadný difúzor", "Športový výfuk", "Elektricky nastaviteľné spätné zrkadlá" ],
+            "comfort": [ "Bluetooth", "Navigačný systém", "Audi MMI", "Elektrické okná", "Bezklúčové štartovanie" ]
+        },
+        "dimensions": {
+            "length": "4580 mm",
+            "height": "1415 mm",
+            "gauge": "2650 mm",
+            "volume": "460",
+            "kilograms": "1650",
+            "maxkilograms": "2000",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "63",
+            "maxkilograms": "1800",
+            "kg": "370",
+            "rotating": "8250"
+        },
+        "map": {
+            "latitude": 48.716385,
+            "longitude": 21.261074
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "martin",
+                "date": "Január 10, 2024",
+                "review": "Skvelé auto, drží ako pribité na ceste, motor je neskutočný a zvuk je návykový."
+            },
+            {
+                "id": 2,
+                "name": "jakub",
+                "date": "Február 5, 2024",
+                "review": "Jazdím ho už 3 roky, spoľahlivé auto, ale servis je drahý. Inak perfektný stroj!"
+            }
+        ],
+        "chart": [
+            { "year": 2017, "price": 35000 },
+            { "year": 2019, "price": 29000 },
+            { "year": 2021, "price": 31000 },
+            { "year": 2023, "price": 28000 },
+            { "year": 2024, "price": 32999 }
+        ]
     },
     {
         "id": 4,
-        "title": "AUDI A4 B5",
-        "description": "1.9TDI R4 74KW Sedan QUATTRO",
-        "kilometres": "142 030 km",
+        "title": "BMW E46 M3",
+        "description": "3.5 R6 160KW Coupe RWD",
+        "kilometres": "197 430 km",
+        "year": "2003",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 35999,
+        "details": {
+            "firstPrice": 40000,
+            "user": "Patrik",
+            "phone": "+421 911 123 456",
+            "adress": "Senec, Bratislavský Kraj",   
+            "color": "Silver",
+            "drive": "RWD",
+            "power": "160KW",
+            "engine": "3.5 R6",
+            "condition": "Veľmi dobrý stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "6",
+            "seats": "4",
+            "vin": "WBSBL92040JR12345"
+        },
+        "cardescription": {
+            "description": "Predám BMW E46 M3 3.5 R6 160KW Coupe RWD, 197 430 km, 2003, Benzín, Manuálna prevodovka, 35999€",
+            "additional": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis, in pharetra urna euismod. Morbi aliquam ut turpis sit amet ultrices. Vestibulum mattis blandit nisl, et tristique elit scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut rutrum risus et nunc pretium scelerisque.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Klimatizácia", "Digitálny otáčkomer", "Vyhrievaný volant", "Kožené sedačky", "Panoramatická strecha", "Tachometer", "Dotykový Displej" ],
+            "security": [ "ABS", "Brzdový asistent", "Detská poistka", "Vodičov airbag", "Centrálne zamykanie", "Kontrola stability", "Trakčná kontrola" ],
+            "exterior": [ "Predné hmlovky", "Daždový sensor", "Detská poistka", "Zadný spoiler", "Elektrické okná" ],
+            "comfort": [ "Android Auto", "Apple CarPlay", "Bluetooth", "HomeLink", "Posilovač riadenia" ]
+        },
+        "dimensions": {
+            "length": "4950 mm",
+            "height": "1550 mm",
+            "gauge": "2580 mm",
+            "height2": "1850 mm",   
+            "volume": "480",
+            "volume2": "850",
+            "match": "2100 mm",
+            "match2": "2140 mm",
+            "kilograms": "1550",
+            "maxkilograms": "1200",
+            "maxkilograms2": "400",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "80",
+            "maxkilograms": "1000",
+            "maxkilograms2": "1100",
+            "kg": "350",   
+            "rotating": "6500"
+        },
+        "map": {
+            "latitude": 48.119880,
+            "longitude": 17.126781
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "demo",
+                "date": "November 30, 2023",
+                "review": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
+            },
+            {
+                "id": 2,
+                "name": "user2",
+                "date": "December 15, 2023",
+                "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor orci sed odio sagittis, nec fermentum velit pharetra."
+            }
+        ],
+        "chart": [
+            { "year": 2016, "price": 28000 },
+            { "year": 2018, "price": 22000 },
+            { "year": 2020, "price": 25000 },
+            { "year": 2022, "price": 23000 },
+            { "year": 2024, "price": 27000 }
+          ]
     },
     {
         "id": 5,
-        "title": "AUDI RS6",
-        "description": "4.2 V10 240KW Combi RWD",
-        "kilometres": "142 030 km",
+        "title": "Audi RS4 B7",
+        "description": "4.2 V8 309KW Sedan Quattro",
+        "kilometres": "165 200 km",
+        "year": "2007",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 22999,
+        "details": {
+            "firstPrice": 37000,
+            "user": "Marek",
+            "phone": "+421 902 654 321",
+            "adress": "Košice, Košický Kraj",
+            "color": "Daytona Grey",
+            "drive": "Quattro",
+            "power": "309KW",
+            "engine": "4.2 V8",
+            "condition": "Výborný stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "8",
+            "seats": "5",
+            "vin": "WAUZZZ8E37A123456"
+        },
+        "cardescription": {
+            "description": "Predám Audi RS4 B7 4.2 V8 309KW Sedan Quattro, 165 200 km, 2007, Benzín, Manuálna prevodovka, 32999€",
+            "additional": "RS4 B7 je ikonický športový sedan s atmosférickým motorom 4.2 V8 a pohonom Quattro. Auto je vo výbornom stave, pravidelne servisované, bez vážnych poškodení. Vhodné pre nadšencov športových áut.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Dvojzónová klimatizácia", "Kožené športové sedačky", "Vyhrievané predné sedačky", "Digitálny otáčkomer", "Multifunkčný volant" ],
+            "security": [ "ABS", "ESP", "Airbagy", "Tempomat", "Parkovacie senzory" ],
+            "exterior": [ "Xenónové svetlá", "Zadný difúzor", "Športový výfuk", "Elektricky nastaviteľné spätné zrkadlá" ],
+            "comfort": [ "Bluetooth", "Navigačný systém", "Audi MMI", "Elektrické okná", "Bezklúčové štartovanie" ]
+        },
+        "dimensions": {
+            "length": "4580 mm",
+            "height": "1415 mm",
+            "gauge": "2650 mm",
+            "volume": "460",
+            "kilograms": "1650",
+            "maxkilograms": "2000",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "63",
+            "maxkilograms": "1800",
+            "kg": "370",
+            "rotating": "8250"
+        },
+        "map": {
+            "latitude": 48.716385,
+            "longitude": 21.261074
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "martin",
+                "date": "Január 10, 2024",
+                "review": "Skvelé auto, drží ako pribité na ceste, motor je neskutočný a zvuk je návykový."
+            },
+            {
+                "id": 2,
+                "name": "jakub",
+                "date": "Február 5, 2024",
+                "review": "Jazdím ho už 3 roky, spoľahlivé auto, ale servis je drahý. Inak perfektný stroj!"
+            }
+        ],
+        "chart": [
+            { "year": 2017, "price": 35000 },
+            { "year": 2019, "price": 29000 },
+            { "year": 2021, "price": 31000 },
+            { "year": 2023, "price": 28000 },
+            { "year": 2024, "price": 32999 }
+        ]
     },
     {
         "id": 6,
-        "title": "AUDI RS6",
-        "description": "4.2 V10 240KW Combi RWD",
-        "kilometres": "142 030 km",
+        "title": "BMW E46",
+        "description": "3.5 R6 160KW Coupe RWD",
+        "kilometres": "197 430 km",
+        "year": "2003",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 5999,
+        "details": {
+            "firstPrice": 40000,
+            "user": "Patrik",
+            "phone": "+421 911 123 456",
+            "adress": "Senec, Bratislavský Kraj",   
+            "color": "Silver",
+            "drive": "RWD",
+            "power": "160KW",
+            "engine": "3.5 R6",
+            "condition": "Veľmi dobrý stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "6",
+            "seats": "4",
+            "vin": "WBSBL92040JR12345"
+        },
+        "cardescription": {
+            "description": "Predám BMW E46 M3 3.5 R6 160KW Coupe RWD, 197 430 km, 2003, Benzín, Manuálna prevodovka, 35999€",
+            "additional": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis, in pharetra urna euismod. Morbi aliquam ut turpis sit amet ultrices. Vestibulum mattis blandit nisl, et tristique elit scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut rutrum risus et nunc pretium scelerisque.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Klimatizácia", "Digitálny otáčkomer", "Vyhrievaný volant", "Kožené sedačky", "Panoramatická strecha", "Tachometer", "Dotykový Displej" ],
+            "security": [ "ABS", "Brzdový asistent", "Detská poistka", "Vodičov airbag", "Centrálne zamykanie", "Kontrola stability", "Trakčná kontrola" ],
+            "exterior": [ "Predné hmlovky", "Daždový sensor", "Detská poistka", "Zadný spoiler", "Elektrické okná" ],
+            "comfort": [ "Android Auto", "Apple CarPlay", "Bluetooth", "HomeLink", "Posilovač riadenia" ]
+        },
+        "dimensions": {
+            "length": "4950 mm",
+            "height": "1550 mm",
+            "gauge": "2580 mm",
+            "height2": "1850 mm",   
+            "volume": "480",
+            "volume2": "850",
+            "match": "2100 mm",
+            "match2": "2140 mm",
+            "kilograms": "1550",
+            "maxkilograms": "1200",
+            "maxkilograms2": "400",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "80",
+            "maxkilograms": "1000",
+            "maxkilograms2": "1100",
+            "kg": "350",   
+            "rotating": "6500"
+        },
+        "map": {
+            "latitude": 48.119880,
+            "longitude": 17.126781
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "demo",
+                "date": "November 30, 2023",
+                "review": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
+            },
+            {
+                "id": 2,
+                "name": "user2",
+                "date": "December 15, 2023",
+                "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor orci sed odio sagittis, nec fermentum velit pharetra."
+            }
+        ],
+        "chart": [
+            { "year": 2016, "price": 28000 },
+            { "year": 2018, "price": 22000 },
+            { "year": 2020, "price": 25000 },
+            { "year": 2022, "price": 23000 },
+            { "year": 2024, "price": 27000 }
+          ]
     },
     {
-        "id": 7,
-        "title": "AUDI RS6",
-        "description": "4.2 V10 240KW Combi RWD",
-        "kilometres": "142 030 km",
+        "id": 5,
+        "title": "Audi RS6 B8",
+        "description": "5.2 V8 309KW Sedan Quattro",
+        "kilometres": "165 200 km",
+        "year": "2007",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 52999,
+        "details": {
+            "firstPrice": 37000,
+            "user": "Marek",
+            "phone": "+421 902 654 321",
+            "adress": "Košice, Košický Kraj",
+            "color": "Daytona Grey",
+            "drive": "Quattro",
+            "power": "309KW",
+            "engine": "4.2 V8",
+            "condition": "Výborný stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "8",
+            "seats": "5",
+            "vin": "WAUZZZ8E37A123456"
+        },
+        "cardescription": {
+            "description": "Predám Audi RS4 B7 4.2 V8 309KW Sedan Quattro, 165 200 km, 2007, Benzín, Manuálna prevodovka, 32999€",
+            "additional": "RS4 B7 je ikonický športový sedan s atmosférickým motorom 4.2 V8 a pohonom Quattro. Auto je vo výbornom stave, pravidelne servisované, bez vážnych poškodení. Vhodné pre nadšencov športových áut.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Dvojzónová klimatizácia", "Kožené športové sedačky", "Vyhrievané predné sedačky", "Digitálny otáčkomer", "Multifunkčný volant" ],
+            "security": [ "ABS", "ESP", "Airbagy", "Tempomat", "Parkovacie senzory" ],
+            "exterior": [ "Xenónové svetlá", "Zadný difúzor", "Športový výfuk", "Elektricky nastaviteľné spätné zrkadlá" ],
+            "comfort": [ "Bluetooth", "Navigačný systém", "Audi MMI", "Elektrické okná", "Bezklúčové štartovanie" ]
+        },
+        "dimensions": {
+            "length": "4580 mm",
+            "height": "1415 mm",
+            "gauge": "2650 mm",
+            "volume": "460",
+            "kilograms": "1650",
+            "maxkilograms": "2000",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "63",
+            "maxkilograms": "1800",
+            "kg": "370",
+            "rotating": "8250"
+        },
+        "map": {
+            "latitude": 48.716385,
+            "longitude": 21.261074
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "martin",
+                "date": "Január 10, 2024",
+                "review": "Skvelé auto, drží ako pribité na ceste, motor je neskutočný a zvuk je návykový."
+            },
+            {
+                "id": 2,
+                "name": "jakub",
+                "date": "Február 5, 2024",
+                "review": "Jazdím ho už 3 roky, spoľahlivé auto, ale servis je drahý. Inak perfektný stroj!"
+            }
+        ],
+        "chart": [
+            { "year": 2017, "price": 35000 },
+            { "year": 2019, "price": 29000 },
+            { "year": 2021, "price": 31000 },
+            { "year": 2023, "price": 28000 },
+            { "year": 2024, "price": 32999 }
+        ]
     },
     {
         "id": 8,
-        "title": "AUDI RS6",
-        "description": "4.2 V10 240KW Combi RWD",
-        "kilometres": "142 030 km",
+        "title": "BMW E46 318i",
+        "description": "2.0 R4 160KW Coupe RWD",
+        "kilometres": "197 430 km",
+        "year": "2003",
         "fuel": "Benzín",
-        "gearbox": "Automat",
-        "price": 28321
+        "gearbox": "Manuálna",
+        "price": 35999,
+        "details": {
+            "firstPrice": 40000,
+            "user": "Patrik",
+            "phone": "+421 911 123 456",
+            "adress": "Senec, Bratislavský Kraj",   
+            "color": "Silver",
+            "drive": "RWD",
+            "power": "160KW",
+            "engine": "3.5 R6",
+            "condition": "Veľmi dobrý stav",
+            "body": "Sedan",
+            "status": "Používané",
+            "doors": "4",
+            "pistons": "6",
+            "seats": "4",
+            "vin": "WBSBL92040JR12345"
+        },
+        "cardescription": {
+            "description": "Predám BMW E46 M3 3.5 R6 160KW Coupe RWD, 197 430 km, 2003, Benzín, Manuálna prevodovka, 35999€",
+            "additional": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis, in pharetra urna euismod. Morbi aliquam ut turpis sit amet ultrices. Vestibulum mattis blandit nisl, et tristique elit scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut rutrum risus et nunc pretium scelerisque.",
+            "report": true,
+            "brochure": true
+        },
+        "functions": {
+            "interior": [ "Klimatizácia", "Digitálny otáčkomer", "Vyhrievaný volant", "Kožené sedačky", "Panoramatická strecha", "Tachometer", "Dotykový Displej" ],
+            "security": [ "ABS", "Brzdový asistent", "Detská poistka", "Vodičov airbag", "Centrálne zamykanie", "Kontrola stability", "Trakčná kontrola" ],
+            "exterior": [ "Predné hmlovky", "Daždový sensor", "Detská poistka", "Zadný spoiler", "Elektrické okná" ],
+            "comfort": [ "Android Auto", "Apple CarPlay", "Bluetooth", "HomeLink", "Posilovač riadenia" ]
+        },
+        "dimensions": {
+            "length": "4950 mm",
+            "height": "1550 mm",
+            "gauge": "2580 mm",
+            "height2": "1850 mm",   
+            "volume": "480",
+            "volume2": "850",
+            "match": "2100 mm",
+            "match2": "2140 mm",
+            "kilograms": "1550",
+            "maxkilograms": "1200",
+            "maxkilograms2": "400",
+            "seats": "5"
+        },
+        "additionaldata": {
+            "fueltankcapacity": "80",
+            "maxkilograms": "1000",
+            "maxkilograms2": "1100",
+            "kg": "350",   
+            "rotating": "6500"
+        },
+        "map": {
+            "latitude": 48.119880,
+            "longitude": 17.126781
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "name": "demo",
+                "date": "November 30, 2023",
+                "review": "Etiam sit amet ex pharetra, venenatis ante vehicula, gravida sapien. Fusce eleifend vulputate nibh, non cursus augue placerat pellentesque. Sed venenatis risus nec felis mollis."
+            },
+            {
+                "id": 2,
+                "name": "user2",
+                "date": "December 15, 2023",
+                "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor orci sed odio sagittis, nec fermentum velit pharetra."
+            }
+        ],
+        "chart": [
+            { "year": 2016, "price": 28000 },
+            { "year": 2018, "price": 22000 },
+            { "year": 2020, "price": 25000 },
+            { "year": 2022, "price": 23000 },
+            { "year": 2024, "price": 27000 }
+          ]
     }
 ]
