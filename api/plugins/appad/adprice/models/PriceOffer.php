@@ -1,5 +1,6 @@
 <?php namespace AppAd\AdPrice\Models;
 
+use Mail;
 use Model;
 use AppAd\Ad\Models\Ad;
 use RainLab\User\Models\User;
@@ -56,4 +57,17 @@ class PriceOffer extends Model
 		'ad' => Ad::class,
 		'user' => User::class
 	];
+
+	public function afterCreate()
+	{
+		$vars = [
+			'ad'      => $this->ad,
+			'user'    => $this->user,
+			'price'   => $this->price,
+			'request' => $this->message,
+			'url'     => env('APP_FRONTEND_URL') . '/ad/' . $this->ad->slug
+		];
+
+		Mail::sendTo([$this->ad->user->email => $this->ad->user->name],'appad.adprice::mail.offer', $vars);
+	}
 }

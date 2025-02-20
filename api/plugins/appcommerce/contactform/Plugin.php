@@ -77,4 +77,11 @@ class Plugin extends PluginBase
             ]
         ];
     }
+
+	public function registerMailTemplates()
+	{
+		return [
+			'appcommerce.contactform::mail.new-request'
+		];
+	}
 }

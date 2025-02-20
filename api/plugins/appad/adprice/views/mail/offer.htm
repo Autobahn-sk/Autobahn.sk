@@ -1,0 +1,32 @@
+subject = "Nová cenová ponuka na inzerát"
+==
+
+Ahoj,
+
+na tvoj inzerát **{{ ad.title }}** prišla nová cenová ponuka.
+
+**Ponúkajúci:** {{ user.name }}
+
+**Cena:** {{ price }} €
+
+**Správa:** {{ request }}
+
+[Otvoriť inzerát]({{ url }})
+
+Ďakujeme,
+tím {{ config('app.name') }}
+==
+
+<p>Ahoj,</p>
+
+<p>na tvoj inzerát <b>{{ ad.title }}</b> prišla nová cenová ponuka.</p>
+
+<p><b>Ponúkajúci</b>: {{ user.name }}</p>
+
+<p><b>Cena</b>: {{ price }} €</p>
+
+<p><b>Správa</b>: {{ request | raw }}</p>
+
+<p><a href="{{ url }}">Otvoriť inzerát</a></p>
+
+<p>Ďakujeme,<br>tím {{ config('app.name') }}</p>

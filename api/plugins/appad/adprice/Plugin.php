@@ -54,4 +54,11 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+	public function registerMailTemplates()
+	{
+		return [
+			'appad.adprice::mail.offer'
+		];
+	}
 }
