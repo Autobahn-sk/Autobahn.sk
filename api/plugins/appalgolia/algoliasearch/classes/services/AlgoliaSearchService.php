@@ -35,4 +35,11 @@ class AlgoliaIndexService
 
         return $index;
     }
+
+	public function search($query, $params = []): array
+	{
+		$index = $this->client->initIndex($this->index);
+
+		return $index->search($query, $params);
+	}
 }
