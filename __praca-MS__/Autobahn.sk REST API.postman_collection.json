@@ -1,0 +1,1289 @@
+{
+	"info": {
+		"_postman_id": "57b2b691-0319-426a-ab6c-ae1d61d331d2",
+		"name": "Autobahn.sk REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40243031",
+		"_collection_link": "https://autobahn-sk.postman.co/workspace/Team-Workspace~522d0101-4564-4051-84a5-c8f9c960f508/collection/40243031-57b2b691-0319-426a-ab6c-ae1d61d331d2?action=share&source=collection_link&creator=40243031"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Check email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/check/email",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"check",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Martin Mojzis",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "mojzism",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "+421908072163",
+									"type": "text"
+								},
+								{
+									"key": "gdpr_consent",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "newsletter_subscriber",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();",
+									"",
+									"pm.environment.set('jwt', res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "social",
+									"value": "",
+									"description": "google",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();",
+									"",
+									"pm.environment.set('jwt', res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalidate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/invalidate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"invalidate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/forgot",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check forgot code",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "IH6BfBygaMXV8XblHAlEVq9WWqSSQF5EZFtjye8pJW",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/check/forgot/code",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"check",
+								"forgot",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "AJuOyGvYZofyMOmaFbqu6SRXvczjHWZaKp9tCLlXRT",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "21005",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/verify/email",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"verify",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify email resend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/verify/email/resend",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"verify",
+								"email",
+								"resend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/deactivate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ad",
+			"item": [
+				{
+					"name": "Get ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads?limit=15&sort=created_at&order=desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15",
+									"description": "Pagination limit"
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "Sort column"
+								},
+								{
+									"key": "order",
+									"value": "desc",
+									"description": "asc | desc"
+								},
+								{
+									"key": "condition",
+									"value": "USED",
+									"description": "NEW | USED",
+									"disabled": true
+								},
+								{
+									"key": "body_type",
+									"value": "CONVERTIBLE",
+									"description": "Body type",
+									"disabled": true
+								},
+								{
+									"key": "manufacturer",
+									"value": "bmw",
+									"description": "Manufacturer code",
+									"disabled": true
+								},
+								{
+									"key": "fuel_type",
+									"value": "DIESEL",
+									"description": "GAS | DIESEL | ELECTRICITY",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": null,
+									"description": "Current price",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads-search?query=sedan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads-search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "sedan",
+									"description": "Pagination limit"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads/car-ad-1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads",
+								"car-ad-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store ad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "google_place_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "attachments[]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/ads",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "google_place_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "attachments[]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/ads/bmw-e46-m3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads",
+								"bmw-e46-m3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy ad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads/bmw-e46-m3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads",
+								"bmw-e46-m3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get ad comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/ad/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"ad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ad comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store ad comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "Komentar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comments/ad/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"ad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store comment reply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "Komentar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comments/comment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "Komentar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comments/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/comments/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact form",
+			"item": [
+				{
+					"name": "Send contact form",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Martin Mojžiš",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Ahoj",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/contact",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Newsletter",
+			"item": [
+				{
+					"name": "Subscribe to newsletter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "martinmojzis06@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/newsletter/subscribe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"newsletter",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Price",
+			"item": [
+				{
+					"name": "Store price offer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "ad_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/price-offer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"price-offer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "ad_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/price",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"price"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Qna",
+			"item": [
+				{
+					"name": "Get qnas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/qna",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"qna"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "PAYMENT",
+									"description": "optional",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Store report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "ad",
+									"description": "ad | comment",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/reports",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User flag",
+			"item": [
+				{
+					"name": "Bookmark ad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "bookmark",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/userflag/ad/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"userflag",
+								"ad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle manufacturer",
+			"item": [
+				{
+					"name": "Get vehicle manufacturers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/vehicle-manufacturers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"vehicle-manufacturers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
