@@ -1,31 +1,30 @@
 <?php namespace AppUser\Report\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use AppUser\UserApi\Facades\JWTAuth;
 use October\Rain\Exception\SystemException;
+use AppApi\ApiResponse\Resources\ApiResource;
 
 class UserReportsController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
-        $user = JWTAuth::getUser();
+        $user = $request->user();
 
         $reportableTypes = config('appuser.report::types', []);
 
-        $type = input('type');
+        $type = $request->input('type');
         $reportableClass = array_get($reportableTypes, $type);
         if (!$reportableClass) {
             throw new SystemException(sprintf('Reportable type "%s" not configured', $type));
         }
 
-        $reportable = (new $reportableClass)->findOrFail(input('id'));
+        $reportable = (new $reportableClass)->findOrFail($request->input('id'));
 
         $report = $user->reports()->make();
         $report->reportable = $reportable;
         $report->save();
 
-        return [
-            'success' => true
-        ];
-    }
+		return ApiResource::success();
+	}
 }

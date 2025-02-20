@@ -6,3 +6,16 @@ columns:
     id:
         label: ID
         searchable: true
+    price:
+        label: Price
+        type: number
+        searchable: true
+    ad[title]:
+        label: Ad
+        searchable: true
+    user[name]:
+        label: User
+        searchable: true
+    created_at:
+        label: Created At
+        searchable: true

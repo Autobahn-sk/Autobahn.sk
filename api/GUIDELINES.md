@@ -14,7 +14,6 @@ The purpose of these guidelines is to ensure that all contributors to the projec
 ## Coding Standards
 
 - Language-specific conventions: Follow the widely accepted conventions for the PHP language and OctoberCMS.
-- Code formatting: Use **Pint** for automatic code formatting.
 - Commenting and documentation: Write meaningful comments that explain the "why" behind complex logic. Document every function, class, and module with clear descriptions of their purpose and usage.
 
 ## Git Workflow
@@ -71,7 +70,7 @@ appplugin/plugin
 │   │   └── IExampleRepository.php
 │   └── ExampleRepository.php
 ├── updates
-│   └── YYYY_MM_DD_NUMBER_create_example_table.php
+│   └── YYYY_MM_DD_create_example_table.php
 └── views
     ├── layouts
     │   └── layouts
@@ -144,7 +143,7 @@ appplugin/plugin
 ### Updates
 
 - Database migrations
-- Migrations should follow the naming: **YYYY_MM_DD_NUMBER_create_example_table.php**
+- Migrations should follow the naming: **YYYY_MM_DD_create_example_table.php**
 
 ### Views
 
@@ -157,7 +156,7 @@ appplugin/plugin
 
 ## Responses
 
-- For handling responses and errors in application use the **WApi** plugins
+- For handling responses and errors in application use the **Api** plugins
 - It handles the process of making unified responses and throwing unified exceptions
 - For details check README.md of these plugins
 

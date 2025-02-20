@@ -1,4 +1,4 @@
-<?php namespace AppUtil\Util\Classes\utils;
+<?php namespace AppUtil\Util\Classes\Utils;
 
 class BooleanValueUtil
 {

@@ -26,7 +26,27 @@ class PriceOffer extends Model
 		'price' => 'required|numeric',
 		'message' => 'nullable|string',
 		'ad_id' => 'required|integer|exists:appad_ad_ads,id',
-		'user_id' => 'required|integer|exists:users,id'
+		'user_id' => 'required|integer|exists:users,id',
+		'ad' => 'required',
+		'user' => 'required'
+	];
+
+	/**
+	 * @var array fillable fields
+	 */
+	protected $fillable = [
+		'price',
+		'message',
+		'ad_id',
+		'user_id'
+	];
+
+	/**
+	 * @var array casts
+	 */
+	protected $casts = [
+		'price' => 'float',
+		'message' => 'string'
 	];
 
 	/**

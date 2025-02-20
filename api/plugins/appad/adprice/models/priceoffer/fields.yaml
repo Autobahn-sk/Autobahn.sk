@@ -6,3 +6,29 @@ fields:
     id:
         label: ID
         disabled: true
+        hidden: true
+    price:
+        label: Price
+        type: number
+        span: full
+    message:
+        label: Message
+        type: textarea
+        size: small
+        span: full
+    ad:
+        label: Ad
+        type: recordfinder
+        nameFrom: title
+        descriptionFrom: description
+        list: ~/plugins/appad/ad/models/ad/columns.yaml
+        recordsPerPage: 10
+        span: left
+    user:
+        label: User
+        type: recordfinder
+        nameFrom: name
+        descriptionFrom: email
+        list: ~/plugins/rainlab/user/models/user/columns.yaml
+        recordsPerPage: 10
+        span: right

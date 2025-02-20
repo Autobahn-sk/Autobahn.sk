@@ -44,13 +44,11 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'adprice' => [
-                'label' => 'AdPrice',
-                'url' => Backend::url('appad/adprice/mycontroller'),
-                'icon' => 'icon-leaf',
+                'label' => 'Price Offers',
+                'url' => Backend::url('appad/adprice/priceoffers'),
+                'icon' => 'icon-money',
                 'permissions' => ['appad.adprice.*'],
                 'order' => 500,
             ],

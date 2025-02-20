@@ -11,6 +11,12 @@ use AppUser\UserFlag\Classes\Services\UserFlagService;
  */
 class Plugin extends PluginBase
 {
+	public $require = [
+		'AppUser.User',
+		'AppUser.UserApi',
+		'AppUser.UserFlag'
+	];
+
     /**
      * pluginDetails about this plugin.
      */
@@ -65,7 +71,7 @@ class Plugin extends PluginBase
                 'url' => Backend::url('appad/ad/ads'),
                 'icon' => 'icon-car',
                 'permissions' => ['appad.ad.*'],
-                'order' => 500,
+                'order' => 100,
             ],
         ];
     }

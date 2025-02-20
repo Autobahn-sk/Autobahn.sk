@@ -8,7 +8,12 @@
     "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video1"
+    "youtube_url": "https://www.youtube.com/watch?v=video1",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 2,
@@ -16,10 +21,15 @@
     "title": "Car Model 2",
     "description": "<p>Description for Car Model 2, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 2,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video2"
+    "youtube_url": "https://www.youtube.com/watch?v=video2",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 3,
@@ -27,10 +37,15 @@
     "title": "Car Model 3",
     "description": "<p>Description for Car Model 3, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 3,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video3"
+    "youtube_url": "https://www.youtube.com/watch?v=video3",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 4,
@@ -38,10 +53,15 @@
     "title": "Car Model 4",
     "description": "<p>Description for Car Model 4, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 4,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video4"
+    "youtube_url": "https://www.youtube.com/watch?v=video4",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 5,
@@ -49,10 +69,15 @@
     "title": "Car Model 5",
     "description": "<p>Description for Car Model 5, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 5,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video5"
+    "youtube_url": "https://www.youtube.com/watch?v=video5",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 6,
@@ -60,10 +85,15 @@
     "title": "Car Model 6",
     "description": "<p>Description for Car Model 6, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 6,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video6"
+    "youtube_url": "https://www.youtube.com/watch?v=video6",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 7,
@@ -71,10 +101,15 @@
     "title": "Car Model 7",
     "description": "<p>Description for Car Model 7, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 7,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video7"
+    "youtube_url": "https://www.youtube.com/watch?v=video7",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 8,
@@ -82,10 +117,15 @@
     "title": "Car Model 8",
     "description": "<p>Description for Car Model 8, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 8,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video8"
+    "youtube_url": "https://www.youtube.com/watch?v=video8",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 9,
@@ -93,10 +133,15 @@
     "title": "Car Model 9",
     "description": "<p>Description for Car Model 9, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 9,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video9"
+    "youtube_url": "https://www.youtube.com/watch?v=video9",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 10,
@@ -104,10 +149,15 @@
     "title": "Car Model 10",
     "description": "<p>Description for Car Model 10, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 10,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video10"
+    "youtube_url": "https://www.youtube.com/watch?v=video10",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 11,
@@ -115,10 +165,15 @@
     "title": "Car Model 11",
     "description": "<p>Description for Car Model 11, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 11,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video11"
+    "youtube_url": "https://www.youtube.com/watch?v=video11",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 12,
@@ -126,10 +181,15 @@
     "title": "Car Model 12",
     "description": "<p>Description for Car Model 12, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 12,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video12"
+    "youtube_url": "https://www.youtube.com/watch?v=video12",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 13,
@@ -137,10 +197,15 @@
     "title": "Car Model 13",
     "description": "<p>Description for Car Model 13, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 13,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video13"
+    "youtube_url": "https://www.youtube.com/watch?v=video13",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 14,
@@ -148,10 +213,15 @@
     "title": "Car Model 14",
     "description": "<p>Description for Car Model 14, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 14,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video14"
+    "youtube_url": "https://www.youtube.com/watch?v=video14",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 15,
@@ -159,10 +229,15 @@
     "title": "Car Model 15",
     "description": "<p>Description for Car Model 15, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 15,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video15"
+    "youtube_url": "https://www.youtube.com/watch?v=video15",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 16,
@@ -170,10 +245,15 @@
     "title": "Car Model 16",
     "description": "<p>Description for Car Model 16, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 16,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video16"
+    "youtube_url": "https://www.youtube.com/watch?v=video16",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 17,
@@ -181,10 +261,15 @@
     "title": "Car Model 17",
     "description": "<p>Description for Car Model 17, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 17,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video17"
+    "youtube_url": "https://www.youtube.com/watch?v=video17",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 18,
@@ -192,10 +277,15 @@
     "title": "Car Model 18",
     "description": "<p>Description for Car Model 18, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 18,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video18"
+    "youtube_url": "https://www.youtube.com/watch?v=video18",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 19,
@@ -203,10 +293,15 @@
     "title": "Car Model 19",
     "description": "<p>Description for Car Model 19, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 19,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video19"
+    "youtube_url": "https://www.youtube.com/watch?v=video19",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 20,
@@ -214,10 +309,15 @@
     "title": "Car Model 20",
     "description": "<p>Description for Car Model 20, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 20,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video20"
+    "youtube_url": "https://www.youtube.com/watch?v=video20",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 21,
@@ -225,10 +325,15 @@
     "title": "Car Model 21",
     "description": "<p>Description for Car Model 21, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 21,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video21"
+    "youtube_url": "https://www.youtube.com/watch?v=video21",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 22,
@@ -236,10 +341,15 @@
     "title": "Car Model 22",
     "description": "<p>Description for Car Model 22, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 22,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video22"
+    "youtube_url": "https://www.youtube.com/watch?v=video22",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 23,
@@ -247,10 +357,15 @@
     "title": "Car Model 23",
     "description": "<p>Description for Car Model 23, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 23,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video23"
+    "youtube_url": "https://www.youtube.com/watch?v=video23",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 24,
@@ -258,10 +373,15 @@
     "title": "Car Model 24",
     "description": "<p>Description for Car Model 24, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 24,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video24"
+    "youtube_url": "https://www.youtube.com/watch?v=video24",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 25,
@@ -269,10 +389,15 @@
     "title": "Car Model 25",
     "description": "<p>Description for Car Model 25, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 25,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video25"
+    "youtube_url": "https://www.youtube.com/watch?v=video25",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 26,
@@ -280,10 +405,15 @@
     "title": "Car Model 26",
     "description": "<p>Description for Car Model 26, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 26,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video26"
+    "youtube_url": "https://www.youtube.com/watch?v=video26",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 27,
@@ -291,10 +421,15 @@
     "title": "Car Model 27",
     "description": "<p>Description for Car Model 27, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 27,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video27"
+    "youtube_url": "https://www.youtube.com/watch?v=video27",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 28,
@@ -302,10 +437,15 @@
     "title": "Car Model 28",
     "description": "<p>Description for Car Model 28, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 28,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video28"
+    "youtube_url": "https://www.youtube.com/watch?v=video28",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 29,
@@ -313,10 +453,15 @@
     "title": "Car Model 29",
     "description": "<p>Description for Car Model 29, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 29,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video29"
+    "youtube_url": "https://www.youtube.com/watch?v=video29",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   },
   {
     "id": 30,
@@ -324,9 +469,14 @@
     "title": "Car Model 30",
     "description": "<p>Description for Car Model 30, in excellent condition.</p>",
     "status": "PUBLISHED",
-    "user_id": 30,
+    "user_id": 1,
     "location": "Various Locations",
     "google_place_id": "",
-    "youtube_url": "https://www.youtube.com/watch?v=video30"
+    "youtube_url": "https://www.youtube.com/watch?v=video30",
+    "images": [
+      {
+        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+      }
+    ]
   }
 ]

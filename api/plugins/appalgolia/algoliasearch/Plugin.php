@@ -1,7 +1,7 @@
 <?php namespace AppAlgolia\AlgoliaSearch;
 
 use System\Classes\PluginBase;
-use AppAlgolia\AlgoliaIndex\Classes\Hooks\Ads;
+use AppAlgolia\AlgoliaSearch\Classes\Hooks\Ads;
 
 /**
  * Plugin Information File
@@ -36,6 +36,6 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-//		Ads::handle();
+		Ads::handle();
     }
 }

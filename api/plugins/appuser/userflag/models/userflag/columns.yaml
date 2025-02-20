@@ -6,7 +6,7 @@ columns:
     id:
         label: ID
         searchable: true
-    user[username]:
+    user[name]:
         label: User
         searchable: true
     flaggable_type:

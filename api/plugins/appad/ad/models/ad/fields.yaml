@@ -10,6 +10,7 @@ fields:
         label: Images
         type: fileupload
         mode: image
+        required: true
         span: right
     slug:
         label: Slug
@@ -147,6 +148,7 @@ tabs:
             tab: Finances
             label: Prices
             type: repeater
+            required: true
             span: left
             form:
                 fields:

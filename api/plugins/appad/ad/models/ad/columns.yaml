@@ -15,6 +15,7 @@ columns:
         searchable: true
     current_price[price]:
         label: Price (EUR)
+        type: number
         searchable: true
     user[name]:
         label: User

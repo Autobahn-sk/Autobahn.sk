@@ -12,6 +12,9 @@ columns:
     name:
         label: Name
         searchable: true
+    is_published:
+        label: Is Published
+        type: switch
     created_at:
         label: Created At
         type: datetime

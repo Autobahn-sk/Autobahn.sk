@@ -1,25 +1,22 @@
-<?php namespace AppAd\Ad\Http\Resources;
+<?php namespace AppAd\AdVehicle\Http\Resources;
 
 use October\Rain\Support\Facades\Event;
-use AppAd\AdPrice\Http\Resources\PriceResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AdResource extends JsonResource
+class VehicleManufacturerResource extends JsonResource
 {
     public function toArray($request)
     {
         $data = [
-            'id'            => $this->id,
-            'title'         => $this->title,
-            'slug'          => $this->slug,
-			'description'   => $this->description,
-            'current_price' => $this->current_price->price,
-			'highest_price' => $this->highest_price?->price,
-			'difference_price'    => $this->difference_price,
-            'prices'        => PriceResource::collection($this->prices)
+            'id'         => $this->id,
+            'code'       => $this->code,
+			'name'       => $this->name,
+			'logo'       => $this->logo,
+			'created_at' => $this->created_at,
+			'updated_at' => $this->updated_at
         ];
 
-        Event::fire('appad.ad.ad.beforeReturnResource', [&$data, $this->resource]);
+        Event::fire('appad.advehicle.vehiclemanufacturer.beforeReturnResource', [&$data, $this->resource]);
 
         return $data;
     }

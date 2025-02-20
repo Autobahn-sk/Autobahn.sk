@@ -38,4 +38,9 @@ class VehicleManufacturer extends Model
 	public $attachOne = [
 		'logo' => File::class
 	];
+
+	public function scopeIsPublished($query)
+	{
+		return $query->where('is_published', true);
+	}
 }

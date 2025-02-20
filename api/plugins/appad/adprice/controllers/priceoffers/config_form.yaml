@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Price Offer
+
+# Model Form Field configuration
+form: $/appad/adprice/models/priceoffer/fields.yaml
+
+# Model Class name
+modelClass: AppAd\AdPrice\Models\PriceOffer
+
+# Default redirect location
+defaultRedirect: appad/adprice/priceoffers
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appad/adprice/priceoffers/update/:id
+    redirectClose: appad/adprice/priceoffers
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appad/adprice/priceoffers
+    redirectClose: appad/adprice/priceoffers
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

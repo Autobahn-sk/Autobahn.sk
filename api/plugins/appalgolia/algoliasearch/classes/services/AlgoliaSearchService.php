@@ -4,7 +4,7 @@ use ApplicationException;
 use Algolia\AlgoliaSearch\SearchIndex;
 use Algolia\AlgoliaSearch\SearchClient;
 
-class AlgoliaIndexService
+class AlgoliaSearchService
 {
     protected $client;
 

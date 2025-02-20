@@ -2,16 +2,14 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-use AppUser\UserApi\Http\Middlewares\Check;
 use AppUser\UserApi\Http\Middlewares\Authenticate;
 
 Route::group([
     'prefix'      => 'api/v1',
     'namespace'  => 'AppUser\Profile\Http\Controllers',
     'middleware' => [
-        'api',
-        Check::class
-    ]
+        'api'
+	]
 ], function (Router $router) {
     $router
         ->get('profile/{key}', 'ProfilesController')

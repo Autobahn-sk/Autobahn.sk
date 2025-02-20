@@ -13,14 +13,14 @@ class AdPolicyMiddleware
         $user = $request->route()->parameter('user');
         
         switch ($routeGroup[0]) {
-            case 'comments':
-                $comment = $request->route()->parameter('comment');
+            case 'ads':
+                $ad = $request->route()->parameter('ad');
                 
                 $allowedToPerformAction = false;
                 
                 switch ($routeAction) {
                     case 'update':
-                        if (isset($user) && $comment->creatable->id == $user->id) {
+                        if (isset($user) && $ad->user->id == $user->id) {
                             $allowedToPerformAction = true;
                         }
                         
@@ -29,7 +29,7 @@ class AdPolicyMiddleware
                         }
                         break;
                     case 'destroy':
-                        if (isset($user) && (!$user->groups->where('code', '=', 'admin')->isEmpty() || $comment->creatable->id == $user->id)) {
+                        if (isset($user) && (!$user->groups->where('code', '=', 'admin')->isEmpty() || $ad->user->id == $user->id)) {
                             $allowedToPerformAction = true;
                         }
                         

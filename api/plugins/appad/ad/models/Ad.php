@@ -34,12 +34,12 @@ class Ad extends Model
 		'status'          => 'required|string',
 		'user' 		      => 'required',
 		'user_id'         => 'required|integer|exists:users,id',
-		'prices'          => 'required|array',
+		'prices'          => 'nullable|array',
 		'location'        => 'required_without:google_place_id|string',
 		'google_place_id' => 'nullable|string',
 		'youtube_url'     => 'nullable|url',
 		'images'          => 'required|array',
-		'attachments'     => 'nullable|array',
+		'attachments'     => 'nullable|array'
 	];
 
 	/**
@@ -69,6 +69,20 @@ class Ad extends Model
 	 */
 	public $slugs = [
 		'slug' => 'title'
+	];
+
+	/**
+	 * @var array Attributes to be cast to native types
+	 */
+	protected $casts = [
+		'title' => 'string',
+		'description' => 'string',
+		'status' => 'string',
+		'images' => 'array',
+		'attachments' => 'array',
+		'location' => 'string',
+		'google_place_id' => 'string',
+		'youtube_url' => 'string'
 	];
 
 	/**
@@ -190,6 +204,6 @@ class Ad extends Model
 			return null;
 		}
 
-		return $this->vehicle->displacement . ' ' . $this->vehicle->engine_type . $this->vehicle->cylinders . ' ' . $this->vehicle->kilowatts . 'kW' . ' ' . $this->vehicle->body_type . ' ' . $this->vehicle->drive;
+		return $this->vehicle->displacement . ' ' . substr($this->vehicle->engine_type, 0, 1) . $this->vehicle->cylinders . ' ' . $this->vehicle->kilowatts . 'kW' . ' ' . title_case($this->vehicle->body_type) . ' ' . strtoupper($this->vehicle->drive);
 	}
 }

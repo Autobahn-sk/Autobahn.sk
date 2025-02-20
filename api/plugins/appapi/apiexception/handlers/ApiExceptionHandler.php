@@ -1,31 +1,31 @@
 <?php namespace AppApi\ApiException\Handlers;
 
+use Throwable;
 use AjaxException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Response;
-use Illuminate\Validation\ValidationException;
 use October\Rain\Auth\AuthException;
 use October\Rain\Database\ModelException;
-use October\Rain\Exception\ApplicationException;
-use October\Rain\Exception\ForbiddenException;
-use October\Rain\Exception\NotFoundException;
-use October\Rain\Foundation\Exception\Handler;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
-use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
-use Throwable;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
+use October\Rain\Exception\NotFoundException;
+use AppApi\ApiResponse\Resources\ApiResource;
+use Illuminate\Validation\ValidationException;
+use October\Rain\Exception\ForbiddenException;
+use October\Rain\Foundation\Exception\Handler;
+use AppApi\ApiResponse\Enums\ResponseTypeEnum;
+use October\Rain\Exception\ApplicationException;
 use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use AppApi\ApiException\Exceptions\BadRequestException as AppBadRequestException;
-use AppApi\ApiException\Exceptions\ForbiddenException as AppForbiddenException;
+use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
+use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
 use AppApi\ApiException\Exceptions\NotFoundException as AppNotFoundException;
-use AppApi\ApiException\Exceptions\TooManyRequestsException as AppTooManyRequestsException;
-use AppApi\ApiException\Exceptions\UnauthorizedException as AppUnauthorizedException;
+use AppApi\ApiException\Exceptions\ForbiddenException as AppForbiddenException;
 use AppApi\ApiException\Exceptions\ValidationException as AppValidationException;
-use AppApi\ApiResponse\Enums\ResponseTypeEnum;
-use AppApi\ApiResponse\Resources\ApiResource;
+use AppApi\ApiException\Exceptions\BadRequestException as AppBadRequestException;
+use AppApi\ApiException\Exceptions\UnauthorizedException as AppUnauthorizedException;
+use AppApi\ApiException\Exceptions\TooManyRequestsException as AppTooManyRequestsException;
 
 class ApiExceptionHandler extends Handler
 {

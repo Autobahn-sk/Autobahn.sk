@@ -8,7 +8,7 @@ use AppUser\UserApi\Http\Middlewares\Authenticate;
 
 Route::group([
     'prefix'      => 'api/v1',
-    'namespace'  => 'AppAd\Ad\Http\Controllers',
+    'namespace'  => 'AppAd\AdPrice\Http\Controllers',
     'middleware' => [
 		'api',
 		UserModelBind::class,
@@ -17,21 +17,11 @@ Route::group([
     ],
 ], function(Router $router) {
 	$router
-		->get('ads', 'AdController@index');
-
-	$router
-		->get('ads/{ad}', 'AdController@show');
-
-	$router
-		->post('ads', 'AdController@store')
+		->post('price', 'PriceController@store')
 		->middleware([Authenticate::class]);
 
 	$router
-		->post('ads/{ad}', 'AdController@update')
-		->middleware([Authenticate::class]);
-
-	$router
-		->delete('ads/{ad}', 'AdController@destroy')
+		->post('price-offer', 'PriceController@storePriceOffer')
 		->middleware([Authenticate::class]);
 });
 

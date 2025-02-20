@@ -17,3 +17,6 @@ fields:
         type: fileupload
         mode: image
         span: full
+    is_published:
+        label: Is Published
+        type: switch

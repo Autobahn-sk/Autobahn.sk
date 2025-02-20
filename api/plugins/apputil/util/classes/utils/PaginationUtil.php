@@ -1,4 +1,4 @@
-<?php namespace AppUtil\Util\Classes;
+<?php namespace AppUtil\Util\Classes\Utils;
 
 class PaginationUtil
 {

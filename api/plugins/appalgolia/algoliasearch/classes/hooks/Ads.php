@@ -1,25 +1,25 @@
-<?php namespace AppAlgolia\AlgoAlgoliaSearchliaIndex\Classes\Hooks;
+<?php namespace AppAlgolia\AlgoliaSearch\Classes\Hooks;
 
 use AppAd\Ad\Models\Ad;
 use AppAd\Ad\Http\Resources\AdResource;
-use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaIndexService;
+use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaSearchService;
 
 class Ads
 {
     public static function handle()
     {
-        Ad::extend(function ($model) {
-            $model->bindEvent('model.afterCreate', function () {
-                (new AlgoliaIndexService(env('ALGOLIA_INDEX')))->sync(self::objects());
+		Ad::extend(function ($model) {
+			$model->bindEvent('model.afterCreate', function () {
+                (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync(self::objects());
             });
             $model->bindEvent('model.afterUpdate', function () {
-                (new AlgoliaIndexService(env('ALGOLIA_INDEX')))->sync(self::objects());
+                (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync(self::objects());
             });
             $model->bindEvent('model.afterRestore', function () {
-                (new AlgoliaIndexService(env('ALGOLIA_INDEX')))->sync(self::objects());
+                (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync(self::objects());
             });
             $model->bindEvent('model.afterDelete', function () {
-                (new AlgoliaIndexService(env('ALGOLIA_INDEX')))->sync(self::objects());
+                (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync(self::objects());
             });
         });
     }

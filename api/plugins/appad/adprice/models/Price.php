@@ -27,6 +27,14 @@ class Price extends Model
 	];
 
 	/**
+	 * @var array fillable fields
+	 */
+	protected $fillable = [
+		'price',
+		'ad_id'
+	];
+
+	/**
 	 * @var array casts
 	 */
 	protected $casts = [
@@ -39,4 +47,9 @@ class Price extends Model
 	public $belongsTo = [
 		'ad' => Ad::class
 	];
+
+	public function getIsCurrentAttribute()
+	{
+		return $this->ad->current_price->id === $this->id;
+	}
 }
