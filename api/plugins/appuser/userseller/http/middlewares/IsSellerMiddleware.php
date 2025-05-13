@@ -20,6 +20,7 @@ class IsSellerMiddleware
 					case 'store':
 					case 'update':
 					case 'destroy':
+					case 'generateAdDescription':
 						if (isset($user) && $user->isSeller()) {
 							$allowedToPerformAction = true;
 						}
