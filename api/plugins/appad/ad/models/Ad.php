@@ -129,12 +129,6 @@ class Ad extends Model
 	public function beforeValidate()
 	{
 		$this->rules['status'] = Rule::in(AdStatusEnum::values()) . '|required|string';
-
-		if ((!$this->vehicle || !$this->current_price) && $this->status == AdStatusEnum::PUBLISHED->value) {
-			throw new ValidationException([
-				'status' => 'You must add a vehicle and price before publishing the ad.'
-			]);
-		}
 	}
 
 	// Scopes
