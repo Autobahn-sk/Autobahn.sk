@@ -46,11 +46,25 @@ class Plugin extends PluginBase
     {
         return [
             'advehicle' => [
-                'label' => 'Vehicle Manufacturers',
+                'label' => 'Vehicles',
                 'url' => Backend::url('appad/advehicle/vehiclemanufacturers'),
-                'icon' => 'icon-building',
+                'icon' => 'icon-truck',
                 'permissions' => ['appad.advehicle.*'],
                 'order' => 500,
+				'sideMenu'    => [
+					'vehiclemanufacturers' => [
+						'label'       => 'Vehicle Manufacturers',
+						'icon'        => 'icon-building',
+						'url'         => Backend::url('appad/advehicle/vehiclemanufacturers'),
+						'permissions' => ['appad.advehicle.*']
+					],
+					'vehiclefeatures'      => [
+						'label'       => 'Vehicle Features',
+						'icon'        => 'icon-bolt',
+						'url'         => Backend::url('appad/advehicle/vehiclefeatures'),
+						'permissions' => ['appad.advehicle.*']
+					]
+				]
             ],
         ];
     }

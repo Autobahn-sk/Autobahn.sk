@@ -238,7 +238,9 @@ class Ad extends Model
 		}
 
 		if ($request->has('vehicle')) {
-			$this->vehicle()->updateOrCreate(['id' => $this->vehicle?->id], $request->input('vehicle'));
+			$vehicle = $this->vehicle()->updateOrCreate(['id' => $this->vehicle?->id], $request->input('vehicle'));
+
+			$vehicle->saveRelations($request);
 		}
 	}
 }

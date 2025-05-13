@@ -1,5 +1,6 @@
 <?php namespace AppAd\Ad\Controllers;
 
+use Response;
 use Exception;
 use BackendMenu;
 use AppAd\Ad\Models\Ad;
@@ -56,15 +57,17 @@ class Ads extends Controller
 	{
 		$model = $this->formGetModel();
 
-		$adData = $model->load(['vehicle', 'vehicle.manufacturer'])->toArray();
+		$adData = $model->load(['vehicle', 'vehicle.manufacturer', 'vehicle.features'])->toArray();
 
 		$description = (new OpenAIChatService)->generateAdDescription($adData);
 
 		$model->description = $description;
 
+		$model->save();
+
 		Flash::success('Description was generated successfully.');
 
-		return ['#Form-field-Ad-description-group' => $this->formRenderField('description')];
+		return Response::make('<script>window.location.reload();</script>');
 	}
 
 	public function onAlgoliaSync(): void

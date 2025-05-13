@@ -30,9 +30,9 @@ fields:
         optionsMethod: getFormStatusOptions
         span: left
     user:
-        label: Seller
+        label: User
         type: recordfinder
-        title: Find seller
+        title: Find user
         nameFrom: name
         descriptionFrom: email
         list: ~/plugins/rainlab/user/models/user/columns.yaml

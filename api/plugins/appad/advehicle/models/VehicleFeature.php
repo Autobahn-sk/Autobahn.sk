@@ -47,4 +47,9 @@ class VehicleFeature extends Model
 	{
 		$this->rules['category'] = Rule::in(VehicleFeatureCategoryEnum::values()) . '|nullable|string';
 	}
+
+	public function getCategoryOptions()
+	{
+		return VehicleFeatureCategoryEnum::optionsForBackend();
+	}
 }

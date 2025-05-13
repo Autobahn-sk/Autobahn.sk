@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Vehicle Feature
+
+# Model Form Field configuration
+form: $/appad/advehicle/models/vehiclefeature/fields.yaml
+
+# Model Class name
+modelClass: AppAd\AdVehicle\Models\VehicleFeature
+
+# Default redirect location
+defaultRedirect: appad/advehicle/vehiclefeatures
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appad/advehicle/vehiclefeatures/update/:id
+    redirectClose: appad/advehicle/vehiclefeatures
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appad/advehicle/vehiclefeatures
+    redirectClose: appad/advehicle/vehiclefeatures
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

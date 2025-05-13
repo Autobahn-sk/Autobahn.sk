@@ -6,19 +6,18 @@ columns:
     id:
         label: ID
         searchable: true
-    logo:
-        label: Logo
-        type: image
-        sortable: false
-    name:
-        label: Name
+    title:
+        label: Title
         searchable: true
-    code:
-        label: Code
+    category:
+        label: Category
+        type: selectable
         searchable: true
-    is_published:
-        label: Is Published
-        type: switch
+    vehicles:
+        label: Vehicles
+        type: number
+        relation: vehicles
+        useRelationCount: true
     created_at:
         label: Created At
         type: datetime

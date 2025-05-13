@@ -49,6 +49,7 @@ Route::group([
 
 		$router
 			->post('ads-generate-ad-description/{ad}', 'AdController@generateAdDescription')
+			->middleware(['throttle:60,1'])
 			->name('ads.generate-ad-description');
 	});
 });

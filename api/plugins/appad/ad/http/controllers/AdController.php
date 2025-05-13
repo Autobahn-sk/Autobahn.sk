@@ -109,7 +109,7 @@ class AdController extends Controller
 
 		$ad->saveRelations($request);
 
-		$ad->load(['images', 'attachments', 'vehicle', 'prices']);
+		$ad->load(['images', 'attachments', 'vehicle', 'vehicle.manufacturer', 'vehicle.features', 'prices']);
 
 		$response = new AdResource($ad);
 
@@ -130,7 +130,7 @@ class AdController extends Controller
 
 		$ad->saveRelations($request);
 
-		$ad->load(['images', 'attachments', 'vehicle', 'prices']);
+		$ad->load(['images', 'attachments', 'vehicle', 'vehicle.manufacturer', 'vehicle.features', 'prices']);
 
 		$response = new AdResource($ad);
 
@@ -148,7 +148,7 @@ class AdController extends Controller
 
 	public function generateAdDescription(Request $request, $ad)
 	{
-		$adData = $ad->load(['vehicle', 'vehicle.manufacturer'])->toArray();
+		$adData = $ad->load(['vehicle', 'vehicle.manufacturer', 'vehicle.features'])->toArray();
 
 		$description = (new OpenAIChatService)->generateAdDescription($adData);
 

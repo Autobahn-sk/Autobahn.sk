@@ -155,4 +155,41 @@ class Vehicle extends Model
 	{
 		return VehicleEngineTypeEnum::optionsForBackend();
 	}
+
+	public function saveRelations($request)
+	{
+		if ($request->has('vehicle.manufacturer')) {
+			$this->manufacturer = VehicleManufacturer::isPublished()
+				->where('id', $request->input('vehicle.manufacturer'))
+				->orWhere('code', $request->input('vehicle.manufacturer'))
+				->firstOrFail();
+
+			$this->manufacturer_id = $this->manufacturer->id;
+
+			$this->save();
+		}
+
+		if ($request->has('vehicle.features')) {
+			$features[] = [];
+
+			foreach ($request->input('vehicle.features') as $featureTitle) {
+				$featureTitle = trim($featureTitle);
+
+				$feature = VehicleFeature::where('title', $featureTitle)
+					->first();
+
+				if (!$feature) {
+					$feature = new VehicleFeature();
+					$feature->title = $featureTitle;
+					$feature->save();
+				}
+
+				$features[] = $feature;
+			}
+
+			$this->features = array_filter($features);
+
+			$this->save();
+		}
+	}
 }
