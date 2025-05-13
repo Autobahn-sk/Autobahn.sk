@@ -25,7 +25,7 @@ class CommentPolicyMiddleware
                         }
                         
                         if (!$allowedToPerformAction) {
-                            throw new BadRequestException('You are not authorized to access this Model.');
+                            throw new BadRequestException('Nie ste oprávnený na prístup k tomuto komentáru.');
                         }
                         break;
                     case 'destroy':
@@ -34,7 +34,7 @@ class CommentPolicyMiddleware
                         }
                         
                         if (!$allowedToPerformAction) {
-                            throw new BadRequestException('You are not authorized to access this Model.');
+                            throw new BadRequestException('Nie ste oprávnený na prístup k tomuto komentáru.');
                         }
                         break;
                 }

@@ -1,7 +1,13 @@
 <?php namespace AppAd\Ad\Controllers;
 
+use Exception;
 use BackendMenu;
+use AppAd\Ad\Models\Ad;
 use Backend\Classes\Controller;
+use October\Rain\Support\Facades\Flash;
+use AppAd\Ad\Http\Resources\AdResource;
+use AppOpenAI\OpenAIChat\Classes\Services\OpenAIChatService;
+use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaSearchService;
 
 /**
  * Ads Backend Controller
@@ -13,7 +19,8 @@ class Ads extends Controller
     public $implement = [
         \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
-    ];
+		\Backend\Behaviors\RelationController::class
+	];
 
     /**
      * @var string formConfig file
@@ -24,6 +31,11 @@ class Ads extends Controller
      * @var string listConfig file
      */
     public $listConfig = 'config_list.yaml';
+
+	/**
+	 * @var string relationConfig file
+	 */
+	public $relationConfig = 'config_relation.yaml';
 
     /**
      * @var array required permissions
@@ -39,4 +51,39 @@ class Ads extends Controller
 
         BackendMenu::setContext('AppAd.Ad', 'ad', 'ads');
     }
+
+	public function onGenerateDescription()
+	{
+		$model = $this->formGetModel();
+
+		$adData = $model->load(['vehicle', 'vehicle.manufacturer'])->toArray();
+
+		$description = (new OpenAIChatService)->generateAdDescription($adData);
+
+		$model->description = $description;
+
+		Flash::success('Description was generated successfully.');
+
+		return ['#Form-field-Ad-description-group' => $this->formRenderField('description')];
+	}
+
+	public function onAlgoliaSync(): void
+	{
+		try {
+			(new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync($this->objects());
+
+			Flash::success('Successfully synced with Algolia');
+		} catch (Exception $e) {
+			Flash::error($e->getMessage());
+		}
+	}
+
+	public static function objects()
+	{
+		$objects = AdResource::collection(Ad::all());
+
+		return response()
+			->json($objects)
+			->getData(true);
+	}
 }

@@ -35,6 +35,14 @@
                     <?= __("Save & Close") ?>
                 </button>
                 <button
+                        type="button"
+                        class="btn btn-info"
+                        data-request="onGenerateDescription"
+                        data-request-message="<?= __("Generating description...") ?>"
+                        data-load-indicator>
+					<?= __("Generate Description (AI)") ?>
+                </button>
+                <button
                     type="button"
                     class="oc-icon-delete btn-icon danger pull-right"
                     data-request="onDelete"

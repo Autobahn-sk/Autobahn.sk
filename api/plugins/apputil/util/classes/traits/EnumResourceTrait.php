@@ -16,6 +16,17 @@ trait EnumResourceTrait
         return array_column(self::cases(), 'value');
     }
 
+	public static function map($value): ?string
+	{
+		foreach (self::cases() as $case) {
+			if ($case->value === $value) {
+				return $case->name;
+			}
+		}
+
+		return null;
+	}
+
     public static function resourceCollection(): array
     {
         $resources = [];

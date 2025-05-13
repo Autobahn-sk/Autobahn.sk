@@ -1,0 +1,30 @@
+vehicle:
+    label: Vehicle
+    deferredBinding: true
+    view:
+        form: $/appad/advehicle/models/vehicle/fields.yaml
+        toolbarButtons: create|update|delete
+    manage:
+        form: $/appad/advehicle/models/vehicle/fields.yaml
+prices:
+    label: Prices
+    deferredBinding: true
+    view:
+        list: $/appad/adprice/models/price/columns.yaml
+        form: $/appad/adprice/models/price/fields.yaml
+        toolbarButtons: create|delete
+    manage:
+        list: $/appad/adprice/models/price/columns.yaml
+        form: $/appad/adprice/models/price/fields.yaml
+        recordsPerPage: 10
+price_offers:
+    label: Price Offers
+    deferredBinding: true
+    view:
+        list: $/appad/adprice/models/priceoffer/columns.yaml
+        form: $/appad/adprice/models/priceoffer/fields.yaml
+        toolbarButtons: create|delete
+    manage:
+        list: $/appad/adprice/models/priceoffer/columns.yaml
+        form: $/appad/adprice/models/priceoffer/fields.yaml
+        recordsPerPage: 10

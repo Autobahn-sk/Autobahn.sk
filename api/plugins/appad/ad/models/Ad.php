@@ -2,6 +2,7 @@
 
 use Model;
 use System\Models\File;
+use ValidationException;
 use RainLab\User\Models\User;
 use AppAd\AdPrice\Models\Price;
 use Illuminate\Validation\Rule;
@@ -30,16 +31,16 @@ class Ad extends Model
      */
     public $rules = [
 		'title'           => 'required|string',
+		'slug' 		      => 'required|string|unique:appad_ad_ads',
 		'description'     => 'required|string',
 		'status'          => 'required|string',
 		'user' 		      => 'required',
 		'user_id'         => 'required|integer|exists:users,id',
-		'prices'          => 'nullable|array',
 		'location'        => 'required_without:google_place_id|string',
 		'google_place_id' => 'nullable|string',
 		'youtube_url'     => 'nullable|url',
-		'images'          => 'required|array',
-		'attachments'     => 'nullable|array'
+		'images.*'        => 'required',
+		'attachments'     => 'nullable'
 	];
 
 	/**
@@ -47,12 +48,15 @@ class Ad extends Model
 	 */
 	protected $fillable = [
 		'title',
+		'slug',
 		'description',
 		'status',
 		'user_id',
 		'location',
 		'google_place_id',
 		'youtube_url',
+		'images',
+		'attachments'
 	];
 
 	/*
@@ -96,7 +100,8 @@ class Ad extends Model
 		'vehicle' => [
 			Vehicle::class,
 			'key' => 'id',
-			'otherKey' => 'id'
+			'otherKey' => 'id',
+			'delete' => true
 		]
 	];
 
@@ -104,12 +109,14 @@ class Ad extends Model
 		'prices' => [
 			Price::class,
 			'key' => 'ad_id',
-			'otherKey' => 'id'
+			'otherKey' => 'id',
+			'delete' => true
 		],
 		'price_offers' => [
 			PriceOffer::class,
 			'key' => 'ad_id',
-			'otherKey' => 'id'
+			'otherKey' => 'id',
+			'delete' => true
 		]
 	];
 
@@ -122,6 +129,12 @@ class Ad extends Model
 	public function beforeValidate()
 	{
 		$this->rules['status'] = Rule::in(AdStatusEnum::values()) . '|required|string';
+
+		if ((!$this->vehicle || !$this->current_price) && $this->status == AdStatusEnum::PUBLISHED->value) {
+			throw new ValidationException([
+				'status' => 'You must add a vehicle and price before publishing the ad.'
+			]);
+		}
 	}
 
 	// Scopes
@@ -145,6 +158,17 @@ class Ad extends Model
 		return AdStatusEnum::optionsForBackend();
 	}
 
+	public function getFormStatusOptions()
+	{
+		if (!$this->exists) {
+			return [
+				AdStatusEnum::DRAFT->value => title_case(AdStatusEnum::DRAFT->value)
+			];
+		}
+
+		return AdStatusEnum::optionsForBackend();
+	}
+
 	public function getCurrentPriceAttribute()
 	{
 		return $this->prices()->orderByDesc('created_at')->first();
@@ -158,7 +182,7 @@ class Ad extends Model
 
 		$highestPrice = $this->prices()->orderByDesc('price')->first();
 
-		if ($highestPrice->price == $this->current_price->price) {
+		if ($highestPrice?->price == $this->current_price?->price) {
 			return null;
 		}
 
@@ -205,5 +229,16 @@ class Ad extends Model
 		}
 
 		return $this->vehicle->displacement . ' ' . substr($this->vehicle->engine_type, 0, 1) . $this->vehicle->cylinders . ' ' . $this->vehicle->kilowatts . 'kW' . ' ' . title_case($this->vehicle->body_type) . ' ' . strtoupper($this->vehicle->drive);
+	}
+
+	public function saveRelations($request)
+	{
+		if ($request->has('price')) {
+			$this->prices()->create($request->input('price'));
+		}
+
+		if ($request->has('vehicle')) {
+			$this->vehicle()->updateOrCreate(['id' => $this->vehicle?->id], $request->input('vehicle'));
+		}
 	}
 }

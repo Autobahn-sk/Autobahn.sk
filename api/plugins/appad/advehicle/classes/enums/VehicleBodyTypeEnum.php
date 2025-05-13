@@ -19,4 +19,5 @@ enum VehicleBodyTypeEnum: string
 	case SUPERCAR = 'SUPERCAR';
 	case LIMOUSINE = 'LIMOUSINE';
 	case MUSCLE = 'MUSCLE';
+	case WAGON = 'WAGON';
 }

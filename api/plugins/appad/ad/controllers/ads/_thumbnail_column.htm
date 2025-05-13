@@ -1,0 +1,5 @@
+<?php if ($record->images->count()): ?>
+    <img src="<?= $record->images->first()->getThumb(80, 80, ['mode' => 'crop']) ?>" style="height: 80px; width: 80px; object-fit: cover;">
+<?php else: ?>
+    <span style="color: #aaa;">No thumbnail</span>
+<?php endif; ?>

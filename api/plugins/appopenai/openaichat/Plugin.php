@@ -1,6 +1,5 @@
 <?php namespace AppOpenAI\OpenAIChat;
 
-use Backend;
 use System\Classes\PluginBase;
 
 /**
@@ -37,50 +36,5 @@ class Plugin extends PluginBase
     public function boot()
     {
         //
-    }
-
-    /**
-     * registerComponents used by the frontend.
-     */
-    public function registerComponents()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'AppOpenAI\OpenAIChat\Components\MyComponent' => 'myComponent',
-        ];
-    }
-
-    /**
-     * registerPermissions used by the backend.
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'appopenai.openaichat.some_permission' => [
-                'tab' => 'OpenAIChat',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    /**
-     * registerNavigation used by the backend.
-     */
-    public function registerNavigation()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'openaichat' => [
-                'label' => 'OpenAIChat',
-                'url' => Backend::url('appopenai/openaichat/mycontroller'),
-                'icon' => 'icon-leaf',
-                'permissions' => ['appopenai.openaichat.*'],
-                'order' => 500,
-            ],
-        ];
     }
 }

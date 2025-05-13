@@ -8,7 +8,7 @@ fields:
         disabled: true
         hidden: true
     price:
-        label: Price
+        label: Price (EUR)
         type: number
         span: full
     message:

@@ -25,7 +25,7 @@ class IsSellerMiddleware
 						}
 
 						if (!$allowedToPerformAction) {
-							throw new BadRequestException('You are not a seller.');
+							throw new BadRequestException('Nie ste predajca.');
 						}
 						break;
 				}

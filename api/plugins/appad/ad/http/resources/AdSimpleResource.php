@@ -14,10 +14,10 @@ class AdSimpleResource extends JsonResource
 			'summary' 			=> $this->summary,
 			'thumbnail' 		=> $this->thumbnail,
 			'badge' 			=> $this->badge,
-			'current_price'     => $this->current_price->price,
-			'mileage' 			=> $this->vehicle->mileage,
-			'fuel_type' 		=> $this->vehicle->fuel_type,
-			'transmission' 		=> $this->vehicle->transmission
+			'current_price'     => $this->current_price?->price,
+			'mileage' 			=> $this->vehicle?->mileage,
+			'fuel_type' 		=> $this->vehicle?->fuel_type,
+			'transmission' 		=> $this->vehicle?->transmission
         ];
 
         Event::fire('appad.ad.adSimple.beforeReturnResource', [&$data, $this->resource]);

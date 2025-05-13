@@ -27,14 +27,32 @@ class AlgoliaSearchService
         $this->index = $index;
     }
 
-    public function sync($objects): SearchIndex
-    {
-        $index = $this->client->initIndex($this->index);
+	public function sync($objects): SearchIndex
+	{
+		$index = $this->client->initIndex($this->index);
 
-        $index->replaceAllObjects($objects);
+		$index->replaceAllObjects($objects);
 
-        return $index;
-    }
+		return $index;
+	}
+
+	public function save($object): SearchIndex
+	{
+		$index = $this->client->initIndex($this->index);
+
+		$index->saveObject($object);
+
+		return $index;
+	}
+
+	public function delete($objectId): SearchIndex
+	{
+		$index = $this->client->initIndex($this->index);
+
+		$index->deleteObject($objectId);
+
+		return $index;
+	}
 
 	public function search($query, $params = []): array
 	{

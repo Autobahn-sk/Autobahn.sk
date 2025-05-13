@@ -27,14 +27,16 @@ fields:
     status:
         label: Status
         type: dropdown
+        optionsMethod: getFormStatusOptions
         span: left
     user:
-        label: User
+        label: Seller
         type: recordfinder
-        title: Find user
+        title: Find seller
         nameFrom: name
         descriptionFrom: email
         list: ~/plugins/rainlab/user/models/user/columns.yaml
+        conditions: is_seller = 1
         recordsPerPage: 10
         span: right
     location:
@@ -50,115 +52,28 @@ tabs:
     fields:
         vehicle:
             tab: Vehicle
-            label: Content
-            type: nestedform
-            form:
-                fields:
-                    vin:
-                        label: VIN
-                        type: text
-                        span: left
-                    license_plate:
-                        label: License Plate
-                        type: text
-                        span: right
-                    manufacturer:
-                        label: Manufacturer
-                        type: recordfinder
-                        title: Find manufacturer
-                        nameFrom: name
-                        descriptionFrom: code
-                        list: ~/plugins/appad/advehicle/models/vehiclemanufacturer/columns.yaml
-                        recordsPerPage: 10
-                        span: left
-                    model:
-                        label: Model
-                        type: text
-                        span: right
-                    body_type:
-                        label: Body Type
-                        type: dropdown
-                        span: left
-                    color:
-                        label: Color
-                        type: text
-                        span: right
-                    kilowatts:
-                        label: Kilowatts
-                        type: number
-                        span: left
-                    torque:
-                        label: Torque
-                        type: number
-                        span: right
-                    displacement:
-                        label: Displacement
-                        type: number
-                        span: left
-                    top_speed:
-                        label: Top Speed
-                        type: number
-                        span: right
-                    fuel_type:
-                        label: Fuel Type
-                        type: dropdown
-                        span: left
-                    drive:
-                        label: Drive
-                        type: dropdown
-                        span: right
-                    transmission:
-                        label: Transmission
-                        type: dropdown
-                        span: left
-                    gears:
-                        label: Gears
-                        type: dropdown
-                        span: right
-                    engine_type:
-                        label: Engine Type
-                        type: dropdown
-                        span: left
-                    cylinders:
-                        label: Cylinders
-                        type: dropdown
-                        span: right
-                    doors:
-                        label: Doors
-                        type: dropdown
-                        span: left
-                    seats:
-                        label: Seats
-                        type: dropdown
-                        span: right
-                    year:
-                        label: Year
-                        type: number
-                        span: left
-                    mileage:
-                        label: Mileage
-                        type: number
-                        span: right
-                    condition:
-                        label: Condition
-                        type: dropdown
-                        span: left
-
+            label: Vehicle
+            type: relation
+            context:
+                - preview
+                - update
+            form: $/appad/advehicle/models/vehicle/fields.yaml
         prices:
             tab: Finances
             label: Prices
-            type: repeater
+            type: relation
+            context:
+                - preview
+                - update
             required: true
             span: left
-            form:
-                fields:
-                    price:
-                        label: Price
-                        type: number
         price_offers:
             tab: Finances
             label: Price Offers
-            type: repeater
+            type: relation
+            context:
+                - preview
+                - update
             span: right
             form:
                 fields:

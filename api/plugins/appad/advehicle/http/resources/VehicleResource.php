@@ -30,9 +30,7 @@ class VehicleResource extends JsonResource
 			'seats'         => $this->seats,
 			'mileage'       => $this->mileage,
 			'condition'     => $this->condition,
-			'created_at'    => $this->created_at,
-			'updated_at'    => $this->updated_at,
-			'deleted_at'    => $this->deleted_at
+			'features'      => VehicleFeatureResource::collection($this->features)
         ];
 
         Event::fire('appad.advehicle.vehicle.beforeReturnResource', [&$data, $this->resource]);

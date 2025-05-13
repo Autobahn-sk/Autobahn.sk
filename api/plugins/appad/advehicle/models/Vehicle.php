@@ -2,14 +2,11 @@
 
 use Model;
 use AppAd\Ad\Models\Ad;
+use Illuminate\Validation\Rule;
 use AppAd\AdVehicle\Classes\Enums\VehicleDriveEnum;
-use AppAd\AdVehicle\Classes\Enums\VehicleGearsEnum;
-use AppAd\AdVehicle\Classes\Enums\VehicleDoorsEnum;
-use AppAd\AdVehicle\Classes\Enums\VehicleSeatsEnum;
 use AppAd\AdVehicle\Classes\Enums\VehicleBodyTypeEnum;
 use AppAd\AdVehicle\Classes\Enums\VehicleFuelTypeEnum;
 use AppAd\AdVehicle\Classes\Enums\VehicleConditionEnum;
-use AppAd\AdVehicle\Classes\Enums\VehicleCylindersEnum;
 use AppAd\AdVehicle\Classes\Enums\VehicleEngineTypeEnum;
 use AppAd\AdVehicle\Classes\Enums\VehicleTransmissionEnum;
 
@@ -37,19 +34,54 @@ class Vehicle extends Model
 	 * @var array rules for validation
 	 */
 	public $rules = [
-		'vin' => 'required|string|regex:' . self::VIN_REGEX . '|unique:appad_advehicle_vehicles,vin',
+		'vin' => 'required|string|regex:' . self::VIN_REGEX,
+		'license_plate' => 'nullable|string|regex:' . self::ECV_REGEX,
 		'manufacturer_id' => 'required|exists:appad_advehicle_vehicle_manufacturers,id',
 		'model' => 'required|string',
 		'body_type' => 'required|string',
 		'color' => 'required|string',
+		'kilowatts' => 'required|integer',
+		'torque' => 'required|integer',
+		'displacement' => 'required|numeric',
+		'top_speed' => 'required|integer',
 		'fuel_type' => 'required|string',
 		'drive' => 'required|string',
 		'transmission' => 'required|string',
-		'cylinders' => 'required|integer',
+		'gears' => 'required|integer|min:1',
+		'engine_type' => 'required|string',
+		'cylinders' => 'required|integer|min:0|max:24',
+		'doors' => 'required|integer|min:2|max:5',
+		'seats' => 'required|integer|min:1|max:10',
 		'year' => 'required|integer|min:1900|max:2025',
-		'mileage' => 'required|integer',
-		'condition' => 'required|string',
-		'license_plate' => 'nullable|string|regex:' . self::ECV_REGEX . '|unique:appad_advehicle_vehicles,license_plate'
+		'mileage' => 'required|integer|min:0',
+		'condition' => 'required|string'
+	];
+
+	/**
+	 * @var array fillable fields
+	 */
+	protected $fillable = [
+		'vin',
+		'license_plate',
+		'manufacturer_id',
+		'model',
+		'body_type',
+		'color',
+		'kilowatts',
+		'torque',
+		'displacement',
+		'top_speed',
+		'fuel_type',
+		'drive',
+		'transmission',
+		'gears',
+		'engine_type',
+		'cylinders',
+		'doors',
+		'seats',
+		'year',
+		'mileage',
+		'condition'
 	];
 
 	/**
@@ -67,6 +99,27 @@ class Vehicle extends Model
 			'otherKey' => 'id'
 		]
 	];
+
+	public $belongsToMany = [
+		'features' => [
+			VehicleFeature::class,
+			'table'    => 'appad_advehicle_vehicles_vehicle_features',
+			'order'    => 'sort_order',
+			'key'      => 'vehicle_id',
+			'otherKey' => 'feature_id'
+		]
+	];
+
+	// Events
+	public function beforeValidate()
+	{
+		$this->rules['body_type'] = Rule::in(VehicleBodyTypeEnum::values()) . '|required|string';
+		$this->rules['condition'] = Rule::in(VehicleConditionEnum::values()) . '|required|string';
+		$this->rules['fuel_type'] = Rule::in(VehicleFuelTypeEnum::values()) . '|required|string';
+		$this->rules['engine_type'] = Rule::in(VehicleEngineTypeEnum::values()) . '|required|string';
+		$this->rules['transmission'] = Rule::in(VehicleTransmissionEnum::values()) . '|required|string';
+		$this->rules['drive'] = Rule::in(VehicleDriveEnum::values()) . '|required|string';
+	}
 
 	public function getHorsepowerAttribute()
 	{
@@ -98,28 +151,8 @@ class Vehicle extends Model
 		return VehicleTransmissionEnum::optionsForBackend();
 	}
 
-	public function getCylindersOptions()
-	{
-		return VehicleCylindersEnum::optionsForBackend();
-	}
-
-	public function getGearsOptions()
-	{
-		return VehicleGearsEnum::optionsForBackend();
-	}
-
 	public function getEngineTypeOptions()
 	{
 		return VehicleEngineTypeEnum::optionsForBackend();
-	}
-
-	public function getDoorsOptions()
-	{
-		return VehicleDoorsEnum::optionsForBackend();
-	}
-
-	public function getSeatsOptions()
-	{
-		return VehicleSeatsEnum::optionsForBackend();
 	}
 }

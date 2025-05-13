@@ -7,7 +7,7 @@ columns:
         label: ID
         searchable: true
     price:
-        label: Price
+        label: Price (EUR)
         type: number
         searchable: true
     ad[title]:

@@ -157,6 +157,10 @@
       <path value="$PROJECT_DIR$/api/vendor/google/apiclient-services" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/api/vendor/algolia/algoliasearch-client-php" />
+      <path value="$PROJECT_DIR$/api/vendor/php-http/multipart-stream-builder" />
+      <path value="$PROJECT_DIR$/api/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/api/vendor/openai-php/client" />
+      <path value="$PROJECT_DIR$/api/vendor/marc-mabe/php-enum" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

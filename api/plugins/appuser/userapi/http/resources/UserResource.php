@@ -3,6 +3,7 @@
 use Cache;
 use October\Rain\Support\Facades\Event;
 use AppAd\Ad\Http\Resources\AdSimpleResource;
+use AppUtil\Util\Http\Resources\FileResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -13,7 +14,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'username' => $this->username,
-			'avatar' => $this->avatar,
+			'avatar' => new FileResource($this->avatar),
             'email' => $this->email,
             'phone_number' => $this->phone_number,
 			'location' => $this->location,

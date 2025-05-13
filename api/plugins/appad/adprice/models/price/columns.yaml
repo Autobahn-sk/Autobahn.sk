@@ -3,6 +3,9 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    price:
+        label: Price (EUR)
+        type: number
+    created_at:
+        label: Created At
+        type: datetime

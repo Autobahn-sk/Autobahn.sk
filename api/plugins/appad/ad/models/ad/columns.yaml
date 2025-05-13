@@ -6,6 +6,12 @@ columns:
     id:
         label: ID
         searchable: true
+    images:
+        label: Thumbnail
+        relation: images
+        type: partial
+        path: ~/plugins/appad/ad/controllers/ads/_thumbnail_column.htm
+        sortable: false
     title:
         label: Title
         searchable: true
@@ -25,10 +31,10 @@ columns:
         type: selectable
         searchable: true
     created_at:
-        label: Created at
+        label: Created At
         searchable: true
         type: datetime
     updated_at:
-        label: Updated at
+        label: Updated At
         searchable: true
         type: datetime

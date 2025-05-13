@@ -8,5 +8,8 @@ enum VehicleFuelTypeEnum: string
 
 	case GAS = 'GAS';
 	case DIESEL = 'DIESEL';
-	case ELECTRICITY = 'ELECTRICITY';
+	case ELECTRIC = 'ELECTRIC';
+	case HYBRID = 'HYBRID';
+	case HYDROGEN = 'HYDROGEN';
+	case LPG = 'LPG';
 }

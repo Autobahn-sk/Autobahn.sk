@@ -19,7 +19,7 @@ return new class extends Migration
         Schema::create('appad_advehicle_vehicles', function(Blueprint $table) {
             $table->id();
 
-			$table->string('vin')->unique();
+			$table->string('vin');
 			$table->string('license_plate')->nullable();
 			$table->integer('manufacturer_id')->unsigned()->index();
 			$table->string('model');

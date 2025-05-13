@@ -76,7 +76,7 @@ namespace {$bindNamespace};
 use {$modelNamespace};
 use AppApi\Api\ModelBinds\ModelBind;
 
-class {$modelName}ModelBind extends WModelBind
+class {$modelName}ModelBind extends ModelBind
 {
     public string \$model = {$modelName}::class;
 

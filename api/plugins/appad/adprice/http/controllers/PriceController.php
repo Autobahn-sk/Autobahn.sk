@@ -10,9 +10,22 @@ use AppAd\AdPrice\Http\Resources\PriceOfferResource;
 
 class PriceController extends Controller
 {
-	public function store(Request $request)
+	public function adPriceHistory(Request $request, $ad)
+	{
+		$prices = $ad->prices()
+			->orderBy('created_at', 'desc')
+			->get();
+
+		$response = PriceResource::collection($prices);
+
+		return ApiResource::success(data: $response);
+	}
+	
+	public function store(Request $request, $ad)
 	{
 		$price = new Price();
+
+		$price->ad_id = $ad->id;
 
 		$price->fill($request->all());
 
@@ -23,11 +36,13 @@ class PriceController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-	public function storePriceOffer(Request $request)
+	public function storePriceOffer(Request $request, $ad)
 	{
 		$priceOffer = new PriceOffer();
 
-		$priceOffer->user_id = $request->user()->id;
+		$priceOffer->ad_id = $ad->id;
+
+		$priceOffer->user()->associate($request->user());
 
 		$priceOffer->fill($request->all());
 

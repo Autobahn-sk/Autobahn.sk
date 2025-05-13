@@ -12,10 +12,7 @@ Route::group([
     'namespace'  => 'AppAd\Ad\Http\Controllers',
     'middleware' => [
 		'api',
-		UserModelBind::class,
-		AdModelBind::class,
-		AdPolicyMiddleware::class,
-		IsSellerMiddleware::class
+		AdModelBind::class
     ],
 ], function(Router $router) {
 	$router
@@ -30,19 +27,29 @@ Route::group([
 		->get('ads-search', 'AdController@search')
 		->name('ads.search');
 
-	$router
-		->post('ads', 'AdController@store')
-		->middleware([Authenticate::class])
-		->name('ads.store');
+	Route::group([
+		'middleware' => [
+			Authenticate::class,
+			UserModelBind::class,
+			AdPolicyMiddleware::class,
+			IsSellerMiddleware::class
+		],
+	], function(Router $router) {
+		$router
+			->post('ads', 'AdController@store')
+			->name('ads.store');
 
-	$router
-		->post('ads/{ad}', 'AdController@update')
-		->middleware([Authenticate::class])
-		->name('ads.update');
+		$router
+			->post('ads/{ad}', 'AdController@update')
+			->name('ads.update');
 
-	$router
-		->delete('ads/{ad}', 'AdController@destroy')
-		->middleware([Authenticate::class])
-		->name('ads.destroy');
+		$router
+			->delete('ads/{ad}', 'AdController@destroy')
+			->name('ads.destroy');
+
+		$router
+			->post('ads-generate-ad-description/{ad}', 'AdController@generateAdDescription')
+			->name('ads.generate-ad-description');
+	});
 });
 

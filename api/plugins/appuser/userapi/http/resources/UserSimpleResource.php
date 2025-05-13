@@ -1,6 +1,7 @@
 <?php namespace AppUser\UserApi\Http\Resources;
 
 use October\Rain\Support\Facades\Event;
+use AppUtil\Util\Http\Resources\FileResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserSimpleResource extends JsonResource
@@ -11,7 +12,7 @@ class UserSimpleResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'username' => $this->username,
-			'avatar' => $this->avatar,
+			'avatar' => new FileResource($this->avatar),
 			'email' => $this->email,
 			'phone_number' => $this->phone_number,
 			'location' => $this->location,

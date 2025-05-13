@@ -14,7 +14,8 @@ class Plugin extends PluginBase
 	public $require = [
 		'AppUser.User',
 		'AppUser.UserApi',
-		'AppUser.UserFlag'
+		'AppUser.UserFlag',
+		'AppAlgolia.AlgoliaSearch'
 	];
 
     /**

@@ -41,8 +41,6 @@ appplugin/plugin
 │   ├── extends
 │   │   └── ExampleExtend.php
 │   ├── services
-│   │   ├── interfaces
-│   │   │   └── IExampleService.php
 │   │   └── ExampleService.php
 │   ├── traits
 │   │   └── ExampleTrait.php

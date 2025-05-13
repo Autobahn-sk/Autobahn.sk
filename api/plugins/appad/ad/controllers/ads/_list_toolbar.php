@@ -19,4 +19,13 @@
         <i class="icon-delete"></i>
         <?= __("Delete") ?>
     </button>
+
+    <div class="toolbar-divider"></div>
+
+    <button
+        class="btn btn-default oc-icon-upload"
+        data-request="onAlgoliaSync"
+        data-stripe-load-indicator>
+        Algolia Sync
+    </button>
 </div>

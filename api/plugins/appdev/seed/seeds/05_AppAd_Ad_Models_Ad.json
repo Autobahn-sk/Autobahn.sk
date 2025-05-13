@@ -1,481 +1,481 @@
 [
   {
     "id": 1,
-    "slug": "car-ad-1",
-    "title": "Car Model 1",
-    "description": "<p>Description for Car Model 1, in excellent condition.</p>",
+    "slug": "bmw-e46-m3",
+    "title": "BMW E46 M3",
+    "description": "<p>Predám krásne BMW E46 M3 v modrej metalíze, rok výroby 2003, nájazd 180 000 km. Auto je v perfektnom technickom stave, plne servisované s kompletne udržiavanou históriou. Interiér kožený, klimatizácia, automatické stierače, xenónové svetlá. Ideálny pre milovníkov športových áut.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Pekná 94/13, 900 43 Kalinkovo",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video1",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://webauto.sk/wp-content/uploads/IMG_08851.jpg"
       }
     ]
   },
   {
     "id": 2,
-    "slug": "car-ad-2",
-    "title": "Car Model 2",
-    "description": "<p>Description for Car Model 2, in excellent condition.</p>",
+    "slug": "mercedes-benz-c63-amg",
+    "title": "Mercedes-Benz C63 AMG",
+    "description": "<p>Ponúkam na predaj Mercedes-Benz C63 AMG, rok 2015, nájazd 95 000 km. Vynikajúci technický stav, pravidelný servis u autorizovaného predajcu. Výkonný 4.0L V8 motor, automatická prevodovka, kožený interiér, vyhrievané sedadlá, parkovací asistent. Auto bez nehody, jedno vlastníctvo.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hlavná 32, 811 01 Bratislava",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video2",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://issimi-vehicles-cdn.b-cdn.net/publicamlvehiclemanagement/VehicleDetails/642/timestamped-1726605103699-2021%20Mercedes-Benz%20C63%20S_000001.jpg"
       }
     ]
   },
   {
     "id": 3,
-    "slug": "car-ad-3",
-    "title": "Car Model 3",
-    "description": "<p>Description for Car Model 3, in excellent condition.</p>",
+    "slug": "audi-rs6-avant",
+    "title": "Audi RS6 Avant",
+    "description": "<p>Luxusné Audi RS6 Avant, rok 2018, nájazd 60 000 km. Kombi s výkonom 560 koní, automatická prevodovka, quattro pohon, plná výbava včítane masážnych sedadiel, panoramatickej strechy a najmodernejšej multimediálnej sústavy. Auto v perfektnom stave, servisná história dostupná.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štúrova 56, 040 01 Košice",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video3",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://autonovo.sk/wp-content/uploads/2024/07/IMG_0829.jpg"
       }
     ]
   },
   {
     "id": 4,
-    "slug": "car-ad-4",
-    "title": "Car Model 4",
-    "description": "<p>Description for Car Model 4, in excellent condition.</p>",
+    "slug": "porsche-911-carrera",
+    "title": "Porsche 911 Carrera",
+    "description": "<p>Predám Porsche 911 Carrera z roku 2016, nájazd 45 000 km. Automatická prevodovka PDK, zadný náhon, sportový výfuk, 20\" disky. Interiér v čiernej koži s karbonovými doplnkami. Auto bolo pravidelne servisované u autorizovaného predajcu. Žiadna nehoda, garážované.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Námestie slobody 12, 812 45 Bratislava",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video4",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.topspeed.sk/userfiles/articles/29-10/25825/1730214282-300107.6000x4500.jpg"
       }
     ]
   },
   {
     "id": 5,
-    "slug": "car-ad-5",
-    "title": "Car Model 5",
-    "description": "<p>Description for Car Model 5, in excellent condition.</p>",
+    "slug": "volkswagen-golf-r",
+    "title": "Volkswagen Golf R",
+    "description": "<p>Výkonný Volkswagen Golf R 2.0 TSI, rok 2019, nájazd 30 000 km. Automatická DSG prevodovka, 4x4 pohon, sportové vystuženie, digitálny prístrojový panel, vyhrievané sedadlá. Auto v showroom stave, servisná história u autorizovaného servisu. Ideálny pre každodennú jazdu aj športové využitie.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Továrenská 8, 010 01 Žilina",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video5",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.luxuscars.sk/content/uploads/2018/07/2017-vw-golf-r-1.jpg"
       }
     ]
   },
   {
     "id": 6,
-    "slug": "car-ad-6",
-    "title": "Car Model 6",
-    "description": "<p>Description for Car Model 6, in excellent condition.</p>",
+    "slug": "bmw-m5-competition",
+    "title": "BMW M5 Competition",
+    "description": "<p>Exkluzívne BMW M5 Competition, rok 2020, nájazd 25 000 km. Výkon 625 koní, automatická prevodovka, pohon všetkých kolies, M sportové vystuženie, najvyššia výbava včítane meridiánového audia a asistentov jazdy. Auto v perfektnom stave, garážované, servis u autorizovaného predajcu.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hviezdoslavova 15, 960 01 Zvolen",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video6",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://images.clickdealer.co.uk/vehicles/6431/6431878/large2/153051386.jpg"
       }
     ]
   },
   {
     "id": 7,
-    "slug": "car-ad-7",
-    "title": "Car Model 7",
-    "description": "<p>Description for Car Model 7, in excellent condition.</p>",
+    "slug": "mercedes-benz-g63-amg",
+    "title": "Mercedes-Benz G63 AMG",
+    "description": "<p>Luxusný Mercedes-Benz G63 AMG, rok 2021, nájazd 15 000 km. Automatická prevodovka, 4x4 pohon, výkon 585 koní, kožený interiér, panoramatická strecha, masážne sedadlá. Auto v showroom stave, plná servisná história, žiadna nehoda. Jedinečná príležitosť pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Dukelská 24, 929 01 Dunajská Streda",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video7",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://klassen.eu/media/vehicles/original/hac2p394oz5o2631s9b39db375059y0t.jpg"
       }
     ]
   },
   {
     "id": 8,
-    "slug": "car-ad-8",
-    "title": "Car Model 8",
-    "description": "<p>Description for Car Model 8, in excellent condition.</p>",
+    "slug": "audi-a4-s-line",
+    "title": "Audi A4 S-Line",
+    "description": "<p>Predám Audi A4 S-Line, rok 2017, nájazd 85 000 km. 2.0 TFSI motor, automatická prevodovka, quattro pohon, sportové vystuženie, full LED svetlá, virtuálny kokpit. Auto v perfektnom technickom stave, pravidelný servis, nefajčené. Vhodné pre rodinnú aj firemnú prevádzku.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Kollárova 72, 902 01 Pezinok",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video8",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://assets.adac.de/image/upload/v1/Autodatenbank/Fahrzeugbilder/im05753-1-audi-a4.jpg"
       }
     ]
   },
   {
     "id": 9,
-    "slug": "car-ad-9",
-    "title": "Car Model 9",
-    "description": "<p>Description for Car Model 9, in excellent condition.</p>",
+    "slug": "porsche-cayenne-turbo",
+    "title": "Porsche Cayenne Turbo",
+    "description": "<p>Výkonné Porsche Cayenne Turbo, rok 2019, nájazd 40 000 km. 4.0L V8 motor, automatická prevodovka, vzduchové odpruženie, plná kožená výbava, panoramatická strecha. Auto v excelentnom stave, servis u autorizovaného predajcu. Ideálny kombinácia výkonu a luxusu.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štefánikova 8, 911 01 Trenčín",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video9",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://images.pistonheads.com/nimg/47090/mceu_11071046621681745807691.jpg"
       }
     ]
   },
   {
     "id": 10,
-    "slug": "car-ad-10",
-    "title": "Car Model 10",
-    "description": "<p>Description for Car Model 10, in excellent condition.</p>",
+    "slug": "volkswagen-touareg-r-line",
+    "title": "Volkswagen Touareg R-Line",
+    "description": "<p>Elegantný Volkswagen Touareg R-Line, rok 2020, nájazd 35 000 km. 3.0 TDI motor, automatická prevodovka, 4x4 pohon, plná výbava včítane digitálneho prístrojového panelu a asistentov jazdy. Auto v perfektnom stave, servisná história dostupná. Vhodné pre náročných rodinných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Mierová 12, 974 01 Banská Bystrica",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video10",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.autoneus.sk/wp-content/uploads/2022/08/13915_60ce0413-d859-4c55-9a12-c22e34d46ebdrulemo-1600.jpg"
       }
     ]
   },
   {
     "id": 11,
-    "slug": "car-ad-11",
-    "title": "Car Model 11",
-    "description": "<p>Description for Car Model 11, in excellent condition.</p>",
+    "slug": "bmw-x5-m50d",
+    "title": "BMW X5 M50d",
+    "description": "<p>Predám BMW X5 M50d, rok 2018, nájazd 65 000 km. 3.0L dieselový motor, automatická prevodovka, xDrive pohon, M sportové vystuženie, plná výbava. Auto v perfektnom technickom stave, pravidelne servisované. Ideálne pre kombináciu výkonu a praktickosti.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hradná 3, 010 01 Teplička nad Váhom",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video11",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.autorro.sk/wp-content/uploads/2024/10/1-95-scaled.jpg"
       }
     ]
   },
   {
     "id": 12,
-    "slug": "car-ad-12",
-    "title": "Car Model 12",
-    "description": "<p>Description for Car Model 12, in excellent condition.</p>",
+    "slug": "mercedes-benz-e-class-coupe",
+    "title": "Mercedes-Benz E-Class Coupe",
+    "description": "<p>Elegantné Mercedes-Benz E-Class Coupe, rok 2019, nájazd 28 000 km. 2.0L benzínový motor, automatická prevodovka, AMG vystuženie, kožený interiér, digitálny prístrojový panel. Auto v showroom stave, servis u autorizovaného predajcu. Luxusné auto pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Partizánska 15, 031 01 Liptovský Mikuláš",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video12",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://assets.adac.de/image/upload/v1/Autodatenbank/Fahrzeugbilder/im06119-1-mercedes-e-klasse-coupe.jpg"
       }
     ]
   },
   {
     "id": 13,
-    "slug": "car-ad-13",
-    "title": "Car Model 13",
-    "description": "<p>Description for Car Model 13, in excellent condition.</p>",
+    "slug": "audi-q7-s-line",
+    "title": "Audi Q7 S-Line",
+    "description": "<p>Prostorné Audi Q7 S-Line, rok 2017, nájazd 75 000 km. 3.0 TDI motor, automatická prevodovka, quattro pohon, 7-miestna verzia, plná výbava. Auto v perfektnom technickom stave, pravidelne servisované. Vhodné pre veľkú rodinu alebo firemnú prevádzku.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Kukučínova 22, 080 01 Prešov",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video13",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.pocar.sk/thumbs/1200x1200-watermark-80/2248-8665-profilova.jpeg"
       }
     ]
   },
   {
     "id": 14,
-    "slug": "car-ad-14",
-    "title": "Car Model 14",
-    "description": "<p>Description for Car Model 14, in excellent condition.</p>",
+    "slug": "porsche-macan-s",
+    "title": "Porsche Macan S",
+    "description": "<p>Športové Porsche Macan S, rok 2018, nájazd 50 000 km. 3.0L V6 motor, automatická prevodovka, pohon všetkých kolies, plná kožená výbava, sportový výfuk. Auto v perfektnom stave, servis u autorizovaného predajcu. Ideálny kombinácia športového výkonu a SUV praktickosti.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Sládkovičova 45, 921 01 Piešťany",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video14",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.moris.sk/media/content/media/product/1147/101/hd.jpg"
       }
     ]
   },
   {
     "id": 15,
-    "slug": "car-ad-15",
-    "title": "Car Model 15",
-    "description": "<p>Description for Car Model 15, in excellent condition.</p>",
+    "slug": "volkswagen-arteon-r-line",
+    "title": "Volkswagen Arteon R-Line",
+    "description": "<p>Moderný Volkswagen Arteon R-Line, rok 2020, nájazd 25 000 km. 2.0 TSI motor, automatická DSG prevodovka, plná výbava včítane digitálneho prístrojového panelu a asistentov jazdy. Auto v showroom stave, servisná história dostupná. Elegantné auto pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hurbanova 12, 949 01 Nitra",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video15",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://overenie-vozidla.s3.eu-central-1.amazonaws.com/autobazareu/scrp/2023/1/10/72e854081c55b5aaf196483cd084e5cdbf3a8d66.jpg"
       }
     ]
   },
   {
     "id": 16,
-    "slug": "car-ad-16",
-    "title": "Car Model 16",
-    "description": "<p>Description for Car Model 16, in excellent condition.</p>",
+    "slug": "bmw-330i-m-sport",
+    "title": "BMW 330i M-Sport",
+    "description": "<p>Predám BMW 330i s M-Sport výbavou, rok 2019, nájazd 40 000 km. 2.0L benzínový motor, automatická prevodovka, zadný náhon, plná výbava včítane adaptívnych svetlometov a virtuálneho kokpitu. Auto v perfektnom stave, pravidelne servisované u autorizovaného predajcu.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štúrova 8, 010 01 Žilina",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video16",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://content.homenetiol.com/2000292/2215091/0x0/0995adfd54f448439c31e37ccbaf4143.jpg"
       }
     ]
   },
   {
     "id": 17,
-    "slug": "car-ad-17",
-    "title": "Car Model 17",
-    "description": "<p>Description for Car Model 17, in excellent condition.</p>",
+    "slug": "mercedes-benz-s-class",
+    "title": "Mercedes-Benz S-Class",
+    "description": "<p>Luxusný Mercedes-Benz S-Class, rok 2017, nájazd 70 000 km. 3.0L dieselový motor, automatická prevodovka, plná výbava včítane masážnych sedadiel, panoramatickej strechy a najmodernejších asistentov jazdy. Auto v perfektnom technickom stave, servisná história dostupná.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Námestie SNP 1, 960 01 Zvolen",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video17",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://blackrent.sk/datap/image/775/uprava-288.jpg.jpg/"
       }
     ]
   },
   {
     "id": 18,
-    "slug": "car-ad-18",
-    "title": "Car Model 18",
-    "description": "<p>Description for Car Model 18, in excellent condition.</p>",
+    "slug": "audi-s5-sportback",
+    "title": "Audi S5 Sportback",
+    "description": "<p>Športové Audi S5 Sportback, rok 2018, nájazd 45 000 km. 3.0L V6 motor, automatická prevodovka, quattro pohon, plná výbava včítane sportového podvozku a digitálneho prístrojového panelu. Auto v perfektnom stave, pravidelne servisované. Elegantné a výkonné zároveň.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Kukučínova 5, 080 01 Prešov",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video18",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.automoli.com/common/vehicles/_assets/img/gallery/f109/audi-s5-sportback-f5-facelift-2019.jpg"
       }
     ]
   },
   {
     "id": 19,
-    "slug": "car-ad-19",
-    "title": "Car Model 19",
-    "description": "<p>Description for Car Model 19, in excellent condition.</p>",
+    "slug": "porsche-panamera-4s",
+    "title": "Porsche Panamera 4S",
+    "description": "<p>Exkluzívne Porsche Panamera 4S, rok 2019, nájazd 30 000 km. 2.9L V6 motor, automatická prevodovka, pohon všetkých kolies, plná kožená výbava, sportový výfuk. Auto v showroom stave, servis u autorizovaného predajcu. Luxusné auto pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hviezdoslavova 12, 811 02 Bratislava",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video19",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://i.carbi.sk/cache/1620x1080/v/23089ff8/c4e60a1aa/8f7bc06b8e/31831972-1-676285ba95965.jpg"
       }
     ]
   },
   {
     "id": 20,
-    "slug": "car-ad-20",
-    "title": "Car Model 20",
-    "description": "<p>Description for Car Model 20, in excellent condition.</p>",
+    "slug": "volkswagen-passat-r-line",
+    "title": "Volkswagen Passat R-Line",
+    "description": "<p>Elegantný Volkswagen Passat R-Line, rok 2018, nájazd 80 000 km. 2.0 TDI motor, automatická DSG prevodovka, plná výbava včítane digitálneho prístrojového panelu a asistentov jazdy. Auto v perfektnom technickom stave, pravidelne servisované. Vhodné pre rodinnú aj firemnú prevádzku.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štefánikova 15, 911 01 Trenčín",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video20",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://image.alza.cz/products/AUPR64777/AUPR64777-05.jpg"
       }
     ]
   },
   {
     "id": 21,
-    "slug": "car-ad-21",
-    "title": "Car Model 21",
-    "description": "<p>Description for Car Model 21, in excellent condition.</p>",
+    "slug": "bmw-740li",
+    "title": "BMW 740Li",
+    "description": "<p>Luxusné BMW 740Li, rok 2017, nájazd 65 000 km. 3.0L benzínový motor, automatická prevodovka, pohon zadných kolies, plná výbava včítane masážnych sedadiel a najmodernejších asistentov jazdy. Auto v perfektnom stave, servisná história dostupná. Pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Mierová 5, 974 01 Banská Bystrica",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video21",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://cdn.bigboytoyz.com/new-version/products/product/whatsapp-image-2022-07-18-at-11.21.46-am.jpeg"
       }
     ]
   },
   {
     "id": 22,
-    "slug": "car-ad-22",
-    "title": "Car Model 22",
-    "description": "<p>Description for Car Model 22, in excellent condition.</p>",
+    "slug": "mercedes-benz-cla-45-amg",
+    "title": "Mercedes-Benz CLA 45 AMG",
+    "description": "<p>Športové Mercedes-Benz CLA 45 AMG, rok 2016, nájazd 55 000 km. 2.0L motor, automatická prevodovka, 4x4 pohon, AMG vystuženie, sportový výfuk. Auto v perfektnom technickom stave, pravidelne servisované. Ideálne pre milovníkov športových áut s praktickosťou.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Dukelská 12, 929 01 Dunajská Streda",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video22",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://vehicle-images.dealerinspire.com/b750-11002896/W1K5J5EB6SN508026/2c91cd928a96ba6e6100353bb836bf38.jpg"
       }
     ]
   },
   {
     "id": 23,
-    "slug": "car-ad-23",
-    "title": "Car Model 23",
-    "description": "<p>Description for Car Model 23, in excellent condition.</p>",
+    "slug": "audi-tt-rs",
+    "title": "Audi TT RS",
+    "description": "<p>Výkonné Audi TT RS, rok 2018, nájazd 25 000 km. 2.5L 5-valcový motor, automatická prevodovka, quattro pohon, sportový podvozok, plná výbava. Auto v showroom stave, servis u autorizovaného predajcu. Skutočný športový automobil pre náročných nadšencov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Kollárova 15, 902 01 Pezinok",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video23",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://www.topspeed.sk/userfiles/articles/04-10/21869/1664875849-audi.tt.rs.iconic.edition.2022.uvod.jpg"
       }
     ]
   },
   {
     "id": 24,
-    "slug": "car-ad-24",
-    "title": "Car Model 24",
-    "description": "<p>Description for Car Model 24, in excellent condition.</p>",
+    "slug": "porsche-718-cayman",
+    "title": "Porsche 718 Cayman",
+    "description": "<p>Športové Porsche 718 Cayman, rok 2019, nájazd 20 000 km. 2.0L motor, automatická PDK prevodovka, zadný náhon, sportový výfuk, plná kožená výbava. Auto v perfektnom stave, servis u autorizovaného predajcu. Skutočný športový zážitok za volantom.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štefánikova 22, 911 01 Trenčín",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video24",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://di-uploads-pod15.dealerinspire.com/bluegrassmotorsport/uploads/2023/08/2308-Porsche-718-Cayman-S-Trim.jpg"
       }
     ]
   },
   {
     "id": 25,
-    "slug": "car-ad-25",
-    "title": "Car Model 25",
-    "description": "<p>Description for Car Model 25, in excellent condition.</p>",
+    "slug": "volkswagen-tiguan-r-line",
+    "title": "Volkswagen Tiguan R-Line",
+    "description": "<p>Moderný Volkswagen Tiguan R-Line, rok 2020, nájazd 30 000 km. 2.0 TSI motor, automatická DSG prevodovka, 4x4 pohon, plná výbava včítane digitálneho prístrojového panelu. Auto v perfektnom stave, servisná história dostupná. Ideálne pre aktívnych rodinných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hurbanova 5, 949 01 Nitra",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video25",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://media.vw.com/assets/images/thumbnail/7700-H3737.jpg"
       }
     ]
   },
   {
     "id": 26,
-    "slug": "car-ad-26",
-    "title": "Car Model 26",
-    "description": "<p>Description for Car Model 26, in excellent condition.</p>",
+    "slug": "bmw-z4-m40i",
+    "title": "BMW Z4 M40i",
+    "description": "<p>Športové BMW Z4 M40i, rok 2020, nájazd 15 000 km. 3.0L motor, automatická prevodovka, zadný náhon, M sportové vystuženie, plná výbava. Auto v showroom stave, servis u autorizovaného predajcu. Skutočný roadster pre milovníkov otvorených áut.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Štúrova 12, 010 01 Žilina",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video26",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://autofilter.sk/assets/files/_transforms/z4/_carImage5/Bmw-z4-galeria_2025-04-10-203545_nunq.jpg"
       }
     ]
   },
   {
     "id": 27,
-    "slug": "car-ad-27",
-    "title": "Car Model 27",
-    "description": "<p>Description for Car Model 27, in excellent condition.</p>",
+    "slug": "mercedes-benz-glc-63-amg",
+    "title": "Mercedes-Benz GLC 63 AMG",
+    "description": "<p>Výkonné Mercedes-Benz GLC 63 AMG, rok 2019, nájazd 35 000 km. 4.0L V8 motor, automatická prevodovka, 4x4 pohon, AMG vystuženie, sportový výfuk. Auto v perfektnom technickom stave, servisná história dostupná. Kombinácia SUV praktickosti a športového výkonu.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Námestie SNP 5, 960 01 Zvolen",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video27",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://assets.adac.de/image/upload/v1/Autodatenbank/Fahrzeugbilder/im05797-1-mercedes-glc-klasse-amg-coupe.jpg"
       }
     ]
   },
   {
     "id": 28,
-    "slug": "car-ad-28",
-    "title": "Car Model 28",
-    "description": "<p>Description for Car Model 28, in excellent condition.</p>",
+    "slug": "audi-e-tron",
+    "title": "Audi e-tron",
+    "description": "<p>Moderné elektrické Audi e-tron, rok 2020, nájazd 20 000 km. Automatická prevodovka, quattro pohon, plná výbava včítane virtuálnych zrkadiel a najmodernejších asistentov jazdy. Auto v perfektnom stave, servis u autorizovaného predajcu. Budúcnosť automobilovej dopravy už dnes.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Kukučínova 8, 080 01 Prešov",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video28",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://m.smedata.sk/api-media/media/image/sme/4/37/3753484/3753484_1200x.jpeg"
       }
     ]
   },
   {
     "id": 29,
-    "slug": "car-ad-29",
-    "title": "Car Model 29",
-    "description": "<p>Description for Car Model 29, in excellent condition.</p>",
+    "slug": "porsche-taycan-turbo",
+    "title": "Porsche Taycan Turbo",
+    "description": "<p>Revolučné elektrické Porsche Taycan Turbo, rok 2021, nájazd 10 000 km. Automatická prevodovka, pohon všetkých kolies, plná kožená výbava, najmodernejšia technológia. Auto v showroom stave, servis u autorizovaného predajcu. Športové elektrické auto pre náročných zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Hviezdoslavova 8, 811 02 Bratislava",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video29",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://automagazin.sk/wp-content/uploads/2024/03/Porsche-Taycan_Turbo_GT-2025-1024-02.jpg"
       }
     ]
   },
   {
     "id": 30,
-    "slug": "car-ad-30",
-    "title": "Car Model 30",
-    "description": "<p>Description for Car Model 30, in excellent condition.</p>",
+    "slug": "volkswagen-id4",
+    "title": "Volkswagen ID.4",
+    "description": "<p>Moderné elektrické Volkswagen ID.4, rok 2021, nájazd 5 000 km. Automatická prevodovka, pohon zadných kolies, plná výbava včítane najmodernejších asistentov jazdy. Auto v showroom stave, servisná história dostupná. Ideálne pre ekologicky zmýšľajúcich zákazníkov.</p>",
     "status": "PUBLISHED",
     "user_id": 1,
-    "location": "Various Locations",
+    "location": "Mierová 8, 974 01 Banská Bystrica",
     "google_place_id": "",
     "youtube_url": "https://www.youtube.com/watch?v=video30",
     "images": [
       {
-        "url": "https://ipravda.sk/res/2021/06/28/thumbs/aircar-pristatie-v-bratislave-2021_01-nestandard1.jpg"
+        "url": "https://img.topky.sk/podkapotou/640px/3512079.jpg"
       }
     ]
   }

@@ -14,4 +14,5 @@ enum VehicleEngineTypeEnum: string
 	case W = 'W';
 	case H = 'H';
 	case OTHER = 'OTHER';
+	case ELECTRIC = 'ELECTRIC';
 }

@@ -7,7 +7,10 @@ class AdModelBind
 {
     public function handle($request, Closure $next)
     {
-        if ($request->route()->hasParameter('ad') && is_string($request->route()->parameter('ad'))) {
+		if ($request->route()->hasParameter('ad') && is_numeric($request->route()->parameter('ad'))) {
+			$request->route()->setParameter('ad', Ad::findOrFail($request->route()->parameter('ad')));
+		}
+        else if ($request->route()->hasParameter('ad') && is_string($request->route()->parameter('ad'))) {
             $request->route()->setParameter('ad', Ad::where('slug', $request->route()->parameter('ad'))->firstOrFail());
 		}
 

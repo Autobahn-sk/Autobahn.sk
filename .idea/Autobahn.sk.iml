@@ -6,7 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/api/modules/media/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/api/modules/tailor/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/api/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/api/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/api/modules/backend/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/api/modules/system/console" isTestSource="false" packagePrefix="System\Console\" />
+      <sourceFolder url="file://$MODULE_DIR$/api/modules/system/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/composer" />
@@ -149,6 +151,10 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/validator" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/algolia/algoliasearch-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/marc-mabe/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/openai-php/client" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/php-http/discovery" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/php-http/multipart-stream-builder" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
