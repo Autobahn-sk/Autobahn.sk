@@ -37,7 +37,7 @@ fields:
         type: number
         span: left
     torque:
-        label: Torque
+        label: Torque (Nm)
         type: number
         span: right
     displacement:
@@ -85,7 +85,7 @@ fields:
         type: number
         span: left
     mileage:
-        label: Mileage
+        label: Mileage (km)
         type: number
         span: right
     condition:
