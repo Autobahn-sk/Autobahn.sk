@@ -45,14 +45,16 @@ EOT;
 
 		try {
 			$response = $this->client->chat()->create([
-				'model' => 'gpt-3.5-turbo',
+				'model' => 'gpt-4-turbo',
 				'messages' => $messages,
 				'temperature' => 0.7,
-				'max_tokens' => 300,
+				'max_tokens' => 400,
 				'top_p' => 1,
 				'frequency_penalty' => 0,
 				'presence_penalty' => 0
 			]);
+
+			Log::info('OpenAIChatService Response: ' . json_encode($response));
 
 			return $response['choices'][0]['message']['content'] ?? null;
 		} catch (Exception $e) {
