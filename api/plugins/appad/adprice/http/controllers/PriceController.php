@@ -20,21 +20,6 @@ class PriceController extends Controller
 
 		return ApiResource::success(data: $response);
 	}
-	
-	public function store(Request $request, $ad)
-	{
-		$price = new Price();
-
-		$price->ad_id = $ad->id;
-
-		$price->fill($request->all());
-
-		$price->save();
-
-		$response = new PriceResource($price);
-
-		return ApiResource::success(data: $response);
-	}
 
 	public function storePriceOffer(Request $request, $ad)
 	{
