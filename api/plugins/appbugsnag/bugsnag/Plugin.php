@@ -44,7 +44,10 @@ class Plugin extends PluginBase
         $bugsnag = Client::make(env('BUGSNAG_API_KEY'));
         $bugsnag->setReleaseStage(env('APP_ENV'));
         $bugsnag->setAppVersion(env('APP_VERSION'));
-        $bugsnag->startSession();
+
+		$bugsnag->setErrorReportingLevel(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED & ~E_NOTICE);
+
+		$bugsnag->startSession();
         Handler::register($bugsnag);
     }
 }

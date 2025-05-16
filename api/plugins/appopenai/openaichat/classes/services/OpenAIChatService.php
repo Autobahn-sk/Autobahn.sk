@@ -35,12 +35,16 @@ Include:
 Keep the description around 100–150 words in length. If any required information is missing, skip it and do not guess. Do not include headings, formatting, or JSON—just a plain text paragraph in Slovak.
 EOT;
 
-		$prompt = 'Vytvor popis pre inzerát auta na základe údajov.';
-		$parameters = ['description'];
+		$prompt = 'Na základe nasledujúcich údajov o vozidle vytvor popis vhodný pre online inzerát:';
+
+		$content = implode("\n\n", [
+			$prompt,
+			json_encode($adData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+		]);
 
 		$messages = [
 			['role' => 'system', 'content' => $instruction],
-			['role' => 'user', 'content' => '$prompt = ' . $prompt . ' \n $parameters = ' . json_encode($parameters) . ' \n $adData = ' . json_encode($adData)]
+			['role' => 'user', 'content' => $content]
 		];
 
 		try {
