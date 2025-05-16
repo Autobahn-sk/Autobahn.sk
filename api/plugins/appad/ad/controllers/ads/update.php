@@ -38,6 +38,7 @@
                         type="button"
                         class="btn btn-info"
                         data-request="onGenerateDescription"
+                        data-request-data="{ redirect: 0 }"
                         data-request-message="<?= __("Generating description...") ?>"
                         data-load-indicator>
 					<?= __("Generate Description (AI)") ?>

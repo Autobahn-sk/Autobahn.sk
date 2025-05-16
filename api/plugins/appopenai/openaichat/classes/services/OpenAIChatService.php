@@ -52,7 +52,7 @@ EOT;
 				'model' => 'gpt-4-turbo',
 				'messages' => $messages,
 				'temperature' => 0.7,
-				'max_tokens' => 400,
+				'max_tokens' => 500,
 				'top_p' => 1,
 				'frequency_penalty' => 0,
 				'presence_penalty' => 0

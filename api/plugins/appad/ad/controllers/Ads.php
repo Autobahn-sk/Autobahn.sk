@@ -1,6 +1,5 @@
 <?php namespace AppAd\Ad\Controllers;
 
-use Response;
 use Exception;
 use BackendMenu;
 use AppAd\Ad\Models\Ad;
@@ -67,7 +66,9 @@ class Ads extends Controller
 
 		Flash::success('Description was generated successfully.');
 
-		return Response::make('<script>window.location.reload();</script>');
+		if ($redirect = $this->makeRedirect('update', $model)) {
+			return $redirect;
+		}
 	}
 
 	public function onAlgoliaSync(): void
