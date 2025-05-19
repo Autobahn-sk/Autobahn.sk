@@ -6,14 +6,14 @@ use Algolia\AlgoliaSearch\SearchClient;
 
 class AlgoliaSearchService
 {
-    protected $client;
+    protected SearchClient $client;
 
-    protected $index;
+    protected string $index;
 
     /**
      * @throws ApplicationException
      */
-    public function __construct($index)
+    public function __construct(string $index)
     {
         if (!env('ALGOLIA_APP_ID') || !env('ALGOLIA_API_KEY')) {
             throw new ApplicationException('Algolia credentials not set.');
@@ -27,7 +27,7 @@ class AlgoliaSearchService
         $this->index = $index;
     }
 
-	public function sync($objects): SearchIndex
+	public function sync(array $objects): SearchIndex
 	{
 		$index = $this->client->initIndex($this->index);
 
@@ -36,7 +36,7 @@ class AlgoliaSearchService
 		return $index;
 	}
 
-	public function save($object): SearchIndex
+	public function save(array $object): SearchIndex
 	{
 		$index = $this->client->initIndex($this->index);
 
@@ -45,7 +45,7 @@ class AlgoliaSearchService
 		return $index;
 	}
 
-	public function delete($objectId): SearchIndex
+	public function delete(int $objectId): SearchIndex
 	{
 		$index = $this->client->initIndex($this->index);
 
@@ -54,7 +54,7 @@ class AlgoliaSearchService
 		return $index;
 	}
 
-	public function search($query, $params = []): array
+	public function search(string $query, array $params = []): array
 	{
 		$index = $this->client->initIndex($this->index);
 

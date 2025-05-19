@@ -8,8 +8,14 @@ use AppAd\AdVehicle\Http\Resources\VehicleManufacturerResource;
 
 class VehicleManufacturerController extends Controller
 {
-    public function __invoke(Request $request)
-    {
+	/**
+	 * Handle the incoming request.
+	 *
+	 * @param Request $request
+	 * @return ApiResource
+	 */
+    public function __invoke(Request $request): ApiResource
+	{
 		$vehicleManufacturers = VehicleManufacturer::isPublished()
 			->get();
 

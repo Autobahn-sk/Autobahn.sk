@@ -6,7 +6,7 @@ use AppCommerce\Newsletter\Classes\Services\NewsletterService;
 
 class NewsletterController extends Controller
 {
-    public function store()
+    public function store(): ApiResource
     {
         request()->validate([
             'email' => 'email|required'
@@ -14,10 +14,10 @@ class NewsletterController extends Controller
 
         NewsletterService::subscribe(post('email'));
 
-		return ApiResource::success('Subscribed successfully.');
+		return ApiResource::successToast('Úspešne prihlásený na odber noviniek.');
 	}
 
-    public function destroy()
+    public function destroy(): ApiResource
     {
         request()->validate([
             'email' => 'email|required'
@@ -25,6 +25,6 @@ class NewsletterController extends Controller
 
         NewsletterService::unsubscribe(post('email'));
 
-		return ApiResource::success('Unsubscribed successfully.');
+		return ApiResource::successToast('Úspešne odhlásený z odberu noviniek.');
 	}
 }

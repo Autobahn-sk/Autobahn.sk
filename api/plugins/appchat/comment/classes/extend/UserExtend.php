@@ -5,8 +5,8 @@ use AppChat\Comment\Models\Comment;
 
 class UserExtend
 {
-    public static function addCommentRelationToUser()
-    {
+    public static function addCommentRelationToUser(): void
+	{
         User::extend(function ($user) {
             $user->morphMany['comments'] = [
                 Comment::class,

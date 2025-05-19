@@ -2,7 +2,6 @@
 
 use Model;
 use System\Models\File;
-use ValidationException;
 use RainLab\User\Models\User;
 use AppAd\AdPrice\Models\Price;
 use Illuminate\Validation\Rule;

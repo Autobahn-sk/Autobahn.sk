@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    plan:
+        label: Plan
+        type: relation
+        nameFrom: name
+        span: auto
+    user:
+        label: User
+        type: relation
+        nameFrom: email
+        span: auto
+    calculated_price:
+        label: Price (EUR)
+        context: update
+        span: auto
+    status:
+        label: Status
+        span: auto
+    cancelled_at:
+        label: Cancelled At
+        span: auto

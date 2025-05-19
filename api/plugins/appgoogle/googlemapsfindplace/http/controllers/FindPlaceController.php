@@ -9,9 +9,13 @@ use AppApi\ApiResponse\Resources\ApiResource;
 class FindPlaceController extends Controller
 {
     /**
-     * @throws GuzzleException
-     */
-    public function __invoke(Request $request)
+	 * Handle the incoming request.
+	 *
+	 * @param Request $request
+	 * @return ApiResource
+	 * @throws GuzzleException
+	 */
+    public function __invoke(Request $request): ApiResource
     {
         $client = new Client();
 

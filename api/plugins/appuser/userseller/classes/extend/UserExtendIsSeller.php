@@ -8,7 +8,7 @@ use October\Rain\Support\Facades\Event;
 
 class UserExtendIsSeller
 {
-	public static function extend()
+	public static function extend(): void
 	{
 		self::addMethods();
 		self::addIsSellerToColumns();
@@ -20,7 +20,7 @@ class UserExtendIsSeller
 		self::extendUser_addRules();
 	}
 
-	public static function addMethods()
+	public static function addMethods(): void
 	{
 		User::extend(function ($model) {
 			$model->addDynamicMethod('isSeller', function () use ($model) {
@@ -29,7 +29,7 @@ class UserExtendIsSeller
 		});
 	}
 	
-	public static function addIsSellerToColumns()
+	public static function addIsSellerToColumns(): void
 	{
 		Users::extendListColumns(function(Lists $list, $model) {
 			if (!$model instanceof User) {
@@ -49,7 +49,7 @@ class UserExtendIsSeller
 		});
 	}
 
-	public static function addIsSellerToFieldsFilterScopes()
+	public static function addIsSellerToFieldsFilterScopes(): void
 	{
 		Users::extendListFilterScopes(function($filter) {
 			$filter->addScopes([
@@ -66,7 +66,7 @@ class UserExtendIsSeller
 		});
 	}
 
-	public static function addIsSellerToFields()
+	public static function addIsSellerToFields(): void
 	{
 		Users::extendFormFields(function(Form $form, $model) {
 			if (!$model instanceof User) {
@@ -85,7 +85,7 @@ class UserExtendIsSeller
 		});
 	}
 
-	public static function addIsSellerToResource()
+	public static function addIsSellerToResource(): void
 	{
 		Event::listen('appuser.userapi.user.beforeReturnResource', function(&$data, User $user){
 			$data['is_seller'] = (bool) $user->is_seller;

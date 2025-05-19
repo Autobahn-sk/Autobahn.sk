@@ -556,7 +556,7 @@
 								{
 									"key": "fuel_type",
 									"value": "DIESEL",
-									"description": "GAS | DIESEL | ELECTRICITY",
+									"description": "GAS | DIESEL | ELECTRIC",
 									"disabled": true
 								},
 								{

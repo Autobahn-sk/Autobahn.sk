@@ -8,10 +8,15 @@ use AppCommerce\ContactForm\Http\Resources\ContactFormResource;
 
 class ContactFormsController extends Controller
 {
-    public function __invoke()
+	/**
+	 * Handle the incoming request.
+	 *
+	 * @return ApiResource
+	 */
+    public function __invoke(): ApiResource
     {
         $response = new ContactFormResource(ContactForm::create(Request::all()));
 
-		return ApiResource::success(data: $response);
+		return ApiResource::successToast(data: $response);
 	}
 }

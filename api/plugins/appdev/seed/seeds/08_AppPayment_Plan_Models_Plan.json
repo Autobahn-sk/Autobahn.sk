@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Základný plán",
+    "description": "Ideálny pre jednotlivcov, ktorí začínajú – základné funkcie zdarma.",
+    "price": 0.0,
+    "stripe_id": "monthly-basic",
+    "stripe_product_id": "plan-subscription",
+    "is_published": true,
+    "is_featured": false,
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "name": "Štandardný plán",
+    "description": "Vyvážený balík funkcií pre bežné použitie a vyššiu efektivitu.",
+    "price": 39.0,
+    "stripe_id": "monthly-standard",
+    "stripe_product_id": "plan-subscription",
+    "is_published": true,
+    "is_featured": true,
+    "sort_order": 2
+  },
+  {
+    "id": 3,
+    "name": "Rozšírený plán",
+    "description": "Pokročilé možnosti pre náročnejších používateľov a tímy.",
+    "price": 89.0,
+    "stripe_id": "monthly-advanced",
+    "stripe_product_id": "plan-subscription",
+    "is_published": true,
+    "is_featured": false,
+    "sort_order": 3
+  },
+  {
+    "id": 4,
+    "name": "Podnikový plán",
+    "description": "Kompletné riešenie s prémiovou podporou pre firmy a organizácie.",
+    "price": 129.0,
+    "stripe_id": "monthly-enterprise",
+    "stripe_product_id": "plan-subscription",
+    "is_published": true,
+    "is_featured": false,
+    "sort_order": 4
+  }
+]

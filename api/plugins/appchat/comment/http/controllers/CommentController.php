@@ -9,7 +9,7 @@ use AppChat\Comment\Http\Resources\CommentResource;
 
 class CommentController extends Controller
 {
-    public function index(Request $request, $model, $modelId, User $user)
+    public function index(Request $request, $model, $modelId, User $user): ApiResource
     {
         $data = Comment::where('commentable_type', $model['class'])->where('commentable_id', (int) $modelId)->get();
         
@@ -38,14 +38,14 @@ class CommentController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    public function show(Request $request, Comment $comment)
+    public function show(Request $request, Comment $comment): ApiResource
     {
 		$response = new CommentResource($comment);
 
 		return ApiResource::success(data: $response);
 	}
 
-    public function store(Request $request, $model, $modelId, User $user)
+    public function store(Request $request, $model, $modelId, User $user): ApiResource
     {
         $comment = new Comment;
         $comment->creatable = $user;
@@ -60,7 +60,7 @@ class CommentController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    public function update(Request $request, Comment $comment)
+    public function update(Request $request, Comment $comment): ApiResource
     {
         $comment->update([
             'content' => $request->text
@@ -71,7 +71,7 @@ class CommentController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    public function destroy(Request $request, Comment $comment)
+    public function destroy(Request $request, Comment $comment): ApiResource
     {
         $comment->delete();
 

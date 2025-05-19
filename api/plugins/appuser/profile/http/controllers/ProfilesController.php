@@ -10,7 +10,7 @@ use AppUser\Profile\Http\Resources\ProfileResource;
 
 class ProfilesController extends Controller
 {
-    public function __invoke(Request $request, $key)
+    public function __invoke(Request $request, $key): ApiResource
     {
         $loggedUser = JWTAuth::getUser();
 

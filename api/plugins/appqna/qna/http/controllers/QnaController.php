@@ -7,7 +7,7 @@ use AppQna\Qna\Http\Resources\QuestionResource;
 
 class QnaController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): ApiResource
     {
 		$category = request()->input('category');
 

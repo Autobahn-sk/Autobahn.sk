@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: full
+    description:
+        label: Description
+        type: textarea
+        span: full
+    price:
+        label: Price (EUR)
+        type: number
+        span: full
+    stripe_id:
+        label: Stripe Plan
+        type: dropdown
+        span: left
+    stripe_product_id:
+        label: Stripe Product
+        type: dropdown
+        span: right
+    is_published:
+        label: Is Published
+        type: switch
+        span: left
+    is_featured:
+        label: Is Featured
+        type: switch
+        span: right

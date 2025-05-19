@@ -11,10 +11,17 @@ use AppApi\ApiException\Exceptions\BadRequestException;
 
 class UserFlagController extends Controller
 {
-    /*
-     * Create or update
-     */
-    public function storeOrUpdate(Request $request, $model, $id, User $user)
+	/**
+	 * Store or update a user flag.
+	 *
+	 * @param Request $request
+	 * @param $model
+	 * @param $id
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws BadRequestException
+	 */
+	public function storeOrUpdate(Request $request, $model, $id, User $user): ApiResource
     {
         $modelClass = $this->_getModelClassFromAlias($model);
 
@@ -35,10 +42,17 @@ class UserFlagController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    /*
-     * Get models with given type
-     */
-    public function getModels_modelAndType(Request $request, $model, $type, User $user)
+	/**
+	 * Get models with given type
+	 *
+	 * @param Request $request
+	 * @param $model
+	 * @param $type
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws BadRequestException
+	 */
+    public function getModels_modelAndType(Request $request, $model, $type, User $user): ApiResource
     {
         $modelClass = $this->_getModelClassFromAlias($model);
 
@@ -50,10 +64,17 @@ class UserFlagController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    /*
-     * Returns flags for specific model
-     */
-    public function getFlags_modelAndId(Request $request, $model, $id, User $user)
+	/**
+	 * Returns flags for specific model
+	 *
+	 * @param Request $request
+	 * @param $model
+	 * @param $id
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws BadRequestException
+	 */
+    public function getFlags_modelAndId(Request $request, $model, $id, User $user): ApiResource
     {
         $modelClass = $this->_getModelClassFromAlias($model);
 
@@ -68,10 +89,16 @@ class UserFlagController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    /*
-     * Returns flags for all models
-     */
-    public function getFlags_model(Request $request, $model, User $user)
+	/**
+	 * Returns flags for all models
+	 *
+	 * @param Request $request
+	 * @param $model
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws BadRequestException
+	 */
+    public function getFlags_model(Request $request, $model, User $user): ApiResource
     {
         $modelClass = $this->_getModelClassFromAlias($model);
 
@@ -85,10 +112,15 @@ class UserFlagController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    /*
-     * Get all models with given type
-     */
-    public function getModels_type(Request $request, $type, User $user)
+	/**
+	 * Get all models with given type
+	 *
+	 * @param Request $request
+	 * @param $type
+	 * @param User $user
+	 * @return ApiResource
+	 */
+    public function getModels_type(Request $request, $type, User $user): ApiResource
     {
         $flags = UserFlag::where([
             'user_id' => $user->id,
@@ -100,10 +132,13 @@ class UserFlagController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-    /*
-     * Get model class from alias and throw error if not found
-     */
-    protected function _getModelClassFromAlias($model)
+	/**
+	 * Get model class from alias and throw error if not found
+	 *
+	 * @param $model
+	 * @throws BadRequestException
+	 */
+    protected function _getModelClassFromAlias($model): string
     {
         if (!array_key_exists($model, config('appuser.userflag::aliases', []))) {
             throw new BadRequestException('Model not allowed');

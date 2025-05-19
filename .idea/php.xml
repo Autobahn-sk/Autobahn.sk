@@ -161,6 +161,7 @@
       <path value="$PROJECT_DIR$/api/vendor/php-http/discovery" />
       <path value="$PROJECT_DIR$/api/vendor/openai-php/client" />
       <path value="$PROJECT_DIR$/api/vendor/marc-mabe/php-enum" />
+      <path value="$PROJECT_DIR$/api/vendor/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

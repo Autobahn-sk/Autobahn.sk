@@ -1,0 +1,8 @@
+{
+	"name": "apppayment/stripe-plugin",
+	"type": "october-plugin",
+	"description": "No description provided yet...",
+	"require": {
+		"stripe/stripe-php": "^17.2"
+	}
+}

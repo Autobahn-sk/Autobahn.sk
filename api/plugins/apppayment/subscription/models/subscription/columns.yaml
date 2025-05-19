@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    plan[name]:
+        label: Plan
+    status:
+        label: Status
+    cancelled_at:
+        label: Cancelled At
+    user[email]:
+        label: User
+    calculated_price:
+        label: Price
+    created_at:
+        label: Created At
+    updated_at:
+        label: Updated At

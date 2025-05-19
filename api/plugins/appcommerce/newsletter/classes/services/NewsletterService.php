@@ -9,7 +9,14 @@ use October\Rain\Exception\ValidationException;
 
 class NewsletterService
 {
-    public static function subscribe($email)
+	/**
+	 * Subscribe a user to the newsletter.
+	 *
+	 * @param string $email
+	 * @return bool
+	 * @throws ValidationException
+	 */
+    public static function subscribe(string $email): bool
     {
         $params = [
             'email' => $email
@@ -51,7 +58,12 @@ class NewsletterService
         return $isSubscribed;
     }
 
-    public static function unsubscribe($email)
+	/**
+	 * @param string $email
+	 * @return bool
+	 * @throws ValidationException
+	 */
+    public static function unsubscribe(string $email): bool
     {
         $params = [
             'email' => $email

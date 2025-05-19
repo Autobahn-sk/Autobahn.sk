@@ -6,8 +6,8 @@ use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaSearchService;
 
 class Ads
 {
-    public static function handle()
-    {
+    public static function handle(): void
+	{
 		Ad::extend(function ($model) {
 			$model->bindEvent('model.afterCreate', function () use ($model) {
                 (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
@@ -24,7 +24,7 @@ class Ads
         });
     }
 
-	public static function object($object)
+	public static function object(Ad $object): array
 	{
 		$object = AdResource::make($object);
 

@@ -7,7 +7,7 @@ use AppApi\ApiResponse\Resources\ApiResource;
 
 class UserReportsController extends Controller
 {
-    public function store(Request $request)
+    public function store(Request $request): ApiResource
     {
         $user = $request->user();
 

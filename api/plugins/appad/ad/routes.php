@@ -27,6 +27,10 @@ Route::group([
 		->get('ads-search', 'AdController@search')
 		->name('ads.search');
 
+	$router
+		->get('ad-price-history/{ad}', 'AdController@adPriceHistory')
+		->name('ads.ad-price-history');
+
 	Route::group([
 		'middleware' => [
 			Authenticate::class,

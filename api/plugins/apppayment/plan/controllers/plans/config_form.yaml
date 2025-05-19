@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Plan
+
+# Model Form Field configuration
+form: $/apppayment/plan/models/plan/fields.yaml
+
+# Model Class name
+modelClass: AppPayment\Plan\Models\Plan
+
+# Default redirect location
+defaultRedirect: apppayment/plan/plans
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: apppayment/plan/plans/update/:id
+    redirectClose: apppayment/plan/plans
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: apppayment/plan/plans
+    redirectClose: apppayment/plan/plans
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

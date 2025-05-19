@@ -8,7 +8,7 @@ use AppApi\ApiException\Exceptions\BadRequestException;
 
 class GoogleUtils
 {
-    public static function getUserOrCreate()
+    public static function getUserOrCreate(): User
     {
         $googleProfile = self::_getGoogleProfile();
 
@@ -20,7 +20,7 @@ class GoogleUtils
         return $user;
     }
 
-    private static function _createAccounts($googleProfile)
+    private static function _createAccounts(array $googleProfile): User
     {
         $params = [
             'email' => $googleProfile['email'],
@@ -44,7 +44,7 @@ class GoogleUtils
         return $user;
     }
 
-    private static function _getGoogleProfile()
+    private static function _getGoogleProfile(): array
     {
         $client = new Google_Client([
             'client_id' => env('GOOGLE_CLIENT_ID')

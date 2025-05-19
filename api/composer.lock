@@ -136,16 +136,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.343.9",
+            "version": "3.343.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6ca5eb1c60b879cf516e5fadefec87afc6219e74"
+                "reference": "eb50d111a09ef39675358e74801260ac129ee346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6ca5eb1c60b879cf516e5fadefec87afc6219e74",
-                "reference": "6ca5eb1c60b879cf516e5fadefec87afc6219e74",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/eb50d111a09ef39675358e74801260ac129ee346",
+                "reference": "eb50d111a09ef39675358e74801260ac129ee346",
                 "shasum": ""
             },
             "require": {
@@ -227,9 +227,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.343.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.343.13"
             },
-            "time": "2025-05-12T18:11:31+00:00"
+            "time": "2025-05-16T18:24:39+00:00"
         },
         {
             "name": "brick/math",
@@ -569,16 +569,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.8.8",
+            "version": "2.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "85ff84d6c5260ba21740a7c5c9a111890805d6e7"
+                "reference": "b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/85ff84d6c5260ba21740a7c5c9a111890805d6e7",
-                "reference": "85ff84d6c5260ba21740a7c5c9a111890805d6e7",
+                "url": "https://api.github.com/repos/composer/composer/zipball/b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d",
+                "reference": "b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d",
                 "shasum": ""
             },
             "require": {
@@ -663,7 +663,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.8.8"
+                "source": "https://github.com/composer/composer/tree/2.8.9"
             },
             "funding": [
                 {
@@ -679,7 +679,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-04T14:56:46+00:00"
+            "time": "2025-05-13T12:01:37+00:00"
         },
         {
             "name": "composer/installers",
@@ -4605,12 +4605,12 @@
         },
         {
             "name": "october/backend",
-            "version": "v3.7.11",
+            "version": "v3.7.12",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/backend/october-backend-v3.7.11-b0677f.zip",
-                "reference": "be0737ff7c912f4c309d9d406486e29f7ead833a",
-                "shasum": "4977ef98e0222522fb46f8536cf3327ba00eee18"
+                "url": "https://gateway.octobercms.com/composer/dist/october/backend/october-backend-v3.7.12-06f6c0.zip",
+                "reference": "2bcb01ea3d7efcf8f6e872d1d31afb824012ac0f",
+                "shasum": "94c91b81c7fbdebe6380aeb1a36d78555b103ad9"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -4633,7 +4633,7 @@
                 "october",
                 "october cms"
             ],
-            "time": "2025-02-22T22:46:50+00:00"
+            "time": "2025-05-16T23:58:56+00:00"
         },
         {
             "name": "october/drivers-plugin",
@@ -4686,16 +4686,16 @@
         },
         {
             "name": "october/rain",
-            "version": "v3.7.11",
+            "version": "v3.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/octobercms/library.git",
-                "reference": "6ab83bcecbe734a6c4d5d8f9705482e8cc56ed61"
+                "reference": "1fa250879fdb9a069e4d729ebdf342a49e2806b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octobercms/library/zipball/6ab83bcecbe734a6c4d5d8f9705482e8cc56ed61",
-                "reference": "6ab83bcecbe734a6c4d5d8f9705482e8cc56ed61",
+                "url": "https://api.github.com/repos/octobercms/library/zipball/1fa250879fdb9a069e4d729ebdf342a49e2806b0",
+                "reference": "1fa250879fdb9a069e4d729ebdf342a49e2806b0",
                 "shasum": ""
             },
             "require": {
@@ -4763,18 +4763,18 @@
                 "rain"
             ],
             "support": {
-                "source": "https://github.com/octobercms/library/tree/v3.7.11"
+                "source": "https://github.com/octobercms/library/tree/v3.7.12"
             },
-            "time": "2025-02-19T20:18:01+00:00"
+            "time": "2025-05-16T23:30:44+00:00"
         },
         {
             "name": "october/system",
-            "version": "v3.7.11",
+            "version": "v3.7.12",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/system/october-system-v3.7.11-af6cb6.zip",
+                "url": "https://gateway.octobercms.com/composer/dist/october/system/october-system-v3.7.12-af6cb6.zip",
                 "reference": "ca72dabfb3eecf27f65ead890065c0f2a3822f28",
-                "shasum": "66e42c611cca733f3d655c640d1c5134fc4c3879"
+                "shasum": "37069e8789045e2ad653f94f4721831cecc70d64"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -6570,6 +6570,65 @@
                 "source": "https://github.com/Seldaek/signal-handler/tree/2.0.2"
             },
             "time": "2023-09-03T09:24:00+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v17.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "ff2364c75533b71116ea11994d6bd08989b7f67b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/ff2364c75533b71116ea11994d6bd08989b7f67b",
+                "reference": "ff2364c75533b71116ea11994d6bd08989b7f67b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.72.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v17.2.0"
+            },
+            "time": "2025-04-30T19:20:34+00:00"
         },
         {
             "name": "symfony/console",

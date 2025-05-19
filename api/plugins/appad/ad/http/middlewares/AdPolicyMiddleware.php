@@ -20,6 +20,7 @@ class AdPolicyMiddleware
                 
                 switch ($routeAction) {
                     case 'update':
+					case 'getPriceOffers':
 					case 'generateAdDescription':
                         if (isset($user) && $ad->user->id == $user->id) {
                             $allowedToPerformAction = true;

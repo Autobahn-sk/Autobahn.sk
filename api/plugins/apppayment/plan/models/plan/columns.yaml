@@ -1,0 +1,35 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    price:
+        label: Price (EUR)
+        searchable: true
+        type: number
+    stripe_id:
+        label: Stripe Plan
+        type: selectable
+        searchable: true
+    stripe_product_id:
+        label: Stripe Product
+        type: selectable
+        searchable: true
+    is_published:
+        label: Is Published
+        searchable: true
+        type: switch
+    is_featured:
+        label: Is Featured
+        searchable: true
+        type: switch
+    created_at:
+        label: Created At
+        searchable: true
+        type: datetime

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Subscription
+
+# Model Form Field configuration
+form: $/apppayment/subscription/models/subscription/fields.yaml
+
+# Model Class name
+modelClass: AppPayment\Subscription\Models\Subscription
+
+# Default redirect location
+defaultRedirect: apppayment/subscription/subscriptions
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: apppayment/subscription/subscriptions/update/:id
+    redirectClose: apppayment/subscription/subscriptions
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: apppayment/subscription/subscriptions
+    redirectClose: apppayment/subscription/subscriptions
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,10 +1,18 @@
 <?php namespace AppGoogle\GoogleMapsFindPlace\Classes\Services;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 
 class PlaceDetailsService
 {
-    public static function getPlaceDetails($placeId)
+	/**
+	 * Get place details from Google Maps API using place ID.
+	 *
+	 * @param string $placeId
+	 * @return array|null
+	 * @throws GuzzleException
+	 */
+    public static function getPlaceDetails(string $placeId): ?array
     {
         $client = new Client();
 

@@ -9,22 +9,24 @@ use AppAd\Ad\Http\Resources\AdResource;
 use AppAd\Ad\Http\Resources\AdSimpleResource;
 use AppApi\ApiResponse\Resources\ApiResource;
 use AppUtil\Util\Classes\Utils\PaginationUtil;
+use AppAd\AdPrice\Http\Resources\PriceResource;
 use AppOpenAI\OpenAIChat\Classes\Services\OpenAIChatService;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaSearchService;
 
 class AdController extends Controller
 {
-    public function index(Request $request)
-    {
+    public function index(Request $request): AnonymousResourceCollection
+	{
 		$sortMap = [
-			'price_lowest'     => ['column' => 'latest_prices.price', 'order' => 'asc',  'join' => 'price'],
-			'price_highest'    => ['column' => 'latest_prices.price', 'order' => 'desc', 'join' => 'price'],
-			'mileage_lowest'   => ['column' => 'v.mileage',            'order' => 'asc',  'join' => 'vehicle'],
-			'mileage_highest'  => ['column' => 'v.mileage',            'order' => 'desc', 'join' => 'vehicle'],
-			'year_newest'      => ['column' => 'v.year',               'order' => 'desc', 'join' => 'vehicle'],
-			'year_oldest'      => ['column' => 'v.year',               'order' => 'asc',  'join' => 'vehicle'],
-			'created_newest'   => ['column' => 'appad_ad_ads.created_at', 'order' => 'desc'],
-			'created_oldest'   => ['column' => 'appad_ad_ads.created_at', 'order' => 'asc'],
+			'price_lowest'    => ['column' => 'latest_prices.price',     'order' => 'asc',  'join' => 'price'],
+			'price_highest'   => ['column' => 'latest_prices.price',     'order' => 'desc', 'join' => 'price'],
+			'mileage_lowest'  => ['column' => 'v.mileage',               'order' => 'asc',  'join' => 'vehicle'],
+			'mileage_highest' => ['column' => 'v.mileage',               'order' => 'desc', 'join' => 'vehicle'],
+			'year_newest'     => ['column' => 'v.year',                  'order' => 'desc', 'join' => 'vehicle'],
+			'year_oldest'     => ['column' => 'v.year',                  'order' => 'asc',  'join' => 'vehicle'],
+			'created_newest'  => ['column' => 'appad_ad_ads.created_at', 'order' => 'desc'],
+			'created_oldest'  => ['column' => 'appad_ad_ads.created_at', 'order' => 'asc']
 		];
 
 		$sortAlias = $request->input('sort', 'created_newest');
@@ -68,7 +70,7 @@ class AdController extends Controller
 		return AdSimpleResource::collection($ads);
 	}
 
-	public function search(Request $request)
+	public function search(Request $request): ApiResource
 	{
 		$algolia = new AlgoliaSearchService(env('ALGOLIA_INDEX'));
 
@@ -81,14 +83,14 @@ class AdController extends Controller
 		return ApiResource::success(data: $ads['hits']);
 	}
 
-    public function show(Request $request, $ad)
+    public function show(Request $request, $ad): ApiResource
     {
 		$response = new AdResource($ad);
 
 		return ApiResource::success(data: $response);
 	}
 
-	public function store(Request $request, User $user)
+	public function store(Request $request, User $user): ApiResource
 	{
 		$request->validate([
 			'title'       => 'required',
@@ -116,7 +118,7 @@ class AdController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-	public function update(Request $request, $ad)
+	public function update(Request $request, $ad): ApiResource
 	{
 		$ad->update($request->all());
 
@@ -137,7 +139,7 @@ class AdController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-	public function destroy(Request $request, $ad)
+	public function destroy(Request $request, $ad): ApiResource
 	{
 		$ad->delete();
 
@@ -146,7 +148,18 @@ class AdController extends Controller
 		return ApiResource::success(data: $response);
 	}
 
-	public function generateAdDescription(Request $request, $ad)
+	public function adPriceHistory(Request $request, $ad): ApiResource
+	{
+		$prices = $ad->prices()
+			->orderBy('created_at', 'desc')
+			->get();
+
+		$response = PriceResource::collection($prices);
+
+		return ApiResource::success(data: $response);
+	}
+
+	public function generateAdDescription(Request $request, $ad): ApiResource
 	{
 		$adData = $ad->load(['vehicle', 'vehicle.manufacturer', 'vehicle.features'])->toArray();
 
