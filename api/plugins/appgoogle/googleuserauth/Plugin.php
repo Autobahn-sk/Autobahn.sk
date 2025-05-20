@@ -3,10 +3,19 @@
 use System\Classes\PluginBase;
 use AppGoogle\GoogleUserAuth\Classes\Extend\Hook\GoogleAuth;
 
+/**
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
+ */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
     public $require = [
-        'AppUser.UserApi',
+		'AppUtil.Logger',
+		'AppUser.UserApi',
 		'AppApi.ApiException'
     ];
 

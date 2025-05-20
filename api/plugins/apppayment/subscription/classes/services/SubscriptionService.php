@@ -5,8 +5,8 @@ use RainLab\User\Models\User;
 use AppPayment\Plan\Models\Plan;
 use Stripe\Exception\ApiErrorException;
 use AppPayment\Stripe\Classes\CustomerService;
-use AppPayment\Subscription\Models\Subscription;
 use October\Rain\Exception\ApplicationException;
+use AppPayment\Subscription\Models\Subscription;
 
 class SubscriptionService
 {
@@ -14,6 +14,10 @@ class SubscriptionService
 
 	public function __construct()
 	{
+		if (!env('STRIPE_API_KEY')) {
+			throw new ApplicationException('Stripe API key is not set.');
+		}
+
 		$this->client = new StripeClient(env('STRIPE_API_KEY'));
 	}
 

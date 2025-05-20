@@ -5,7 +5,9 @@ use AppUser\User\Classes\Extend\UserModelExtend;
 use AppUser\User\Classes\Extend\UsersControllerExtend;
 
 /**
- * User Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {

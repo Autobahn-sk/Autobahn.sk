@@ -8,12 +8,17 @@ use AppUser\UserApi\Providers\JWTAuthServiceProvider;
 use AppUser\UserApi\Classes\Extend\Hook\RainLabAuthExtend;
 
 /**
- * UserApi Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {
     public $elevated = true;
 
+	/*
+     * Dependencies
+     */
     public $require = [
         'AppApi.ApiException',
         'AppApi.ApiResponse',

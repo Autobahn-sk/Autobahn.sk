@@ -6,6 +6,11 @@ use AppPayment\Subscription\Classes\Services\SubscriptionService;
 
 class UserExtend
 {
+	/**
+	 * Add subscriptions to the User model.
+	 *
+	 * @return void
+	 */
     public static function addSubscriptionsToModelUser(): void
 	{
         User::extend(function (User $user) {
@@ -18,6 +23,11 @@ class UserExtend
         });
     }
 
+	/**
+	 * Cancel active subscriptions associated with a User upon deletion of the User.
+	 *
+	 * @return void
+	 */
     public static function cancelSubscriptionsOnUserDelete(): void
 	{
         User::extend(function (User $user) {

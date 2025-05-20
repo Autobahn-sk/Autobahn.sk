@@ -11,6 +11,12 @@ use Stripe\Exception\SignatureVerificationException;
 
 class SubscriptionsHookController
 {
+	/**
+	 * Handles incoming webhook requests from Stripe.
+	 *
+	 * @param Request $request The incoming HTTP request containing the webhook payload and headers.
+	 * @return void
+	 */
     public function hook(Request $request): void
 	{
         Stripe::setApiKey(env('STRIPE_API_KEY'));
@@ -30,6 +36,12 @@ class SubscriptionsHookController
         }
     }
 
+	/**
+	 * Synchronizes the local subscription record with the updated subscription data from Stripe.
+	 *
+	 * @param object $event The event object received from a Stripe webhook, containing the updated subscription data.
+	 * @return void
+	 */
     private function syncSubscription($event): void
 	{
         if ($event->type = 'customer.subscription.updated') {
@@ -38,7 +50,7 @@ class SubscriptionsHookController
             $subscription = Subscription::where('stripe_id', $stripeSubscription->id)->first();
 
             if (!$subscription) {
-				Logger::info("STRIPE: customer.subscription.updated test webhook received.");
+				Logger::info("SubscriptionsHookController - syncSubscription: customer.subscription.updated test webhook received.");
 
 				response()->json([
 					'data' => [
@@ -51,7 +63,7 @@ class SubscriptionsHookController
             $subscription->status = $stripeSubscription->status;
             $subscription->save();
 
-			Logger::info("STRIPE: Subscription {$subscription->id} was updated to {$subscription->status}.", [$event]);
+			Logger::info("SubscriptionsHookController - syncSubscription: Subscription {$subscription->id} was updated to {$subscription->status}.");
         }
     }
 }

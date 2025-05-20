@@ -2,14 +2,22 @@
 
 use OpenAI;
 use Exception;
+use ApplicationException;
 use AppUtil\Logger\Classes\Logger;
 
 class OpenAIChatService
 {
 	protected OpenAI\Client $client;
-	
+
+	/**
+	 * @throws ApplicationException
+	 */
 	public function __construct()
 	{
+		if (!env('OPENAI_API_KEY')) {
+			throw new ApplicationException('OpenAI API key is not set.');
+		}
+
 		$this->client = OpenAI::client(env('OPENAI_API_KEY'));
 	}
 
@@ -64,11 +72,11 @@ EOT;
 				'presence_penalty' => 0
 			]);
 
-			Logger::info('OpenAIChatService Description Response: ' . json_encode($response));
+			Logger::info('OpenAIChatService - generateAdDescription Response: ' . json_encode($response));
 
 			return $response['choices'][0]['message']['content'] ?? null;
 		} catch (Exception $e) {
-			Logger::error('OpenAIChatService Description Error: ' . $e->getMessage());
+			Logger::error('OpenAIChatService - generateAdDescription Error: ' . $e->getMessage(), $e);
 			return null;
 		}
 	}
@@ -77,12 +85,11 @@ EOT;
 	 * Generates a car diagnostic based on the provided user input.
 	 *
 	 * @param string $prompt User's description of the vehicle problem.
-	 * @return string|null The generated diagnostic response or null on failure.
+	 * @return array The generated diagnostic response or null on failure.
 	 */
-	public function generateOnlineDiagnostic(string $prompt): ?string
+	public function generateOnlineDiagnostic(string $prompt): array
 	{
-		try {
-			$instruction = <<<EOT
+		$instruction = <<<EOT
 You are an expert automotive diagnostic assistant. Your job is to help car owners identify possible causes of technical problems based on their descriptions.
 
 You will receive a user input in Slovak language, where the user describes a problem with their vehicle. The user may mention the brand, model, engine type, mileage, error codes, symptoms, sounds, smells, or performance issues.
@@ -100,27 +107,35 @@ Always respond in **Slovak language**. Do not speculate without basis. If thereâ
 Avoid generic phrases and provide actionable insights whenever possible.
 EOT;
 
-			$messages = [
-				['role' => 'system', 'content' => $instruction],
-				['role' => 'user', 'content' => $prompt]
-			];
+		$messages = [
+			['role' => 'system', 'content' => $instruction],
+			['role' => 'user', 'content' => $prompt]
+		];
 
+		try {
 			$response = $this->client->chat()->create([
 				'model' => 'gpt-4-turbo',
 				'messages' => $messages,
-				'temperature' => 0.6,
-				'max_tokens' => 600,
+				'temperature' => 0.3,
+				'max_tokens' => 1000,
 				'top_p' => 1,
 				'frequency_penalty' => 0,
 				'presence_penalty' => 0
 			]);
 
-			Logger::info('OpenAIChatService Diagnostic Response: ' . json_encode($response));
+			Logger::info('OpenAIChatService - generateOnlineDiagnostic Response: ' . json_encode($response));
 
-			return $response['choices'][0]['message']['content'] ?? null;
+			$diagnostic = $response['choices'][0]['message']['content'] ?? null;
+			$status = 'SUCCESS';
 		} catch (Exception $e) {
-			Logger::error('OpenAIChatService Diagnostic Error: ' . $e->getMessage());
-			return null;
+			Logger::error('OpenAIChatService - generateOnlineDiagnostic Error: ' . $e->getMessage(), $e);
+			$diagnostic = $e->getMessage();
+			$status = 'ERROR';
 		}
+
+		return [
+			'diagnostic' => $diagnostic,
+			'status'     => $status
+		];
 	}
 }

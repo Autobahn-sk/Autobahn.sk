@@ -12,9 +12,7 @@ class GoogleAuth
                 return;
             }
 
-            $user = GoogleUtils::getUserOrCreate();
-
-            return $user;
+			return GoogleUtils::getUserOrCreate();
         });
     }
 }

@@ -5,7 +5,9 @@ use System\Classes\PluginBase;
 use AppUser\Report\Classes\Extend\UserExtend;
 
 /**
- * Report Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {

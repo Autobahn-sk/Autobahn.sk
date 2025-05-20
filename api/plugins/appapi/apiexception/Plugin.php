@@ -4,8 +4,16 @@ use System\Classes\PluginBase;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use AppApi\ApiException\Handlers\ApiExceptionHandler;
 
+/**
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
+ */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
     public $require = [
         'AppApi.ApiResponse'
     ];
@@ -27,4 +35,9 @@ class Plugin extends PluginBase
 			ApiExceptionHandler::class
         );
     }
+
+	public function boot()
+	{
+		//
+	}
 }

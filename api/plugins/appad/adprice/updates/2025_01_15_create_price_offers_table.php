@@ -20,11 +20,9 @@ return new class extends Migration
             $table->id();
 
 			$table->decimal('price', 10, 2)->nullable();
-
 			$table->text('message')->nullable();
 
 			$table->integer('ad_id')->unsigned()->nullable()->index();
-
 			$table->integer('user_id')->unsigned()->nullable()->index();
 
 			$table->timestamps();

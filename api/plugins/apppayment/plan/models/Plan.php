@@ -24,14 +24,15 @@ class Plan extends Model
      * @var array rules for validation
      */
     public $rules = [
-		'name'              => 'required',
-		'description'       => 'required',
-		'price'             => 'required|numeric',
-		'stripe_id'         => 'required',
-		'stripe_product_id' => 'required',
-		'is_published'      => 'boolean',
-		'is_featured'       => 'boolean',
-		'sort_order'        => 'integer'
+		'name'                 => 'required',
+		'description'          => 'required',
+		'price'                => 'required|numeric',
+		'diagnostics_per_hour' => 'required|integer',
+		'stripe_id'            => 'required',
+		'stripe_product_id'    => 'required',
+		'is_published'         => 'boolean',
+		'is_featured'          => 'boolean',
+		'sort_order'           => 'integer'
 	];
 
 	/**
@@ -41,6 +42,7 @@ class Plan extends Model
 		'name',
 		'description',
 		'price',
+		'diagnostics_per_hour',
 		'stripe_id',
 		'stripe_product_id',
 		'is_published',
@@ -52,10 +54,13 @@ class Plan extends Model
 	 * @var array Attributes to be cast to native types
 	 */
 	protected $casts = [
-		'price'        => 'float',
-		'is_published' => 'boolean',
-		'is_featured'  => 'boolean',
-		'sort_order'   => 'integer'
+		'price'                => 'float',
+		'diagnostics_per_hour' => 'integer',
+		'stripe_id'            => 'string',
+		'stripe_product_id'    => 'string',
+		'is_published'         => 'boolean',
+		'is_featured'          => 'boolean',
+		'sort_order'           => 'integer'
 	];
 
 	/**
@@ -74,11 +79,13 @@ class Plan extends Model
 		'deleted_at'
 	];
 
+	// Scopes
 	public function scopeIsPublished($query)
 	{
 		return $query->where('is_published', true);
 	}
 
+	// Events
 	public function afterCreate()
 	{
 		PlansService::createPlan(
@@ -106,6 +113,7 @@ class Plan extends Model
 		PlansService::deletePlan($this->stripe_id);
 	}
 
+	// Options
 	public function getStripeIdOptions()
 	{
 		return collect(

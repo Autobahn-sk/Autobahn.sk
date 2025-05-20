@@ -15,7 +15,7 @@ columns:
     user[email]:
         label: User
     calculated_price:
-        label: Price
+        label: Price (EUR)
     created_at:
         label: Created At
     updated_at:

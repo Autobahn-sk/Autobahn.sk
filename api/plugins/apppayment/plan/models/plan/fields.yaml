@@ -14,7 +14,11 @@ fields:
     price:
         label: Price (EUR)
         type: number
-        span: full
+        span: left
+    diagnostics_per_hour:
+        label: Diagnostics Per Hour
+        type: number
+        span: right
     stripe_id:
         label: Stripe Plan
         type: dropdown

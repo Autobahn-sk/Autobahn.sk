@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    user[email]:
+        label: User
+        searchable: true
+    status:
+        label: Status
+        searchable: true
+        type: selectable
+    created_at:
+        label: Created At
+        searchable: true
+        type: datetime
+    updated_at:
+        label: Updated At
+        searchable: true
+        type: datetime

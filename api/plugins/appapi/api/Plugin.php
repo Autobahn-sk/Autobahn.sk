@@ -3,6 +3,11 @@
 use System\Classes\PluginBase;
 use AppApi\Api\Console\CreateModelBind;
 
+/**
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
+ */
 class Plugin extends PluginBase
 {
     public function pluginDetails()
@@ -19,4 +24,9 @@ class Plugin extends PluginBase
     {
         $this->registerConsoleCommand('create.modelbind', CreateModelBind::class);
     }
+
+	public function boot()
+	{
+		//
+	}
 }

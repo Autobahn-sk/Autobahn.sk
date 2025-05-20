@@ -5,10 +5,15 @@ use System\Classes\PluginBase;
 use AppChat\Comment\Classes\Extend\UserExtend;
 
 /**
- * WallPostComment Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
     public $require = [
 		'AppApi.ApiResponse',
         'AppUser.UserApi'

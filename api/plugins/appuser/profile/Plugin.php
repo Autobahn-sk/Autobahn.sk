@@ -3,7 +3,9 @@
 use System\Classes\PluginBase;
 
 /**
- * Profile Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {
@@ -14,6 +16,7 @@ class Plugin extends PluginBase
         'RainLab.User',
         'AppUser.UserApi'
     ];
+
     /**
      * Returns information about this plugin.
      *

@@ -11,10 +11,14 @@ use AppUser\UserFlag\Classes\Services\UserFlagService;
  */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
 	public $require = [
 		'AppUser.User',
 		'AppUser.UserApi',
 		'AppUser.UserFlag',
+		'AppOpenAI.OpenAIChat',
 		'AppAlgolia.AlgoliaSearch'
 	];
 

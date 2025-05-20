@@ -3,6 +3,7 @@
 use Exception;
 use Mailjet\Client;
 use Mailjet\Resources;
+use AppUtil\Logger\Classes\Logger;
 use October\Rain\Support\Facades\Event;
 use Illuminate\Support\Facades\Validator;
 use October\Rain\Exception\ValidationException;
@@ -48,12 +49,16 @@ class NewsletterService
             ]);
 
             $isSubscribed = true;
-        }
+
+			Logger::info("NewsletterService - subscribe: $email");
+		}
         catch (Exception $exception) {
             $isSubscribed = false;
+
+            Logger::error("NewsletterService - subscribe: $email - " . $exception->getMessage(), $exception);
         }
 
-        Event::fire('appcommerce.newsletter.afterSubscribe', [$email]);
+		Event::fire('appcommerce.newsletter.afterSubscribe', [$email]);
 
         return $isSubscribed;
     }
@@ -95,9 +100,13 @@ class NewsletterService
             ]);
 
             $isUnsubscribed = true;
+
+			Logger::info("NewsletterService - unsubscribe: $email");
         }
         catch (Exception $exception) {
             $isUnsubscribed = false;
+
+			Logger::error("NewsletterService - unsubscribe: $email - " . $exception->getMessage(), $exception);
         }
 
         Event::fire('appcommerce.newsletter.afterUnsubscribe', [$email]);

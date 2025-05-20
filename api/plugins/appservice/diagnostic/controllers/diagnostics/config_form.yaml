@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Diagnostic
+
+# Model Form Field configuration
+form: $/appservice/diagnostic/models/diagnostic/fields.yaml
+
+# Model Class name
+modelClass: AppService\Diagnostic\Models\Diagnostic
+
+# Default redirect location
+defaultRedirect: appservice/diagnostic/diagnostics
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appservice/diagnostic/diagnostics/update/:id
+    redirectClose: appservice/diagnostic/diagnostics
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appservice/diagnostic/diagnostics
+    redirectClose: appservice/diagnostic/diagnostics
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

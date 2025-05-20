@@ -16,6 +16,7 @@ Route::group([
         ->middleware([Authenticate::class])
         ->name('profile.show')
         ->name('profile.by_username');
+
     $router
         ->get('public/profile/{key}', 'ProfilesController')
         ->name('profile.show')

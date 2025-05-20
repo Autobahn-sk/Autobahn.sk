@@ -4,6 +4,7 @@ use Stripe\Stripe;
 use Illuminate\Http\Request;
 use AppPayment\Plan\Models\Plan;
 use AppUser\UserApi\Models\User;
+use Stripe\Exception\ApiErrorException;
 use AppApi\ApiResponse\Resources\ApiResource;
 use AppPayment\Subscription\Models\Subscription;
 use October\Rain\Exception\ApplicationException;
@@ -13,6 +14,13 @@ use AppPayment\Subscription\Classes\Services\SubscriptionService;
 
 class SubscriptionsController
 {
+	/**
+	 * List all subscriptions for a user.
+	 *
+	 * @param Request $request
+	 * @param User $user
+	 * @return ApiResource
+	 */
     public function index(Request $request, User $user): ApiResource
     {
         $subscriptions = Subscription::where([
@@ -24,6 +32,15 @@ class SubscriptionsController
 		return ApiResource::success(data: $response);
     }
 
+	/**
+	 * Show a subscription.
+	 *
+	 * @param Request $request
+	 * @param Plan $plan
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws ApiErrorException
+	 */
     public function show(Request $request, Plan $plan, User $user): ApiResource
     {
         $subscriptions = Subscription::where([
@@ -37,6 +54,13 @@ class SubscriptionsController
     }
 
 	/**
+	 * Store a new subscription.
+	 *
+	 * @param Request $request
+	 * @param Plan $plan
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws ApiErrorException
 	 * @throws ApplicationException
 	 */
 	public function store(Request $request, Plan $plan, User $user): ApiResource
@@ -51,21 +75,34 @@ class SubscriptionsController
 		$stripeSubscription = (new SubscriptionService)->getSubscription($subscription->stripe_id, ['expand' => ['latest_invoice.payments']]);
 		$invoice = $stripeSubscription->latest_invoice;
 
+		$requiresAction = false;
 		$clientSecret = null;
 
 		if (!empty($invoice->payments->data)) {
 			$payment = $invoice->payments->data[0];
 			$paymentIntent = PaymentIntentService::getIntent($payment->payment->payment_intent);
+			$requiresAction = $paymentIntent->status === 'requires_action' || $paymentIntent->status === 'requires_confirmation';
 			$clientSecret = $paymentIntent->client_secret;
 		}
 
 		$response = [
-			'client_secret' => $clientSecret
+			'subscription'    => new SubscriptionResource($subscription),
+			'requires_action' => $requiresAction,
+			'client_secret'   => $clientSecret
 		];
 
 		return ApiResource::success(data: $response);
     }
 
+	/**
+	 * Cancel an existing subscription.
+	 *
+	 * @param Request $request
+	 * @param Plan $plan
+	 * @param User $user
+	 * @return ApiResource
+	 * @throws ApiErrorException
+	 */
     public function destroy(Request $request, Plan $plan, User $user): ApiResource
     {
 		$response = (new SubscriptionService)->cancelSubscription($user, $plan);

@@ -5,7 +5,9 @@ use Bugsnag\Handler;
 use System\Classes\PluginBase;
 
 /**
- * Bugsnag Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {

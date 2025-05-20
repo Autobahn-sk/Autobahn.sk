@@ -12,8 +12,8 @@ use AppPayment\Subscription\Classes\Services\SubscriptionService;
  */
 class Subscription extends Model
 {
-    use \October\Rain\Database\Traits\SoftDelete;
 	use \October\Rain\Database\Traits\Validation;
+	use \October\Rain\Database\Traits\SoftDelete;
 
     /**
      * @var string The database table used by the model.
@@ -28,7 +28,10 @@ class Subscription extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['plan_id', 'user_id'];
+    protected $fillable = [
+		'plan_id',
+		'user_id'
+	];
 
     /**
      * @var array Validation rules for attributes
@@ -53,6 +56,7 @@ class Subscription extends Model
         'user' => User::class
     ];
 
+	// Scopes
     public function scopeActive($query)
     {
         return $query->where([
@@ -71,6 +75,7 @@ class Subscription extends Model
         ]);
     }
 
+	// Events
     public function beforeSave()
     {
         if ($this->isDirty('status')) {
@@ -93,6 +98,7 @@ class Subscription extends Model
         $this->cancelled_at = null;
     }
 
+	// Attributes
     public function getCalculatedPriceAttribute()
     {
         return (new SubscriptionService)->getSubscription($this->stripe_id)->plan->amount / 100;

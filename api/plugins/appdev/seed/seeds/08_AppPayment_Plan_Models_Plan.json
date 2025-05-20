@@ -6,6 +6,7 @@
     "price": 0.0,
     "stripe_id": "monthly-basic",
     "stripe_product_id": "plan-subscription",
+    "diagnostics_per_hour": 1,
     "is_published": true,
     "is_featured": false,
     "sort_order": 1
@@ -17,6 +18,7 @@
     "price": 39.0,
     "stripe_id": "monthly-standard",
     "stripe_product_id": "plan-subscription",
+    "diagnostics_per_hour": 5,
     "is_published": true,
     "is_featured": true,
     "sort_order": 2
@@ -28,6 +30,7 @@
     "price": 89.0,
     "stripe_id": "monthly-advanced",
     "stripe_product_id": "plan-subscription",
+    "diagnostics_per_hour": 10,
     "is_published": true,
     "is_featured": false,
     "sort_order": 3
@@ -39,6 +42,7 @@
     "price": 129.0,
     "stripe_id": "monthly-enterprise",
     "stripe_product_id": "plan-subscription",
+    "diagnostics_per_hour": 30,
     "is_published": true,
     "is_featured": false,
     "sort_order": 4

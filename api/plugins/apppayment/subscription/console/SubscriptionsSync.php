@@ -16,12 +16,14 @@ class SubscriptionsSync extends Command
      */
     protected $description = 'No description provided yet...';
 
-    /**
-     * Execute the console command.
-     * @return void
-     */
-    public function handle()
-    {
+	/**
+	 * Execute the console command.
+	 *
+	 * @return void
+	 * @throws Exception
+	 */
+    public function handle(): void
+	{
 		try {
 			(new SubscriptionCronUpdater())->checkAllSubscriptions();
 			$this->output->success('Sync was successful.');
@@ -33,19 +35,21 @@ class SubscriptionsSync extends Command
 
     /**
      * Get the console command arguments.
+	 *
      * @return array
      */
-    protected function getArguments()
-    {
+    protected function getArguments(): array
+	{
         return [];
     }
 
     /**
      * Get the console command options.
+	 *
      * @return array
      */
-    protected function getOptions()
-    {
+    protected function getOptions(): array
+	{
         return [];
     }
 }

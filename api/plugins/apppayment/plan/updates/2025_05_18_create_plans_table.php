@@ -22,8 +22,11 @@ return new class extends Migration
 			$table->string('name')->nullable()->index();
 			$table->text('description')->nullable();
 			$table->decimal('price', 13, 2)->unsigned()->default(0);
+			$table->integer('diagnostics_per_hour')->default(0);
+
 			$table->string('stripe_id')->index();
 			$table->string('stripe_product_id')->index();
+
 
 			$table->boolean('is_published')->default(false)->index();
 			$table->boolean('is_featured')->default(false)->index();

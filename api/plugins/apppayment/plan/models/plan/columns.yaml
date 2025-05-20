@@ -13,6 +13,10 @@ columns:
         label: Price (EUR)
         searchable: true
         type: number
+    diagnostics_per_hour:
+        label: Diagnostics Per Hour
+        searchable: true
+        type: number
     stripe_id:
         label: Stripe Plan
         type: selectable

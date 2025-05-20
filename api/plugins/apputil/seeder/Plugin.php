@@ -7,7 +7,9 @@ use AppUtil\Seeder\Classes\Providers;
 use AppUtil\Seeder\Facades\SeederProviders;
 
 /**
- * seeder Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {
@@ -51,6 +53,6 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+		//
     }
 }

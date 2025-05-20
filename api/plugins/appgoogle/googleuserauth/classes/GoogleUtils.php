@@ -3,6 +3,7 @@
 use Google_Client;
 use System\Models\File;
 use AppUser\UserApi\Models\User;
+use AppUtil\Logger\Classes\Logger;
 use Illuminate\Support\Facades\Event;
 use AppApi\ApiException\Exceptions\BadRequestException;
 
@@ -52,7 +53,10 @@ class GoogleUtils
 
         $payload = $client->verifyIdToken(input('code'));
 
-        if (!$payload) throw new BadRequestException("Couldn't login.");
+        if (!$payload) {
+			Logger::error('GoogleUtils - _getGoogleProfile: Invalid payload [' . input('code') . ']');
+			throw new BadRequestException("Couldn't login.");
+		}
 
         return [
             'given_name'  => $payload['given_name'],

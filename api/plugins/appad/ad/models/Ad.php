@@ -146,6 +146,7 @@ class Ad extends Model
 		return $query->where('status', AdStatusEnum::ARCHIVED->value);
 	}
 
+	// Options
 	public function getStatusOptions()
 	{
 		return AdStatusEnum::optionsForBackend();
@@ -162,6 +163,7 @@ class Ad extends Model
 		return AdStatusEnum::optionsForBackend();
 	}
 
+	// Attributes
 	public function getCurrentPriceAttribute()
 	{
 		return $this->prices()->orderByDesc('created_at')->first();

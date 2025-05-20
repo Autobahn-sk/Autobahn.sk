@@ -13,6 +13,9 @@ Route::group([
         'api'
     ],
 ], function (Router $router) {
+	$router
+		->post('subscriptions/hook', 'SubscriptionsHookController@hook');
+
     $router->group([
 		'middleware' => [
 			PlanModelBind::class,
@@ -29,7 +32,4 @@ Route::group([
         $router
             ->delete('subscriptions/{plan}', 'SubscriptionsController@destroy');
     });
-
-    $router
-        ->post('subscriptions/hook', 'SubscriptionsHookController@hook');
 });

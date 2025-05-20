@@ -8,9 +8,7 @@ use October\Rain\Database\Model;
 class Comment extends Model
 {
 	use \October\Rain\Database\Traits\Validation;
-
 	use \October\Rain\Database\Traits\SoftDelete;
-
 	use \October\Rain\Database\Traits\SimpleTree;
     
     /**

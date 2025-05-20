@@ -10,6 +10,9 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
 	public $require = [
 		'RainLab.User'
 	];

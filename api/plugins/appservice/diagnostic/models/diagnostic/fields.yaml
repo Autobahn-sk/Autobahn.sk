@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    prompt:
+        label: Prompt
+        type: textarea
+        span: full
+    response:
+        label: Response
+        type: richeditor
+        span: full
+    user:
+        label: User
+        type: relation
+        span: left
+    status:
+        label: Status
+        type: dropdown
+        span: right

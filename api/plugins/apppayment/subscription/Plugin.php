@@ -7,13 +7,19 @@ use AppPayment\Subscription\Classes\Extend\PlanExtend;
 use AppPayment\Subscription\Classes\Extend\UserExtend;
 
 /**
- * Subscription Plugin Information File
+ * Plugin Information File
+ *
+ * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
  */
 class Plugin extends PluginBase
 {
+	/*
+     * Dependencies
+     */
     public $require = [
+		'AppUtil.Logger',
         'AppPayment.Stripe'
-    ];
+	];
 
     /**
      * Returns information about this plugin.
@@ -43,8 +49,8 @@ class Plugin extends PluginBase
     /**
      * Boot method, called right before the request route.
      *
-     * @return array
-     */
+     * @return void
+	 */
     public function boot()
     {
 		PlanExtend::addIsUserSubscribedToResource();
