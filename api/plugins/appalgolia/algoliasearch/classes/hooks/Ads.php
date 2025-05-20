@@ -20,7 +20,10 @@ class Ads
                 (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
             });
             $model->bindEvent('model.afterUpdate', function () use ($model) {
-				if ($model->status !== AdStatusEnum::PUBLISHED->value) return;
+				if ($model->status !== AdStatusEnum::PUBLISHED->value) {
+					(new AlgoliaSearchService(env('ALGOLIA_INDEX')))->delete($model->id);
+					return;
+				}
 				(new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
             });
             $model->bindEvent('model.afterRestore', function () use ($model) {
