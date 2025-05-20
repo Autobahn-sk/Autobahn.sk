@@ -84,7 +84,10 @@ class Ads extends Controller
 
 	public static function objects()
 	{
-		$objects = AdResource::collection(Ad::all());
+		$ads = Ad::isPublished()
+			->get();
+
+		$objects = AdResource::collection($ads);
 
 		return response()
 			->json($objects)

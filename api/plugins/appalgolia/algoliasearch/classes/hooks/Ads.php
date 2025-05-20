@@ -2,6 +2,7 @@
 
 use AppAd\Ad\Models\Ad;
 use AppAd\Ad\Http\Resources\AdResource;
+use AppAd\Ad\Classes\Enums\AdStatusEnum;
 use AppAlgolia\AlgoliaSearch\Classes\Services\AlgoliaSearchService;
 
 class Ads
@@ -15,10 +16,12 @@ class Ads
 	{
 		Ad::extend(function ($model) {
 			$model->bindEvent('model.afterCreate', function () use ($model) {
+				if ($model->status !== AdStatusEnum::PUBLISHED->value) return;
                 (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
             });
             $model->bindEvent('model.afterUpdate', function () use ($model) {
-                (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
+				if ($model->status !== AdStatusEnum::PUBLISHED->value) return;
+				(new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
             });
             $model->bindEvent('model.afterRestore', function () use ($model) {
                 (new AlgoliaSearchService(env('ALGOLIA_INDEX')))->save(self::object($model));
