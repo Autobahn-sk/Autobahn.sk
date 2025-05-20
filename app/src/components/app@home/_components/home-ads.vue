@@ -5,9 +5,24 @@
     </h2>
     <div class="my-9">
       <div class="select-bar flex gap-9">
-        <a class="active">Odporúčané</a>
-        <a>Nové autá</a>
-        <a>Používané autá</a>
+        <a
+          :class="{ active: activeCategory === 'Odporúčané' }"
+          @click="loadCategory('Odporúčané')"
+        >
+          Odporúčané
+        </a>
+        <a
+          :class="{ active: activeCategory === 'Nové autá' }"
+          @click="loadCategory('Nové autá')"
+        >
+          Nové autá
+        </a>
+        <a
+          :class="{ active: activeCategory === 'Používané autá' }"
+          @click="loadCategory('Používané autá')"
+        >
+          Používané autá
+        </a>
       </div>
       <hr class="mt-3 bg-light-gray h-[0.06rem]">
     </div>
@@ -40,6 +55,7 @@ export default defineComponent({
   data() {
     return {
       recentAds: [],
+      activeCategory: "Odporúčané",
     };
   },
   watch: {
@@ -66,10 +82,34 @@ export default defineComponent({
             sort: "created_newest",
           },
         });
-        this.recentAds = response.data?.data || [];
+
+        this.recentAds = this.shuffle(response.data?.data || []);
       } catch (error) {
         console.error("Chyba pri načítavaní inzerátov:", error);
       }
+    },
+    async loadCategory(category) {
+      this.activeCategory = category;
+
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/ads`, {
+          params: {
+            limit: 8,
+            sort: "created_newest",
+          },
+        });
+
+        // Rozhádže poradie inzerátov
+        this.recentAds = this.shuffle(response.data?.data || []);
+      } catch (error) {
+        console.error("Chyba pri načítavaní kategórie:", error);
+      }
+    },
+    shuffle(array) {
+      return array
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
     },
     async searchAds(query) {
       try {
@@ -78,7 +118,7 @@ export default defineComponent({
           {
             params: {
               query: `(${query})`,
-              limit: 8, // ⬅️ Pridaný limit
+              limit: 8,
             },
           }
         );

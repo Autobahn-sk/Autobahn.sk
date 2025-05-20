@@ -1,11 +1,11 @@
 <template>
-    <span class="flex flex-wrap gap-6 justify-center">
-        <div class="card-properties rounded overflow-hidden shadow-lg rounded-2xl"  v-for="item in data" :key="item.id">
-            <img class="w-full" src="@/assets/img/BMWE46M3.png" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
+    <span class="flex flex-col items-center justify-center md:items-center">
+        <div class="w-[280px] bg-[#050B20] rounded overflow-hidden rounded-2xl relative flex flex-col justify-between mb-2">
+            <img class="w-full h-48 object-cover" :src="item.thumbnail?.path" :alt="item.title">
+            <div class="flex flex-col flex-1 px-6 pt-4 pb-2">
                 <h3 class="text-lg font-semibold text-white">{{item.title}}</h3>
                 <div class="mt-2">
-                    <p class="text-g text-sm text-white">{{item.description}}</p>
+                    <p class="text-g text-sm text-white">{{item.summary}}</p>
                 </div>
                 <div class="w-full flex justify-between my-6 grid-rows-1">
                     <div class="flex flex-col items-center justify-center">
@@ -19,7 +19,7 @@
                             </clipPath>
                             </defs>
                         </svg>
-                        <p class="text-sm text-white">{{item.kilometres}}</p>
+                        <p class="text-sm text-white">{{item.mileage}} km</p>
                     </div>
                     <div class="flex flex-col items-center justify-center">
                         <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@
                             </clipPath>
                             </defs>
                         </svg>
-                        <p class="text-sm text-white">{{item.fuel}}</p>
+                        <p class="text-sm text-white">{{item.fuel_type}}</p>
                     </div>
                     <div class="flex flex-col items-center justify-center">
                         <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,12 +45,12 @@
                             </clipPath>
                             </defs>
                         </svg>
-                        <p class="text-sm text-white">{{item.gearbox}}</p>
+                        <p class="text-sm text-white">{{item.transmission}}</p>
                     </div>
                 </div>
                 <div class="mb-2">
                     <div class="w-full flex justify-between">
-                        <h4 class="text-lg font-bold text-white">{{item.price}}</h4>
+                        <h4 class="text-lg font-bold text-white">{{item.current_price}}€</h4>
                         <div class="inline-flex view-ad mt-1">
                             <a class="text text-white text-sm mr-2" href="">Zobraziť inzerát</a>
                             <svg class="mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,23 +65,22 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import jsonData from '@/assets/mocks/ad-cards.json'
 
 export default {
-    data() {
-        return {
-            data: jsonData
+    props: {
+        item: {
+            type: Object,
+            required: true
+        }
+    },
+    methods: {
+        goToDetail() {
+            if (this.item && this.item.id) {
+                this.$router.push(`/ads/${this.item.id}`);
+            } else {
+                console.warn('Item alebo item.id nie je definovaný');
+            }
         }
     }
-};
-</script>
-
-<style scoped>
-
-.card-properties{
-    width: 280px;
-    background-color: #222841;
 }
-
-</style>
+</script>
