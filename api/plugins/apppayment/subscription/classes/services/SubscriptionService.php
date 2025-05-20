@@ -50,12 +50,11 @@ class SubscriptionService
 
         $subscription = Subscription::where([
             'is_primary' => true,
-            'user_id'    => $user->id,
-            'plan_id'    => $plan->id
+            'user_id'    => $user->id
         ])->exists();
 
         if ($subscription) {
-            throw new ApplicationException('You already have an active subscription for this plan.');
+            throw new ApplicationException('Už máte aktívny predplatný plán.');
         }
 
 		$this->client->paymentMethods->attach($cardId, [
@@ -65,7 +64,7 @@ class SubscriptionService
 		$this->client->customers->update($user->stripe_id, [
 			'invoice_settings' => [
 				'default_payment_method' => $cardId
-			],
+			]
 		]);
 
 		$stripeSubscription = $this->client->subscriptions->create([
