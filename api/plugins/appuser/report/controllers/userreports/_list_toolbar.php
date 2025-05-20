@@ -1,9 +1,9 @@
 <div data-control="toolbar loader-container">
     <a
-        href="<?= Backend::url('appad/ad/ads/create') ?>"
+        href="<?= Backend::url('appuser/report/userreports/create') ?>"
         class="btn btn-primary">
         <i class="icon-plus"></i>
-        <?= __("New :name", ['name' => 'Ad']) ?>
+		<?= __("New :name", ['name' => 'User Report']) ?>
     </a>
 
     <div class="toolbar-divider"></div>
@@ -17,16 +17,15 @@
         data-list-checked-request
         disabled>
         <i class="icon-delete"></i>
-        <?= __("Delete") ?>
+		<?= __("Delete") ?>
     </button>
 
     <div class="toolbar-divider"></div>
 
     <button
-        class="btn btn-default oc-icon-upload"
-        data-request="onAlgoliaSync"
-        data-request-message="<?= __("Syncing with Algolia...") ?>"
+        class="btn btn-default oc-icon-eraser"
+        data-request="onClearFiler"
         data-stripe-load-indicator>
-        Algolia Sync
+        Clear Filters
     </button>
 </div>

@@ -76,7 +76,7 @@ class Ads extends Controller
 		try {
 			(new AlgoliaSearchService(env('ALGOLIA_INDEX')))->sync($this->objects());
 
-			Flash::success('Successfully synced with Algolia');
+			Flash::success('Successfully synced with Algolia.');
 		} catch (Exception $e) {
 			Flash::error($e->getMessage());
 		}

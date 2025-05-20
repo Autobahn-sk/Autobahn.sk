@@ -1,9 +1,9 @@
 <div data-control="toolbar loader-container">
     <a
-        href="<?= Backend::url('appad/ad/ads/create') ?>"
+        href="<?= Backend::url('apppayment/subscription/subscriptions/create') ?>"
         class="btn btn-primary">
         <i class="icon-plus"></i>
-        <?= __("New :name", ['name' => 'Ad']) ?>
+        <?= __("New :name", ['name' => 'Subscription']) ?>
     </a>
 
     <div class="toolbar-divider"></div>
@@ -24,9 +24,9 @@
 
     <button
         class="btn btn-default oc-icon-upload"
-        data-request="onAlgoliaSync"
-        data-request-message="<?= __("Syncing with Algolia...") ?>"
+        data-request="onStripeSync"
+        data-request-message="<?= __("Syncing with Stripe...") ?>"
         data-stripe-load-indicator>
-        Algolia Sync
+        Stripe Sync
     </button>
 </div>

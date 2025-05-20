@@ -1,7 +1,10 @@
 <?php namespace AppPayment\Subscription\Controllers;
 
+use Exception;
 use BackendMenu;
 use Backend\Classes\Controller;
+use October\Rain\Support\Facades\Flash;
+use AppPayment\Subscription\Classes\SubscriptionCronUpdater;
 
 /**
  * Subscriptions Back-end Controller
@@ -32,4 +35,15 @@ class Subscriptions extends Controller
 
         BackendMenu::setContext('AppPayment.Subscription', 'subscription', 'subscriptions');
     }
+
+	public function onStripeSync(): void
+	{
+		try {
+			(new SubscriptionCronUpdater())->checkAllSubscriptions();
+
+			Flash::success('Successfully synced with Stripe.');
+		} catch (Exception $e) {
+			Flash::error($e->getMessage());
+		}
+	}
 }

@@ -26,9 +26,11 @@ class SubscriptionsSync extends Command
 	{
 		try {
 			(new SubscriptionCronUpdater())->checkAllSubscriptions();
-			$this->output->success('Sync was successful.');
+
+			$this->output->success('Successfully synced with Stripe.');
 		} catch (Exception $e) {
-			$this->output->error('Sync failed: ' . $e->getMessage());
+			$this->output->error($e->getMessage());
+
 			throw $e;
 		}
     }
