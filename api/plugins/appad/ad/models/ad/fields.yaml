@@ -17,8 +17,8 @@ fields:
         span: left
     description:
         label: Description
-        type: richeditor
-        size: small
+        type: textarea
+        size: large
     attachments:
         label: Attachments
         type: fileupload
