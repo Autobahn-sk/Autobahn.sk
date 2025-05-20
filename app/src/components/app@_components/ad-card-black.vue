@@ -4,7 +4,7 @@
             <img class="w-full" src="@/assets/img/BMWE46M3.png" alt="Sunset in the mountains">
             <div class="px-6 py-4">
                 <h3 class="text-lg font-semibold text-white">{{item.title}}</h3>
-                <div class="mt-0">
+                <div class="mt-2">
                     <p class="text-g text-sm text-white">{{item.description}}</p>
                 </div>
                 <div class="w-full flex justify-between my-6 grid-rows-1">

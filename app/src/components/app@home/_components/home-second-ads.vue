@@ -9,7 +9,7 @@
                 <div class="select-bar-white flex gap-9 text-white">
                     <a class="active">BMW</a>
                     <a>Audi</a>
-                    <a>Ford</a>
+                    <a>Porsche</a>
                     <a>Mercedes Benz</a>
                 </div>
                 <div class="flex inline-flex display-none md:display-block">

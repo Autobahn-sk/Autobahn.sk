@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/components/app@home/home.vue'),
   },
   {
-    path: '/ad/:id',
+    path: '/ads/:id',
     name: 'Detail Inzerátu',
     component: () => import('@/components/app@ad/ad.vue'),
     props: true

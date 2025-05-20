@@ -1,7 +1,11 @@
 <template>
   <div>
-    <HeroSection />
-    <Ads />
+    <!-- zachytávame event "search" z HeroSection a voláme metódu updateSearch -->
+    <HeroSection @search="updateSearch" />
+    
+    <!-- posielame do Ads searchQuery ako prop -->
+    <Ads :search-query="searchQuery" />
+    
     <SellAdd />
     <Benefits />
     <SecondAds />
@@ -38,6 +42,16 @@ export default defineComponent({
     MarketingNumbers,
     CallToAction,
     Footer
+  },
+  data() {
+    return {
+      searchQuery: ""
+    }
+  },
+  methods: {
+    updateSearch(query) {
+      this.searchQuery = query;
+    }
   }
 });
 </script>

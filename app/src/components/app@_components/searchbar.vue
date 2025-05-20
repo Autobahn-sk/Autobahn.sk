@@ -1,9 +1,26 @@
 <template>
-    <form action="" class="input-wrapper relative inline-block w-full">
-        <input class="w-[51.8rem] h-[4.1rem] rounded-[4.1rem] bg-white text-black pl-[3.75rem]" type="text" :placeholder="placeholderText">
-        <button class="text-base bg-purple font-medium text-white absolute top-[0.5rem] right-[0.5rem] border-none w-[11.75rem] h-[3rem] rounded-[3.3rem]">Hladať</button>
-        <img class="absolute top-[1rem] left-[0.9rem] border-none" src="./_img/OpenAILogo.svg" alt="">
-    </form>
+  <form
+    @submit.prevent="onSubmit"
+    class="input-wrapper relative inline-block w-full"
+  >
+    <input
+      v-model="searchTerm"
+      class="w-[51.8rem] h-[4.1rem] rounded-[4.1rem] bg-white text-black pl-[3.75rem]"
+      type="text"
+      :placeholder="placeholderText"
+    />
+    <button
+      type="submit"
+      class="text-base bg-purple font-medium text-white absolute top-[0.5rem] right-[0.5rem] border-none w-[11.75rem] h-[3rem] rounded-[3.3rem]"
+    >
+      Hladať
+    </button>
+    <img
+      class="absolute top-[1rem] left-[0.9rem] border-none"
+      src="./_img/OpenAILogo.svg"
+      alt=""
+    />
+  </form>
 </template>
 
 <script>
@@ -11,6 +28,7 @@ export default {
   data() {
     return {
       placeholderText: "Popíšte Vaše vysnívané auto",
+      searchTerm: "", 
     };
   },
   methods: {
@@ -20,6 +38,10 @@ export default {
       } else {
         this.placeholderText = "Popíšte Vaše vysnívané auto";
       }
+    },
+    onSubmit() {
+
+      this.$emit("search", this.searchTerm.trim());
     },
   },
   mounted() {

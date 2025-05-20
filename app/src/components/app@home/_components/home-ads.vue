@@ -11,7 +11,7 @@
       </div>
       <hr class="mt-3 bg-light-gray h-[0.06rem]">
     </div>
-    <div class="flex flex-wrap gap-4">
+    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
       <Ad
         class="flex-row"
         v-for="item in recentAds"
@@ -23,40 +23,71 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import Ad from '@/components/app@_components/ad-card.vue'
-import AdsData from '@/assets/mocks/ad-cards.json'
+import { defineComponent, watch } from "vue";
+import axios from "axios";
+import Ad from "@/components/app@_components/ad-card.vue";
 
 export default defineComponent({
-    components: {
-      Ad,
+  components: {
+    Ad,
+  },
+  props: {
+    searchQuery: {
+      type: String,
+      default: "",
     },
-    data() {
-      return {
-        recentAds: []
-      };
+  },
+  data() {
+    return {
+      recentAds: [],
+    };
+  },
+  watch: {
+    searchQuery: {
+      immediate: true,
+      handler(newQuery) {
+        if (newQuery && newQuery.trim().length > 0) {
+          this.searchAds(newQuery.trim());
+        } else {
+          this.loadRecentAds();
+        }
+      },
     },
-    mounted() {
-      const links = document.querySelectorAll('.select-bar a');
-      links.forEach(function (link) {
-        link.addEventListener('click', function () {
-          links.forEach(function (l) {
-            l.classList.remove('active');
-          });
-          link.classList.add('active');
+  },
+  mounted() {
+    this.loadRecentAds();
+  },
+  methods: {
+    async loadRecentAds() {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/ads`, {
+          params: {
+            limit: 8,
+            sort: "created_newest",
+          },
         });
-      });
+        this.recentAds = response.data?.data || [];
+      } catch (error) {
+        console.error("Chyba pri načítavaní inzerátov:", error);
+      }
     },
-    created() {
-      this.loadRecentAds();
+    async searchAds(query) {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/ads-search`,
+          {
+            params: {
+              query: `(${query})`,
+              limit: 8, // ⬅️ Pridaný limit
+            },
+          }
+        );
+        this.recentAds = response.data?.data || [];
+      } catch (error) {
+        console.error("Chyba pri vyhľadávaní inzerátov:", error);
+      }
     },
-    methods: {
-    loadRecentAds() {
-      this.recentAds = [...AdsData]
-        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-        .slice(0, 8);
-    }
-  }
+  },
 });
 </script>
 

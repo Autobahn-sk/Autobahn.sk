@@ -10,24 +10,30 @@
           Nájdite si svoje dokonalé auto
         </h1>
         <div class="mt-8">
-          <Searchbar />
+          <!-- zachytíme event zo Searchbaru a prepustíme hore -->
+          <Searchbar @search="onSearch" />
         </div>
       </div>
     </section>
   </div>
 </template>
-  
+
 <script>
-  import { defineComponent } from 'vue'
-  import Header from '@/components/app/_layout/_components/header-transparent.vue';
-  import Searchbar from '@/components/app@_components/searchbar.vue'
-  
-  export default defineComponent({
-    components: {
-      Header,
-      Searchbar
-    }
-  });
+import { defineComponent } from "vue";
+import Header from "@/components/app/_layout/_components/header-transparent.vue";
+import Searchbar from "@/components/app@_components/searchbar.vue";
+
+export default defineComponent({
+  components: {
+    Header,
+    Searchbar,
+  },
+  methods: {
+    onSearch(query) {
+      this.$emit("search", query);
+    },
+  },
+});
 </script>
   
   

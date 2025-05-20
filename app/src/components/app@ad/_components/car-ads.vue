@@ -3,7 +3,7 @@
     <h2 class="subtitle subtitle-40 font-bold text-black">
       <strong>Súvisiace inzeráty</strong>
     </h2>
-    <div class="flex flex-wrap gap-4 mt-6">
+    <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
       <Ad
         class="flex-row"
         v-for="item in recentAds"
@@ -16,70 +16,29 @@
 
 <script>
 import { defineComponent } from 'vue';
-import Ad from '@/components/app@_components/ad-card.vue'
-import AdsData from '@/assets/mocks/ad-cards.json'
+import axios from 'axios';
+import Ad from '@/components/app@_components/ad-card.vue';
 
 export default defineComponent({
-    components: {
-      Ad,
-    },
-    data() {
-      return {
-        recentAds: []
-      };
-    },
-    mounted() {
-      const links = document.querySelectorAll('.select-bar a');
-      links.forEach(function (link) {
-        link.addEventListener('click', function () {
-          links.forEach(function (l) {
-            l.classList.remove('active');
-          });
-          link.classList.add('active');
-        });
-      });
-    },
-    created() {
-      this.loadRecentAds();
-    },
-    methods: {
-    loadRecentAds() {
-      this.recentAds = [...AdsData]
-        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-        .slice(0, 4);
+  components: {
+    Ad,
+  },
+  data() {
+    return {
+      recentAds: [],
+      error: null,
+    };
+  },
+  async created() {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/ads?limit=4&sort=created_newest`
+      );
+      this.recentAds = response.data.data;
+    } catch (err) {
+      this.error = err.response?.data?.message || err.message;
+      console.error('Chyba pri načítaní inzerátov:', this.error);
     }
-  }
+  },
 });
 </script>
-
-<style scoped>
-
-.select-bar a:hover {
-  cursor: pointer;
-}
-
-.select-bar a.active {
-  text-decoration-line: underline !important;
-  text-decoration-color: #405ff2 !important;
-  text-underline-offset: 17px;
-  text-decoration-thickness: 3px;
-}
-
-@media (max-width: 768px) {
-  .select-bar {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-  }
-
-  .select-bar a {
-    display: inline-block;
-    position: relative;
-  }
-
-  .select-bar::-webkit-scrollbar {
-    display: none;
-  }
-}
-</style>
