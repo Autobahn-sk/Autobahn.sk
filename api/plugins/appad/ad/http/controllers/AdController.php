@@ -120,7 +120,7 @@ class AdController extends Controller
 
 	public function update(Request $request, $ad): ApiResource
 	{
-		$ad->fill($request->all());
+		$ad->update($request->all());
 
 		$ad->images()
 			->whereIn('id', post('images_ids_to_delete', []))
@@ -129,8 +129,6 @@ class AdController extends Controller
 		$ad->attachments()
 			->whereIn('id', post('attachments_ids_to_delete', []))
 			->delete();
-
-		$ad->save();
 
 		$ad->saveRelations($request);
 
